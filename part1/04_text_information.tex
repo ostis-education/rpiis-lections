@@ -27,7 +27,7 @@
 	
 	\begin{SCn}
 		\scnheader{Лекция 4. Представление и обработка текстовой информации}
-		\begin{scnrelfromset}{разбиение}
+		\begin{scnrelfromset}{структура}
 			\scnitem{\textbf{Текст и гипертекст. Структура текста.}}
 			\scnitem{Представление текстовой информации в компьютере.}
 			\scnitem{Средства редактирования текста.}
@@ -41,15 +41,17 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Текст}
-		\scntext{определение}{\textbf{Текст} - связная последовательность знаков, образующая законченное сообщение.}
-		\scnhaselement{начало}
-		\scnhaselement{конец}
-		\scnhaselement{внутренняя структура}
+		\scnheader{текст}
+		\scntext{определение}{\textbf{текст} - связная последовательность знаков, образующая законченное сообщение.}
+		\begin{scnrelfromset}{структура}
+			\scnfileitem{начало}
+			\scnfileitem{конец}
+			\scnfileitem{внутренняя структура}
+		\end{scnrelfromset}
 
 		\begin{scnrelfromlist}{свойство}
-			\scnitem{линейность}
-			\scnitem{дискретность}
+			\scnfileitem{линейность}
+			\scnfileitem{дискретность}
 		\end{scnrelfromlist}
 	
 	\end{SCn}
@@ -61,7 +63,7 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Гипертекст}
+		\scnheader{гипертекст}
 		\begin{scnrelfromlist}{утверждение}
 			\scnfileitem{В гипертексте отсутствует единый путь прочтения, в точках ветвления порядок определяет читатель.}
 			\scnfileitem{Гипертекст разбивается на цельные фрагменты, между которыми устанавливаются связи.}
@@ -76,16 +78,16 @@
 	\justifying
 	
 	\begin{SCn}
-		\scnheader{Текст}
-		\scntext{цель}{Цель текста – передача некой информации читателю.}
-		\begin{scnrelfromset}{разбиение}
+		\scnheader{текст}
+		\scntext{цель}{Цель текста -- передача некой информации читателю.}
+		\begin{scnrelfromset}{структура}
 			\scnitem{форма}
 			\begin{scnindent}
 				\scntext{пояснение}{Оформление текста должно помогать читателю воспринять логику изложения.}
 			\end{scnindent}
 			\scnitem{содержание}
 			\begin{scnindent}
-				\scntext{пояснение}{Содержание – основные идеи, логику и порядок изложения задает автор текста.}
+				\scntext{пояснение}{Содержание -- основные идеи, логику и порядок изложения задает автор текста.}
 			\end{scnindent}
 		\end{scnrelfromset}
 	\end{SCn}
@@ -97,8 +99,8 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Структура текста}
-		\scntext{определение}{\textbf{Структура} – это совокупность логических частей и элементов, из которых он состоит, и связей между ними.}		
+		\scnheader{структура текста}
+		\scntext{определение}{\textbf{\textit{структура текста}} -- это совокупность логических частей и элементов, из которых он состоит, и связей между ними.}		
 		\begin{scnrelfromlist}{пояснение}
 			\scnfileitem{Структура текста зачастую определяется неявно, через \scnkeyword{форму}.}
 			\scnfileitem{Оформление задач по принципу: Дано-найти-решение.}
@@ -120,9 +122,9 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Структура текста}
+		\scnheader{структура текста}
 		\begin{scnrelfromset}{правила построения}
-			\scnfileitem{Человек в состоянии удержать в памяти 7±2 объекта – число частей документа.}
+			\scnfileitem{Человек в состоянии удержать в памяти 7±2 объекта -- число частей документа.}
 			\scnfileitem{Разделы документа должны соответствовать основным мыслям текста.}
 			\scnfileitem{В каждом разделе выделяются основные положения, которые он содержит.}
 			\scnfileitem{Структура должна быть визуально подчеркнута.}
@@ -135,7 +137,7 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Визуальное оформление документа}
+		\scnheader{визуальное оформление документа}
 		\begin{scnrelfromlist}{цель}
 			\scnfileitem{Выделить структуру документа.}
 			\scnfileitem{Выделить важные элементы в тексте.}
@@ -151,11 +153,11 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Структура текста}
+		\scnheader{структура текста}
 		\begin{scnrelfromset}{способы визуализации}
-			\scnitem{размер шрифта}
-			\scnitem{отступ}
-			\scnitem{нумерация заголовков}
+			\scnfileitem{Размер шрифта}
+			\scnfileitem{Отступ}
+			\scnfileitem{Нумерация заголовков}
 		\end{scnrelfromset}
 	\end{SCn}
 
@@ -181,12 +183,12 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Компьютерное представление текста}
+		\scnheader{компьютерное представление текста}
 		\begin{scnrelfromset}{требования}
-			\scnitem{простота кодирования}
-			\scnitem{точность представления}
-			\scnitem{удобство хранения}
-			\scnitem{удобство передачи по каналам связи}
+			\scnfileitem{Простота кодирования}
+			\scnfileitem{Точность представления}
+			\scnfileitem{Удобство хранения}
+			\scnfileitem{Удобство передачи по каналам связи}
 		\end{scnrelfromset}
 	\end{SCn}
 \end{frame}
@@ -196,7 +198,7 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Компьютерное представление текста}
+		\scnheader{компьютерное представление текста}
 		\scnsuperset{однобайтное кодирование}
 		\begin{scnindent}
 			\scnsuperset{ASCII}
@@ -218,13 +220,13 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Кодовая страница}
+		\scnheader{кодовая страница}
 		\scnidtf{code page}
-		\scntext{пояснение}{\textbf{Кодовая страница} -- таблица, сопоставляющая каждому значению байта некоторый символ (или его отсутствие).}
+		\scntext{пояснение}{\textbf{\textit{Кодовая страница}} -- таблица, сопоставляющая каждому значению байта некоторый символ (или его отсутствие).}
 
-		\scnheader{Набор символов}
+		\scnheader{набор символов}
 		\scnidtf{character set}
-		\scntext{пояснение}{\textbf{Набор символов} -- определённая таблица кодировки конечного множества знаков. Такая таблица сопоставляет каждому символу последовательность длиной в один или несколько байтов.}
+		\scntext{пояснение}{\textbf{\textit{Набор символов}} -- определённая таблица кодировки конечного множества знаков. Такая таблица сопоставляет каждому символу последовательность длиной в один или несколько байтов.}
 		\begin{scnindent}
 			\scnrelfrom{источник}{RFC 2278}
 		\end{scnindent}
@@ -238,26 +240,26 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Кодовая страница}
+		\scnheader{кодовая страница}
 		\scnsubset{кодовая страница с кириллицей}
 		\begin{scnindent}
 			\scnhaselement{Windows-1251}
 			\begin{scnindent}
 				\scnidtf{ANSI Cyrillic}
-				\scniselement{Windows}
+				\scnsubset{Windows}
 			\end{scnindent}
 			\scnhaselement{KOI8}
 			\begin{scnindent}
-				\scniselement{UNIX}
+				\scnsubset{UNIX}
 			\end{scnindent}
 			\scnhaselement{ГОСТ 19768-87}
 			\scnhaselement{IBM code page 866}
 			\begin{scnindent}
-				\scniselement{DOS}
+				\scnsubset{DOS}
 			\end{scnindent}
 			\scnhaselement{MacCyrillic}
 			\begin{scnindent}
-				\scniselement{Macintosh}
+				\scnsubset{Macintosh}
 			\end{scnindent}
 		\end{scnindent}
 	\end{SCn}
@@ -268,16 +270,16 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Однобайтное кодирование}
+		\scnheader{однобайтное кодирование}
 		\begin{scnrelfromset}{недостатки}
-			\scnitem{проблема отображения документов в неправильной кодировке}
+			\scnfileitem{проблема отображения документов в неправильной кодировке}
 			\begin{scnindent}
-				\scnidtf{крокозябры}
+				\scnidtf{"крокозябры"{}}
 			\end{scnindent}
-			\scnitem{проблема ограниченности набора символов}
-			\scnitem{проблема преобразования одной кодировки в другую}
-			\scnitem{проблема многоязычных документов}
-			\scnitem{проблема дублирования шрифтов}
+			\scnfileitem{проблема ограниченности набора символов}
+			\scnfileitem{проблема преобразования одной кодировки в другую}
+			\scnfileitem{проблема многоязычных документов}
+			\scnfileitem{проблема дублирования шрифтов}
 		\end{scnrelfromset}
 	\end{SCn}
 \end{frame}
@@ -326,8 +328,8 @@
 
 	\begin{SCn}
 		\scnheader{Символ Unicode}
-		\scntext{утверждение}{Каждый символ Unicode имеет свой уникальный код – целое неотрицательное число}
-		\scntext{утверждение}{Обозначение символов: U+XXXX, XXXX – номер символа в наборе в 16-ричном виде.}
+		\scntext{утверждение}{Каждый символ Unicode имеет свой уникальный код -- целое неотрицательное число}
+		\scntext{утверждение}{Обозначение символов: U+XXXX, XXXX -- номер символа в наборе в 16-ричном виде.}
 		\scnhaselement{Й}
 		\begin{scnindent}
 			\scnrelfrom{код}{U+0419}
@@ -533,8 +535,8 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Регулярные выражения}
-		\scnidtf{regular expressions}
+		\scnheader{регулярное выражение}
+		\scnidtf{regular expression}
 		\scntext{пояснение}{\textbf{Регулярные выражения} -- способ (язык) описания множества строк}
 		\begin{scnrelfromlist}{используется в}
 			\scnitem{текстовый редактор}
@@ -553,14 +555,14 @@
 	\justifying
 	\newline
 	\begin{SCn}
-		\scnheader{Шаблон поиска}
+		\scnheader{шаблон поиска}
 		\scntext{пояснение}{\textbf{Шаблон поиска} -- строка-описание желаемого результата поиска.}
 		\scntext{пример}{a*.txt -- поиск всех текстовых файлов с именем на a}
 
-		\scnheader{Литерал}
+		\scnheader{литерал}
 		\scntext{пояснение}{\textbf{Литерал} -- символ в шаблоне поиска, который соответствует самому себе.}
 
-		\scnheader{Метасимвол}
+		\scnheader{метасимвол}
 		\scntext{пояснение}{\textbf{Метасимвол} -- символ в шаблоне поиска, имеющий особое значение, обозначает какой-то другой символ или последовательность символов.}
 	\end{SCn}
 
@@ -571,8 +573,8 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Символьный класс}
-		\scntext{пояснение}{\textbf{Символьный класс} – любой символ из указанного набора символов}
+		\scnheader{символьный класс}
+		\scntext{пояснение}{\textbf{Символьный класс} -- любой символ из указанного набора символов}
 	\end{SCn}
 
 	\begin{center}
@@ -586,7 +588,7 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Сокращенная запись символьных классов}
+		\scnheader{сокращенная запись символьных классов}
 		\scntext{пояснение}{Для наиболее распространенных символьных классов введены специальные обозначения}
 	\end{SCn}
 
@@ -601,13 +603,13 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Квантификатор}
+		\scnheader{квантификатор}
 		\scntext{пояснение}{\textbf{Квантификаторы} -- метасимволы, указывающие сколько раз должен встретиться элемент перед ними.}
 
-		\scnheader{Жадное поведение}
+		\scnheader{жадное поведение}
 		\scntext{пояснение}{\textbf{Жадное поведение} -- ищется строка максимальной длины, удовлетворяющая шаблону.}
 
-		\scnheader{Ленивое поведение}
+		\scnheader{ленивое поведение}
 		\scntext{пояснение}{\textbf{Ленивое поведение} -- ищется строка минимальной длины, удовлетворяющая шаблону.}
 	\end{SCn}
 
@@ -654,11 +656,11 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Группа}
+		\scnheader{группа}
 		\scntext{пояснение}{\textbf{Группа} -- часть шаблона, которая обрабатывается как единое целое.}
 		\scntext{пример}{(\textbackslash w+) (\textbackslash w+)\textbackslash. -- поиск имени и фамилии}
 
-		\scnheader{Подстановка}
+		\scnheader{подстановка}
 		\scntext{пояснение}{\textbf{Подстановка} -- использование при замене найденных подстрок}
 		\scntext{пример}{\textbackslash 2 \textbackslash 1\textbackslash. -- перестановка местами имени и фамилии из примера выше.}
 	\end{SCn}
@@ -670,36 +672,9 @@
 	\justifying
 
 	\begin{SCn}
-		\scnheader{Альтернатива}
+		\scnheader{альтернатива}
 		\scntext{пояснение}{\textbf{Альтернатива} -- выбор из нескольких вариантов}
 		\scntext{пример}{Я люблю (яблоки|бананы)}
 	\end{SCn}
 
-\end{frame}
-
-\begin{frame}
-	
-	\begin{center}
-		\begin{LARGE}
-		\textbf{Спасибо за внимание!}
-		\end{LARGE}
-
-		Остались ли вопросы?
-	\end{center}
-\end{frame}
-
-\begin{frame}{\\Вопросы к зачёту}
-	\topline
-	\justifying
-
-	\begin{itemize}
-		\item 17. Понятие текста и гипертекста. 
-		\item 18. Понятие структуры текста. Способы визуализации структуры текста для читателя. 
-		\item 19. Представление текстовой информации на компьютере. Основные подходы. 
-		\item 20. Однобайтное кодирование. Достоинства подхода и присущие ему проблемы.
-		\item 21. Многобайтное кодирование. Структура стандарта Unicode. 
-		\item 22. Многобайтное кодирование. Представление кодов символов в UTF-8. 
-		\item 23. Многобайтное кодирование. Представление кодов символов в UTF-16 и UTF 32. Метка порядка байтов. 
-	\end{itemize}
-	
 \end{frame}
