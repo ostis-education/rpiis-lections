@@ -1,0 +1,1018 @@
+\title{Lecture 8\\Architecture of Intelligent Systems}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+
+\begin{frame}{\\ Contents lectures }
+	\topline
+	\justifying
+	
+	Intelligent computer system. Fundamental differences between an intelligent computer system and a traditional one. Intelligent system architecture. Knowledge base. Knowledge processing machine.
+	
+\end{frame}
+
+
+\begin{frame}{\\Approaches to defining the concept of AI}
+	\topline
+	\justifying
+	
+	\LARGE
+	
+	\textbf{Artificial intelligence} -- the science and engineering of making intelligent machines [McCarthy, 1956]
+	
+	\vspace{0.5em}
+	Intelligence is not "intellect"{} but "the ability to think intelligently".
+	
+\end{frame}
+
+\begin{frame}{\\Approaches to defining the concept of AI}
+	\topline
+	\justifying
+	
+	\vspace{1em}
+	
+	\Large
+	
+	The ability of \textbf{intelligent systems} to perform functions (creative) that are traditionally considered the prerogative of humans [Explanatory Dictionary of AI, 1992].
+	
+	\vspace{0.5em}
+	A scientific field within which problems of hardware or software modeling of those types of human activity that are traditionally considered \textbf{intelligent} are posed and solved [Explanatory Dictionary of AI, 1992].
+	
+\end{frame}
+
+\begin{frame}{\\Approaches to defining the concept of AI}
+	\topline
+	\justifying
+	
+	Artificial intelligence is a complex of technological solutions that include information and communications infrastructure, software (including that which uses machine learning methods), processes and services for data processing and solution search, which make it possible to imitate human cognitive functions (including the search for a solution without a predetermined algorithm) and obtain results, when performing specific tasks, comparable to or superior to the results of human intellectual activity.
+	
+	\vspace{0.5em}
+	[CIS Model Law "On Artificial Intelligence Technologies"{},\\ 05/18/2025]
+	
+\end{frame}
+
+\begin{frame}{\\Intelligent Systems}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{textitemize}
+		\item A system capable of solving \textbf{intellectual problems}
+		
+		\item A system capable of \textbf{learning}
+		\begin{textitemize}
+			\item A system capable of \textbf{learning to solve problems of one class well}
+			\item A system capable of \textbf{learning skills to solve problems of new classes}
+		\end{textitemize}
+		
+		\item A system capable of \textbf{unlimited learning}
+		\begin{textitemize}
+			\item There are no restrictions on the type of knowledge and skills she acquires
+		\end{textitemize}
+	\end{textitemize}
+	
+	\vspace{10mm}
+	\centering
+	\textbf{The best example of an intelligent system is you and me}
+	
+\end{frame}
+
+\begin{frame}{\\What is AI?}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	Artificial intelligence is a natural, logical stage in the development of information technology, the "cutting edge"{} of scientific and technical achievements in the field of IT.
+	
+	\begin{textitemize}
+		\item It is impossible to contrast "traditional"{} information technologies and artificial intelligence
+		\item We shouldn't everything Artificial Intelligence
+	\end{textitemize}	
+	
+	\vspace{1em}
+	\hrule
+	\vspace{1em}
+	
+	\begin{textitemize}
+		\item In a broad sense, it is a scientific and technical direction
+		\item In a narrow sense, a specific system or module possessing the properties of intelligent systems
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{\\Types of Artificial Intelligence}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{figure}[h]
+		\centering
+		%\setlength{\tabcolsep}{3em} % is possible Same a little less
+		\begin{tabular}{m{0.3\textwidth} m{0.3\textwidth} m{0.3\textwidth}}
+			
+			% --- Column 1 ---
+			\centering
+			\includegraphics[width=0.8\linewidth]{part2/images/is_arch/ai1.png}\\[0.4em]
+			{\Large\bfseries Weak AI }\\[0.4em]
+			\scriptsize
+			\centering
+			Limited learning ability and inability to adapt
+			\normalsize
+			&
+			% --- Column 2 ---
+			\centering
+			\includegraphics[width=0.8\linewidth]{part2/images/is_arch/ai2.png}\\[0.4em]
+			{\Large\bfseries General AI (AGI)}\\[0.4em]
+			\scriptsize
+			\centering
+			Able to learn new skills and adapt to changing conditions
+			\normalsize
+			&
+			% --- Column 3 ---
+			\centering
+			\includegraphics[width=0.8\linewidth]{part2/images/is_arch/ai3.png}\\[0.4em]
+			{\Large\bfseries Strong AI (ASI)}\\[0.4em]
+			\scriptsize
+			\centering
+			Capable of not only performing any tasks, but also being aware of their actions and decisions.
+			
+		\end{tabular}
+	\end{figure}
+\end{frame}
+
+\begin{frame}
+	\centering
+	\Huge
+	\textbf{Cybernetic Systems}
+\end{frame}
+
+\begin{frame}{\\The concept of a cybernetic system}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	
+	\small
+	
+	\begin{SCn}
+		\scnheader{cybernetic system}
+		\scnidtf{a dynamic system capable of performing certain actions and carrying out certain activities}
+		\scnidtftext{explanation}{\uline{open} dynamic system implementing
+			
+			\begin{textitemize}
+				\item \textbf{monitoring and analysis} of the state of the environment and the processes occurring in this environment
+				\item carrying out \textbf{impacts} on this environment (including impacts on its physical shell), caused by
+				\begin{textitemize}
+					\item \textbf{purpose} (specialization) of the dynamic system under consideration (most often this concerns artificial cybernetic systems)
+					\item the desire to ensure \textbf{self-preservation}, integrity, that is, to ensure the implementation of homeostatic activity, which is an important area of \uline{all} cybernetic systems' life activity, and for natural cybernetic systems is a key stimulus for their evolution
+				\end{textitemize}
+		\end{textitemize}}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Classification of cybernetic systems}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	
+	\begin{SCn}
+		\scnheader{cybernetic system}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{\textbf{individual cybernetic system}}
+			\begin{scnindent}
+				\scnsuperset{biological organism}
+			\end{scnindent}
+			
+			\scnitem{\textbf{multi-agent cybernetic system}}
+			\begin{scnindent}
+				\scnidtf{distributed cybernetic system}
+				\scnidtf{\textit{cybernetic system}, in which its \textit{memory}, \textit{processor}, \textit{interface} and the \textit{internal information model of the environment} stored in memory have a distributed (to a certain extent virtual) character}
+				\scnidtf{cybernetic system which is a collection of cybernetic systems that are agents of a multi-agent system and interact with each other through their interfaces and, possibly, through a special communications environment.}
+			\end{scnindent}
+		\end{scnrelfromset}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Classification of cybernetic systems}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	
+	\begin{SCn}
+		\scnheader{cybernetic system}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{natural cybernetic system}
+			\begin{scnindent}
+				\scnidtf{cybernetic system of natural (biological) origin}
+			\end{scnindent}
+			\scnitem{computer system}
+			\begin{scnindent}
+				\scnidtf{\textit{artificial cybernetic system}}
+				\begin{scnrelfromset}{subdividing}
+					\scnitem{individual computer system}
+					\scnitem{multi-agent computer system}
+				\end{scnrelfromset}
+			\end{scnindent}
+			\scnitem{natural-artificial cybernetic system}
+			\begin{scnindent}
+				\scnidtf{a cybernetic system containing components of both natural and artificial origin}
+				\scnsuperset{\textbf{human-machine cybernetic system}}
+			\end{scnindent}
+		\end{scnrelfromset}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Human-machine cybernetic systems}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{human-machine cybernetic system}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{human-machine individual cybernetic system}
+			\begin{scnindent}
+				\scnidtf{a system consisting of a mechanically (manually) controlled \textit{machine} (tool) and a user operating this machine}
+				\scntext{note}{The controlled \textit{machine} specified here is not a \textit{cybernetic system}}
+			\end{scnindent}
+			
+			\scnitem{human-machine multi-agent cybernetic system}
+		\end{scnrelfromset}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Human-machine cybernetic systems}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\scriptsize
+	
+	\begin{SCn}
+		\scnheader{human-machine cybernetic system}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{human-machine individual cybernetic system}
+			\scnitem{human-machine multi-agent cybernetic system}
+			\begin{scnindent}
+				\begin{scnrelfromset}{subdividing}
+					\scnitem{human-machine two-agent cybernetic system}
+					\begin{scnindent}
+						\scnidtf{a two-agent cybernetic system consisting of an \textit{individual computer system} and a human (user) interacting with this system}
+					\end{scnindent}
+					\scnitem{human-machine multi-agent cybernetic system with more than two agents}
+					\begin{scnindent}
+						\scntext{note}{Any number of people and computer systems interacting with each other.\vspace{-\baselineskip}
+							\begin{textitemize}
+								\item individual computer system and many users;
+								\item multi-agent computer system and one user;
+								\item multi-agent computer system and many users;
+						\end{textitemize}}
+					\end{scnindent}		
+				\end{scnrelfromset}
+			\end{scnindent}	
+		\end{scnrelfromset}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Multi-agent cybernetic system}
+	\topline
+	\justifying
+	
+	\small
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{multi-agent cybernetic system}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{population}
+			\begin{scnindent}
+				\scnidtf{a multi-agent system within which self-reproduction of new agents is carried out with the transfer of knowledge and experience accumulated by the population to them [J. von Neumann, 1966]}
+			\end{scnindent}
+			\scnitem{multi-agent system that is not a population}
+		\end{scnrelfromset}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{collective of individual cybernetic systems}
+			\scnitem{hierarchical multi-agent cybernetic system}
+		\end{scnrelfromset}
+		\begin{scnrelfromset}{subdividing}
+			\scnitem{multi-agent cybernetic system with a fixed number of agents}
+			\scnitem{multi-agent cybernetic system with a non-fixed number of agents}
+		\end{scnrelfromset}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Structure of cybernetic systems}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{cybernetic system}
+		\begin{scnrelfromlist}{generalized part}
+			\scnitem{physical shell of a cybernetic system}
+			\scnitem{internal information model of the environment}
+		\end{scnrelfromlist}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Structure of cybernetic systems}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{environment}
+		\begin{scnrelfromset}{generalized decomposition}
+			\scnitem{external environment}
+			\scnitem{self}
+		\end{scnrelfromset}
+		\scnidtf{both the external environment of the cybernetic system and the cybernetic system itself, including all its components, including the internal information model of the environment}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Structure of cybernetic systems}
+	\topline
+	\justifying
+	
+	\small
+	
+	\begin{SCn}
+		\scnheader{self}
+		\begin{scnrelfromset}{generalized decomposition}
+			\scnitem{physical shell of a cybernetic system}
+			\begin{scnindent}
+				\begin{scnrelfromset}{generalized decomposition}
+					\scnitem{complex of sensors and effectors of a cybernetic system}
+					\scnitem{cybernetic system memory}
+					\scnitem{cybernetic system processor}
+					\scnitem{cybernetic system corpus}
+				\end{scnrelfromset}
+			\end{scnindent}
+			\scnitem{internal information model of the environment}
+		\end{scnrelfromset}
+		\begin{scnindent}
+			\scntext{note}{All these components of a cybernetic system can be either localized or distributed (virtual), depending on the structural type of the cybernetic system.}
+		\end{scnindent}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Information processing subsystem}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{built-in information processing subsystem}
+		\scntext{explanation}{\textit{The embedded information processing subsystem}, strictly speaking, is not a \textit{cybernetic system}. However, it can be considered an analogue of a \textit{cybernetic system}, namely, as a \textit{cybernetic system} whose external environment is the \textit{memory} of the corresponding \textit{individual cybernetic system} and the information stored in this memory.}
+		\scnsuperset{processor-memory of an individual cybernetic system}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Cybernetic System Processor}
+	\topline
+	\justifying
+	
+	\small
+	\vspace{5mm}
+	
+	\begin{SCn}
+		\scnheader{cybernetic system processor}
+		\scnidtf{knowledge base processing engine}
+		\scnidtf{a set of functional means of the corresponding cybernetic system, possessing sufficient completeness (integrity) to functionally support the activities of the specified cybernetic system (to interpret the information stored in the memory of the cybernetic system)}
+		\scnidtf{an internal pseudo-cybernetic information processing system whose operating environment is the memory of the corresponding cybernetic system}
+		\scnidtf{a pseudo-cybersystem, integrated into a corresponding cybernetic system and processing information stored in the memory of the said cybernetic system using the processor of that system (using means of analyzing stored information structures and means of transforming them)}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Internal information\\ model of the environment}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	\small
+	
+	\begin{SCn}
+		\scnheader{internal information model of the environment}
+		\scnidtf{part of the state of the \textit{memory of a cybernetic system}, which is used by the \textit{processor} and the \textit{sensory-effector complex} to organize the \textit{activity} (behavior, functioning) of the \textit{cybernetic system} in the process of its interaction with its \textit{external environment}, with its \textit{physical shell} and with its internal information environment (that is, the \textit{internal information model of the environment})}
+		\scnidtf{subjective picture of the world of a cybernetic system}
+		\scnsuperset{knowledge base}
+		\begin{scnindent}
+			\scnidtf{semantically structured internal information model of the environment of an intelligent cybernetic system}
+		\end{scnindent}
+		\scntext{note}{The presence of an internal information model of the environment in a cybernetic system means that the cybernetic system "lives"{} simultaneously in two worlds --- in the external real world and in the internal world of its information model (reflection) of this external real world.}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Memory <-> Information}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{should be distinguished*}
+		\begin{scnhaselementset}
+			\scnitem{memory}
+			\begin{scnindent}
+				\scnidtf{cybernetic system memory}
+			\end{scnindent}
+			\scnitem{combined aggregate information stored in the memory of a cybernetic system}
+			\begin{scnindent}
+				\scnidtf{a dynamic information model of the environment of the corresponding cybernetic system, describing (reflecting) this environment with the required degree of detail}
+				\scnidtf{all information stored in the memory of a cybernetic system}
+				\scnsuperset{knowledge base}
+			\end{scnindent}
+		\end{scnhaselementset}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Physical shell\\ of a cybernetic system}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+	\scnheader{physical shell of a cybernetic system}
+	\scnidtf{material shell of a cybernetic system}
+	\scnidtf{body (corpus) of a cybernetic system}
+	\begin{scnrelfromset}{generalized decomposition}
+		\scnitem{cybernetic system memory}
+		\scnitem{cybernetic system processor}
+		\scnitem{a complex of sensors and effectors of a cybernetic system}
+		\scnitem{other material subsystems that ensure the exchange of substances and energy with the external environment of the cybernetic system}
+	\end{scnrelfromset}
+	\scntext{note}{The physical shell of a cybernetic system is subject to constant destructive influences from the external environment --- this must be counteracted.}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Cybernetic system interface}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	
+	\begin{SCn}
+		\scnheader{cybernetic system interface}
+		\scnrelfrom{generalized part}{sensory-effector complex of the cybernetic system}
+		\begin{scnindent}
+			\begin{scnrelfromset}{generalized decomposition}
+				\scnitem{sensory subsystem of the cybernetic system}
+				\begin{scnindent}
+					\scnrelfrom{generalized part}{sensor}
+					\begin{scnindent}
+						\scnidtf{receptor}
+						\scnidtf{a means of analyzing the physical state of one's external environment and physical shell}	
+					\end{scnindent}
+				\end{scnindent}
+				\scnitem{effector subsystem of the cybernetic system}
+				\begin{scnindent}
+					\scnrelfrom{generalized part}{effector}
+					\begin{scnindent}
+						\scnidtf{a means of \uline{influencing} one's external environment and physical shell}	
+					\end{scnindent}
+				\end{scnindent}
+			\end{scnrelfromset}
+		\end{scnindent}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Self}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{self}
+		\scnidtf{pointer to the sign of itself}
+		\scnidtf{pointer to the sign of the cybernetic system that it is}
+		\scntext{note}{As part of its internal information model of the environment, a cybernetic system can store descriptions of a fairly large number of cybernetic systems with which it interacts (in particular, descriptions of its users). However, from this entire set of described cybernetic systems, each cybernetic system must derive a description of itself, which is necessary, at a minimum, for self-awareness (comprehension) and its activities in the environment.}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Operations defined\\ on cybernetic systems}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{cybernetic system}
+		\begin{scnrelfromlist}{specified operation}
+			\scnitem{convergence of cybernetic systems}
+			\begin{scnindent}
+				\scnsuperset{convergence of internal information models of the environment of cybernetic systems*}
+				\begin{scnindent}
+					\scnidtf{convergence of subjective images of the surrounding world in cybernetic systems*}
+					\scnsuperset{ensuring semantic compatibility*}
+				\end{scnindent}
+			\end{scnindent}
+			\scnitem{fusion of individual cybernetic systems*}
+			\scnitem{division of the individual cybernetic system*}
+			\scnitem{unification of cybernetic systems into a collective*}
+		\end{scnrelfromlist}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Properties of cybernetic systems}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item The presence of an internal information model of the environment (a subjective picture of the world). The basis for the functioning (behavior) of cybernetic systems is the use of an internal picture of the world (i.e., information processing).
+		\item evolvability (unconscious, carried out from the outside)
+		\begin{textitemize}
+			\item flexibility
+			\item stratification
+		\end{textitemize}
+		\item self-evolvability
+		\begin{textitemize}
+			\item reflection
+			\item expansion of the diversity (specialization) of various components while increasing the level of their synergy
+		\end{textitemize}
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Dynamics of the world}
+	\topline
+	\justifying
+	
+	An intelligent system lives in several worlds simultaneously:
+	\begin{textitemize}
+		\item In the real external world (in the simplest case, the external world is its users - end users and developers of different statuses)
+		\item In the internal world (the world of situations and events occurring in its memory, storing an internal information model of a certain fragment of the external world and processed by agents)
+	\end{textitemize}
+	
+	Both the external and internal worlds can be decomposed into dynamic subject areas (several subworlds). In each of these worlds, the system simultaneously exists in the present (current), past, and future tenses.
+	
+\end{frame}
+
+\begin{frame}{\\Evolution of cybernetic systems}
+	\topline
+	\justifying
+	\vspace{5mm}
+	
+	The key property of cybernetic systems is their ability to \textbf{evolve} (improve), and, in particular, to evolve independently (that is, to self-evolve).
+	
+	This ability is due to the presence of an internal information model of the environment surrounding it (an internal subjective picture of the world around it) in the cybernetic system.
+	
+	The fundamental advantage of this information model is that its transformation (carried out with the help of a cybernetic system processor) has significantly lower labor intensity compared to the labor intensity of transforming the environment described by this information model.
+	
+	The high speed of evolution of cybernetic systems is ensured by the flexibility of the internal information model of the environment and, as a consequence, the ease of modification (transformation) of this model.	
+\end{frame}
+
+\begin{frame}{\\Evolution of cybernetic systems}
+	\topline
+	\justifying
+	
+	The environment itself can also be transformed, but \uline{transforming} its information model is much \uline{simpler} and faster, which allows:
+	\begin{textitemize}
+		\item predict the dynamics (changes) of this environment, the cause of which is not one’s own activity;
+		\item plan its transformation with its effectors;
+		\item model (anticipate) the consequences of one's actions in the external environment.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}
+	\centering
+	\Huge
+	\textbf{A system of parameters that determine the general level of intelligence (the level of self-organization) of a cybernetic system}
+\end{frame}
+
+\begin{frame}{\\Intelligence}
+	\topline
+	\justifying
+	
+	\small
+	\vspace{10mm}
+	
+	\begin{SCn}
+		
+		\scnheader{intelligence\scnsupergroupsign}
+		\scnidtf{general evolutionary level of the cybernetic system\scnsupergroupsign}
+		\scntext{note}{It is fundamentally important to emphasize that the overall level of \textit{intelligence} (the level of self-organization) of a \textit{cybernetic system} is determined not only and not so much by what capabilities it currently has, but by how quickly and thanks to what it \uline{evolves}. In other words, the main property of a \textit{cybernetic system} is the level of development of its \textbf{\textit{ability to evolve\scnsupergroupsign}}, modernizing, transforming itself (sometimes with the help of other subjects - teachers, developers) in a variety of directions and, preferably, as quickly as possible.}
+		\scntext{note}{\textit{cybernetic system} is characterized not only by a general comprehensive assessment of its current state, but also by an assessment of the \uline{speed} (rate) of increase (improvement) of the qualitative level of this state, as well as an assessment of the existing potential (capabilities, abilities) of the system to \uline{accelerate} the improvement of the qualitative level of its state.}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Intelligence Factors}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{intelligence\scnsupergroupsign}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{\textbf{current level of cybernetic system capabilities\scnsupergroupsign}}
+			
+			\scnitem{\textbf{speed of evolution of the cybernetic system\scnsupergroupsign}}
+			
+			\scnitem{\textbf{acceleration of the evolution of the cybernetic system\scnsupergroupsign}}
+			
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Current system capabilities}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{\textbf{current level of cybernetic system capabilities\scnsupergroupsign}}
+		\scnidtf{power, diversity, quality, usefulness (for a cybernetic system), and integrity of the current activity that a cybernetic system is able to perform at the current moment\scnsupergroupsign}
+		\scnidtf{volume and diversity of \textit{tasks} for which the \textit{cybernetic system} has the necessary information resources and the \textit{methods} and techniques it has mastered for managing its own \textit{effectors} and \textit{external instruments}\scnsupergroupsign}
+		\scnidtf{a set of \textit{technologies} mastered by the \textit{cybernetic system}\scnsupergroupsign}
+		\scntext{note}{\textit{the activity of the cybernetic system} should not stop, first of all, because the destructive impact of the external environment on the cybernetic system never ceases and must be counteracted.}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Current system capabilities}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{current level of cybernetic system capabilities\scnsupergroupsign}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{memory capacity of a cybernetic system\scnsupergroupsign}
+			\scnitem{functional capacity of the processor-memory of a cybernetic system\scnsupergroupsign}
+			\scnitem{cybernetic system processor performance\scnsupergroupsign}
+			\scnitem{quality of the internal information model of the environment\scnsupergroupsign}
+			\scnitem{variety of possible impacts of the cybernetic system's effectors on the external environment and on the cybernetic system's own physical shell\scnsupergroupsign}
+			\scnitem{total number and variety of types of cybernetic system sensors\scnsupergroupsign}
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Current system capabilities}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{current level of cybernetic system capabilities\scnsupergroupsign}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{diversity and effectiveness of the use of technologies possessed by the cybernetic system\scnsupergroupsign}
+			\scnitem{independence in the use of technologies possessed by the cybernetic system\scnsupergroupsign}
+			\scnitem{level of independence of a cybernetic system in the process of implementing "vital"{} activities that are important to it\scnsupergroupsign}
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Level of independence\\ of a cybernetic system}
+	\topline
+	\justifying
+	
+	\small
+	
+	\begin{SCn}
+		
+		\scnheader{the level of independence of a cybernetic system in the process of implementing "vital"{} activities that are important to it\scnsupergroupsign}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{level of independence of a cybernetic system in the process of ensuring its security\scnsupergroupsign}
+			\begin{scnindent}
+				\scnidtf{level of a cybernetic system's ability to self-preserve\scnsupergroupsign}
+			\end{scnindent}
+			
+			\scnitem{level of independence of a cybernetic system in the process of its material support (self-care)\scnsupergroupsign}
+			
+			\scnitem{level of independence of a cybernetic system in the process of implementing frequently performed activities corresponding to its specialization\scnsupergroupsign}
+			
+			\scnitem{level of independence of a cybernetic system in solving a priori unforeseen problems\scnsupergroupsign}
+			
+			\scnitem{\textbf{ability for purposeful and goal-oriented behavior\scnsupergroupsign}}
+			
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Quality of the internal\\ information model}
+	\topline
+	\justifying
+	
+	\small
+	
+	\begin{SCn}
+		
+		\scnheader{quality of the internal information model of the environment\scnsupergroupsign}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{volume of the internal information model of the environment\scnsupergroupsign}
+			\scnitem{diversity of knowledge included in the internal information model of the environment\scnsupergroupsign}
+			\scnitem{consistency and syntactic correctness of the internal information model of the environment\scnsupergroupsign}
+			\scnitem{semantic correctness of the internal information model of the environment\scnsupergroupsign}
+			\scnitem{semantic completeness of the internal information model of the environment\scnsupergroupsign}
+			\scnitem{information purity\scnsupergroupsign}
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Quality of the internal\\ information model}
+	\topline
+	\justifying
+	
+	\small
+	
+	\begin{SCn}
+		
+		\scnheader{quality of the internal information model of the environment\scnsupergroupsign}
+		\begin{scnrelfromlist}{factor parameter}	
+			\scnitem{completeness of self-description\scnsupergroupsign}
+			\scnitem{syntactic and semantic compatibility of knowledge included in the internal information model of the environment\scnsupergroupsign}
+			\scnitem{level of structuring and systematization of the internal information model of the environment using various types of metainformation\scnsupergroupsign}
+			\scnitem{level of development of linguistic means used in the internal information model of the environment to describe the structure and principles of functioning of one's own physical shell}
+			\scnitem{ability of a cybernetic system to minimize the number of entities considered necessary to perform its actions}
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{The ability for purposeful and goal-oriented behavior}
+	\topline
+	\justifying
+	
+	\small
+	
+	\begin{SCn}
+		
+		\scnheader{ability for purposeful and goal-oriented behavior\scnsupergroupsign}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{ability to set goals and plan actions\scnsupergroupsign}
+			\scnitem{ability to adequately assess one's capabilities\scnsupergroupsign}
+			\scnitem{ability of a cybernetic system to recognize (highlight) tasks (actions) that must be performed\scnsupergroupsign}
+			\scnitem{ability of a cybernetic system to intelligently combine its mandatory actions and its optional actions for the current moment}
+			\scnitem{ability of a cybernetic system to perform sufficiently high-quality forecasting of significant and, above all, dangerous situations and events in the environment for the system\scnsupergroupsign}
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{The ability for purposeful and goal-oriented behavior}
+	\topline
+	\justifying
+	
+	\small
+	
+	\begin{SCn}
+		
+		\scnheader{ability for purposeful and goal-oriented behavior\scnsupergroupsign}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{ability to recognize one's main (strategic) goals (attitudes, motives, limitations, principles) and, accordingly, to distinguish one's beneficial impacts on the environment from possible harmful impacts\scnsupergroupsign}
+			\scnitem{adequacy and correctness of goal setting\scnsupergroupsign}
+			\scnitem{adequacy and purposefulness of immediate behavior}
+			\scnitem{purposefulness\scnsupergroupsign}
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Ability to understand}
+	\topline
+	\justifying
+	
+	\small
+	
+	\begin{SCn}
+		
+		\scnheader{ability to understand\scnsupergroupsign}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{ability to understand messages from other cybernetic systems\scnsupergroupsign}
+			\begin{scnindent}
+				\begin{scnrelfromlist}{factor parameter}
+					\scnitem{ability to understand commands or requests of varying complexity received from other cybernetic systems, and in particular to evaluate the feasibility, timeliness, and quality of their execution\scnsupergroupsign}
+				\end{scnrelfromlist}
+			\end{scnindent}
+			\scnitem{ability to assess the importance and relevance of acquired information\scnsupergroupsign}
+			\scnitem{ability to understand sensory information (in particular, to detect and recognize important objects, situations, events, processes)\scnsupergroupsign}
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{The speed of evolution\\ of the cybernetic system}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{speed of evolution of the cybernetic system\scnsupergroupsign}
+		\scnidtf{evolvability\scnsupergroupsign}
+		\scnidtf{level of ability (adaptability) of a cybernetic system to evolve both with the help of external actors (teachers, developers) and independently\scnsupergroupsign}
+		\scnidtf{ability of a cybernetic system to evolve (including learning)\scnsupergroupsign}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Accelerating of the evolution\\ of the cybernetic system}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{acceleration of the evolution of the cybernetic system\scnsupergroupsign}
+		\scnidtf{level of knowledge of the laws of evolution and the resulting level of awareness, activity, and independence in carrying out the evolutionary process\scnsupergroupsign}
+		\scnidtf{ability of a cybernetic system to evolve its ability to evolve\scnsupergroupsign}
+		\scnidtf{ability of a cybernetic system to conscious, meaningful, and purposeful self-evolution\scnsupergroupsign}
+		\scntext{note}{A cybernetic system must not only be able to evolve (including being able to learn), but also be able to learn how to evolve (including learning) better --- that is, the highest form of evolutionary capabilities of a cybernetic system is the transition to the meta-level of the evolutionary process.}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\It should be distinguished}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{should be distinguished*}
+		\begin{scnhaselementset}
+			\scnitem{current level of cybernetic system capabilities\scnsupergroupsign}
+			\scnitem{evolution of the cybernetic system}
+			\begin{scnindent}
+				\scnsubset{process}
+			\end{scnindent}	
+			\scnitem{speed of evolution of the cybernetic system\scnsupergroupsign}
+			\begin{scnindent}
+				\scnidtf{ability of a cybernetic system to evolve\scnsupergroupsign}
+			\end{scnindent}
+			\scnitem{acceleration of the evolution of the cybernetic system}
+		\end{scnhaselementset}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\It should be distinguished}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	\begin{SCn}
+		
+		\scnheader{should be distinguished*}
+		\begin{scnhaselementset}
+			\scnitem{physical capabilities of a cybernetic system}
+			\scnitem{intelligence\scnsupergroupsign}
+			\begin{scnindent}
+				\scnidtf{cognitive abilities}
+			\end{scnindent}
+			\scnitem{basic intelligence\scnsupergroupsign}
+			\scnitem{intelligence of an individual cybernetic system\scnsupergroupsign}
+			\scnitem{community agent intelligence\scnsupergroupsign}
+			\scnitem{cybernetic systems community intelligence\scnsupergroupsign}
+		\end{scnhaselementset}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Physical capabilities\\ of a cybernetic system}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{physical capabilities of a cybernetic system}
+		\scnidtf{physical abilities and characteristics of the cybernetic system}
+		\scnidtf{physical capabilities of a cybernetic system in its interaction with the external environment and its own material shell --- what the system can detect (notice) and how it can physically or chemically interact --- for example, can it move, can it "hear"{} in the ultrasonic range, etc.}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Basic intelligence}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{basic intelligence\scnsupergroupsign}
+		\scnidtf{cognitive abilities that all cybernetic systems must possess, regardless of their structural type (whether they are individuals, agents, or communities)}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{current cognitive abilities (capabilities) of a cybernetic system}
+			\scnitem{ability to evolve}
+			\scnitem{level of awareness of the laws of evolution and the quality of practical use of this knowledge}
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+
+\begin{frame}{\\Basic intelligence}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		
+		\scnheader{intelligence of an individual cybernetic system\scnsupergroupsign}
+		\scnidtf{basic intelligence of an individual cybernetic system\scnsupergroupsign}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Community Agent Intelligence}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	
+	\begin{SCn}
+		
+		\scnheader{community agent intelligence\scnsupergroupsign}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{community agent base intelligence}
+			\scnitem{community agent interoperability}
+			\begin{scnindent}
+				\scnidtf{social intelligence of a community agent}
+				\scnidtf{ability to effectively exist in a social environment}
+				\begin{scnrelfromlist}{factor parameter}
+					\scnitem{current interoperability level}
+					\scnitem{ability to increase the level of interoperability}
+					\scnitem{ability to accelerate the advancement of interoperability by understanding the laws of interoperability evolution and applying them wisely}
+				\end{scnrelfromlist}
+			\end{scnindent}
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Community intelligence}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	
+	\begin{SCn}
+		
+		\scnheader{cybernetic systems community intelligence\scnsupergroupsign}
+		\scnidtf{basic intelligence of a community of cybernetic systems as an independent subject of activity}
+		\begin{scnrelfromlist}{factor parameter}
+			\scnitem{synergy of interaction between community agents\scnsupergroupsign}
+			\begin{scnindent}
+				\scnidtf{effectiveness (quality of organization) of interaction between community agents in the process of collective problem-solving (including complex ones)}
+				\begin{scnrelfromlist}{factor parameter}
+					\scnitem{current synergy level}
+					\scnitem{ability to increase synergy level}
+					\scnitem{ability to accelerate the increase of synergy levels}
+				\end{scnrelfromlist}
+			\end{scnindent}
+			\scnitem{total intellectual potential, as well as the mean and variance of the level of interoperability of all community agents}
+		\end{scnrelfromlist}
+		
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Conclusion}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	
+	\begin{textitemize}
+		\item We can talk not about the presence or absence of the property of intelligence, but about the \textbf{level of intelligence};
+		\item Of key importance is not only the current level of intelligence, but also the \textbf{ability to evolve} and the \textbf{ability to increase the ability to evolve};
+		\item \textbf{The architecture of intelligent systems} corresponds to the architecture of cybernetic systems, but we can talk about parameters that determine the quality of individual components of intelligent systems.
+	\end{textitemize}
+	
+	
+\end{frame}
