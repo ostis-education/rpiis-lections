@@ -1,0 +1,1124 @@
+\title{Lecture 9\\ Knowledge Bases for Intelligent Systems}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{\\Lecture Contents}
+	\topline
+	\justifying
+	
+	Knowledge base. Requirements for knowledge bases. Quality criteria. Types of knowledge and models of their representation. Crisp and fuzzy sets and knowledge. Meaning. Semantic representation of knowledge. Subject domain. Ontology. Propositions and formal theories.
+	
+\end{frame}
+
+\begin{frame}{Internal information\\ model of the environment}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	\small
+	
+	\begin{SCn}
+		\scnheader{internal information model of the environment}
+		\scnidtf{part of the state of the \textit{memory of a cybernetic system}, which is used by the \textit{processor} and the \textit{sensory-effector complex} to organize the \textit{activity} (behavior, functioning) of the \textit{cybernetic system} in the process of its interaction with its \textit{external environment}, with its \textit{physical shell} and with its internal information environment (that is, the \textit{internal information model of the environment})}
+		\scnidtf{subjective picture of the world of a cybernetic system}
+		\scnsuperset{knowledge base}
+		\scntext{note}{The presence of an internal information model of the environment in a cybernetic system means that the cybernetic system "lives"{} simultaneously in two worlds --- in the external real world and in the internal world of its information model (reflection) of this external real world.}
+	\end{SCn}
+	
+\end{frame}
+
+
+\begin{frame}{\\Knowledge Base}
+	\topline
+	\justifying
+	
+	\vspace{5mm}
+	\small
+	
+	\begin{SCn}
+		\scnheader{knowledge base}
+		\scnidtf{semantically structured internal information model of the environment of an intelligent cybernetic system}
+		\scnidtf{a set of knowledge stored in the memory of an intelligent computer system and sufficient for the said system to satisfy the relevant requirements imposed on it (in particular, for it to have the appropriate level of intelligence)}
+		\scnidtf{a systematized set of knowledge stored in the memory 		of an intelligent computer system and sufficient to ensure 		the purposeful (appropriate, adequate) functioning (behavior) of this system both in its external environment and in its internal environment (in its own knowledge base)}
+		\scnidtf{the totality of knowledge possessed by a cybernetic system at a given moment}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Knowledge}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{knowledge}
+		\scnidtf{syntactically correct (for the corresponding language) and semantically holistic informational construct}
+		\scnrelfrom{coverage}{knowledge type}
+		\begin{scnindent}
+			\scnidtf{multitude of all possible kinds of knowledge}
+		\end{scnindent}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Types of knowledge}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{knowledge type}
+		\scnhaselement{specification}
+		\begin{scnindent}
+			\scnidtf{description of the given entity}
+		\end{scnindent}
+		\scnhaselement{metaknowledge}
+		\begin{scnindent}
+			\scnidtf{specification of the knowledge itself}
+		\end{scnindent}
+		\scnhaselement{task}
+		\begin{scnindent}
+			\scnidtf{action specification}
+		\end{scnindent}
+		\scnhaselement{situation}
+		\scnhaselement{event}
+		\scnhaselement{process}
+		\scnhaselement{plan}
+		\scnhaselement{protocol}
+		\scnhaselement{method}
+		\begin{scnindent}
+			\scnsuperset{algorithm}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Types of knowledge}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{knowledge type}
+		\scnhaselement{comparison}
+		\scnhaselement{statement}
+		\scnhaselement{formal theory}
+		\scnhaselement{subject domain}
+		\scnhaselement{subject domain and ontology}
+		\scnhaselement{technology}
+		\scnhaselement{knowledge base}
+	\end{SCn}
+	
+	Even a small list of types of knowledge shows to the enormous diversity of types of knowledge.
+\end{frame}
+
+\begin{frame}{\\Knowledge}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{knowledge}
+		\begin{scnrelfromset}{partition}
+			\scnitem{declarative knowledge}
+			\begin{scnindent}
+				\scnidtf{knowledge that has only denotational semantics in the form of a semantic specification of the system of concepts used}
+			\end{scnindent}
+			\scnitem{procedural knowledge}
+			\begin{scnindent}
+				\scnidtf{knowledge that has not only denotational semantics, but
+					and operational semantics in the form of a family of specifications of software components (agents) that interpret the specified knowledge in order to solve a certain problem}
+			\end{scnindent}
+		\end{scnrelfromset}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Information structure}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{information construct}
+		\begin{scnrelfromset}{partition}
+			\scnitem{discrete information construct}
+			\begin{scnindent}
+				\scnsuperset{symbolic information construct}
+				\scntext{note}{In modern computer systems, we always deal with \textit{discrete information constructs}.}
+			\end{scnindent}
+			\scnitem{continuous information construct}
+			\begin{scnindent}
+				\scnidtf{signal}
+			\end{scnindent}
+		\end{scnrelfromset}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Atomic fragment\\ of an information structure}
+	\topline
+	\justifying
+	\small
+	
+	\begin{SCn}
+		\scnheader{information structure}
+		\scnidtf{information}
+		\scntext{note}{In general, the information structure represents
+			is a complex hierarchical structure, each level of the hierarchy of which
+			corresponds to a certain class of information structures.}
+		\scnsuperset{syntactically elementary fragment of an information structure}
+		\begin{scnindent}
+			\scnidtf{atomic fragment of an information structure}
+			\scnidtf{information design element}
+			\scntext{note}{Examples of such elementary fragments of information
+				the constructions are letters}
+			\scnsuperset{letter}
+		\end{scnindent}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Simple sign\\Expression}
+	\topline
+	\justifying
+	\small
+	
+	\begin{SCn}
+		\scnheader{simple sign}
+		\scnidtf{semantically elementary fragment of an informational construct}
+		\scnsubset{sign}
+		
+		\scnheader{expression}
+		\scnidtf{complex (non-simple) sign}
+		\scnidtf{a sign that is simultaneously some knowledge of the designated
+			entities (specification of this entity)}
+		\scnidtf{a sign constructed as an expression of the form "the one that..."{}}
+		\scnidtf{a sign that contains other signs}
+		\scnsubset{sign}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Texts}
+	\topline
+	\justifying
+	\scriptsize
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{simple text}
+		\scnidtf{minimal syntactically complete and correct (correct)
+			information structure that includes:
+			\begin{textitemize}
+				\item is a sign of some described connection;
+				\item minimum specification of the specified communication sign (indication
+				the relationship to which this connection belongs);
+				\item indication \uline{of all} components of the described connection (signs of all entities connected by this connection, and/or all signs connected by this connection);
+				\item if the described relationship is not binary, then the relationships with it
+				components may require explicit representation of the signs of these connections with an additional indication of the role of these components.
+		\end{textitemize}}
+		\scnsubset{text}
+		
+		\scnheader{complex text}
+		\scnidtf{information construct resulting from a connection
+			a few simple texts}
+		\scnsubset{text}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Simple knowledge\\Complex knowledge}
+	\topline
+	\justifying
+	\small
+	
+	\begin{SCn}
+		\scnheader{simple knowledge}
+		\scnidtf{minimal semantic holistic information construct}
+		\scnidtf{knowledge that does not include other knowledge}
+		\scnsubset{knowledge}
+		
+		\scnheader{complex knowledge}
+		\scnidtf{information construct resulting from a connection of a few more simple knowledge}
+		\scnidtf{knowledge that includes other knowledge}
+		\scnsubset{knowledge}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Internal and external\\ presentation of information}
+	\topline
+	\justifying
+	\small
+	
+	\begin{SCn}
+		\scnheader{to be distinguished*}
+		\begin{scnhaselementset}
+			\scnitem{internal representation of information}
+			\begin{scnindent}
+				\scnidtf{coding of information in the memory of a computer system}
+			\end{scnindent}
+			\scnitem{external representation of information}
+			\begin{scnindent}
+				\scnidtf{ensuring unambiguous interpretation (understanding, treatment) of this information
+					different users and different computer systems}
+			\end{scnindent}
+		\end{scnhaselementset}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Sign}
+	\topline
+	\justifying
+	\small
+	
+	\begin{SCn}
+		\scnheader{sign}
+		\scnidtf{a fragment of an informational construct that has the property of \uline{designating} a certain entity (object), which, along with other entities, is described by the specified informational construct}
+		\scntext{note}{\uline{Form} of representation of signs to a certain degree
+			is conventional and is the result of an agreement between speakers of the relevant language. The sign can be represented, for example:
+			\begin{textitemize}
+				\item in the form of a fragment of a speech message (sequence
+				phonemes);
+				\item as a string of signs (sequence of letters) in
+				given alphabet;
+				\item in the form of a hieroglyph, pictogram;
+				\item in the form of a gesture.
+		\end{textitemize}}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{\\Typology of signs}
+	\topline
+	\justifying
+	\small
+	
+	\vspace{10mm}
+	Signs used in different languages are characterized by:
+	\begin{textitemize}
+		\item syntactic structure, by coincidence (isomorphism)
+		which for different signs their synonymy is assumed;
+		\item denotational semantics, i.e. the essence that
+		is designated by the corresponding sign;
+		\item type (class) of the designated entity, which can
+		be:
+		\begin{textitemize}
+			\item material (physical) element (point)
+			an abstract space, a set, which can be a connection, a class, or a structure (information construct)
+			\item real and fictional entity;
+			\item constant (specific) and variable
+			(arbitrary) entity;
+			\item permanently existing and temporarily existing
+			entity (past, present, future);
+		\end{textitemize}
+		\item ...
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Typology of signs}
+	\topline
+	\justifying
+	\small
+	
+	\vspace{10mm}
+	Signs used in different languages are characterized by:
+	\begin{textitemize}
+		\item ...
+		\item the set of those connections that connect the entity,
+		denoted by this sign with other entities, and also if this sign
+		denotes a certain connection, a set of entities that are connected by this connection,
+		i.e. entities that are components of this connection;
+		\item current status of the sign itself in the cybernetic memory
+		systems, which can be:
+		\begin{textitemize}
+			\item logically remote sign;
+			\item this sign;
+			\item proposed (possibly future) sign.
+		\end{textitemize}
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\The structure of the sign --- Frege's triangle}
+	\topline
+	\justifying
+	
+	\textbf{I. Thing}, object, phenomenon of reality, etc. Another name is --- \textbf{denotation}
+	
+	\vspace{0.5em}
+	
+	\textbf{II. Sign}: in linguistics, for example, a phonetic word or a written word in mathematics --- a mathematical symbol; another name, adopted especially in philosophy and mathematical logic, --- \textbf{name}.
+	
+	\vspace{0.5em}
+	
+	\textbf{III. Concept} of an object or thing. Other names: in linguistics --- significator, designatum; in mathematics --- the meaning of a name, or the concept of a denotate.
+	
+\end{frame}
+
+\begin{frame}{\\Frege triangle}
+	\topline
+	\justifying
+	\vspace{15mm}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{part2/images/is_knowledge_bases/frege_en.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Denotation}
+	\topline
+	\justifying
+	\small
+	
+	\begin{SCn}
+		\scnheader{denotate*}
+		\scnidtf{denotate of the given sign*}
+		\scnidtf{object denoted by the given sign*}
+		\scnidtf{denotational semantics of a given sign*}
+		\scnidtf{meaning of the given sign*}
+		\scnidtf{A binary oriented relation, each pair of which
+			connects:
+			\begin{textitemize}
+				\item some sign presented in one form or another in the text
+				the language being studied;
+				\item \uline{with the sign} of the entity that is designated by the specified
+				above is familiar within the framework of the metalanguage used.
+		\end{textitemize}}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Denotation}
+	\topline
+	\justifying
+	\small
+	
+	This relation is used when it is necessary to describe the denotational semantics of another language using one language.
+	
+	\bigskip
+	
+	In fact, we are talking about the translation of a given sign, which is part of a certain text under consideration, belonging to a certain language under study (object language), into a certain metalanguage, the denotational semantics of which is considered to be known to us a priori.
+	
+	\bigskip
+	
+	The specified translation is a connection between a given sign and a synonymous sign that is part of a text belonging to the specified metalanguage.
+	
+\end{frame}
+
+\begin{frame}{\\The concept of language}
+	\topline
+	\justifying
+	
+	Language is a set of texts and is defined by the four
+	\[
+	L = \{ A, S_n, S_m, P \},
+	\]
+	Where
+	
+	A --- alphabet (set of symbols),
+	
+	$S_n$ --- language syntax,
+	
+	$S_m$ --- semantics of the language,
+	
+	P --- pragmatics of language.
+	
+\end{frame}
+
+\begin{frame}{\\Languages}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{language}
+		\scnsuperset{universal language}
+		\scnsuperset{natural language}
+		\scnsuperset{artificial language}
+		\begin{scnindent}
+			\scnsuperset{language of sense representation}
+		\end{scnindent}
+		\scnsuperset{specialized language}
+		\scnsuperset{formal language}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{\\Knowledge Engineering}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item \textbf{Knowledge Extraction}
+		\begin{textitemize}
+			\item Communicative methods
+			\item Textual methods
+		\end{textitemize}
+		\item \textbf{Knowledge representation} (recording knowledge in a language understandable to an intelligent system for subsequent use in solving problems)
+		
+		Verification of Knowledge
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Knowledge Representation and Extraction}
+	\topline
+	\justifying
+	
+	\textbf{Knowledge Extraction}:
+	\begin{textitemize}
+		\item Where can I find knowledge on the problem?
+		\item On what basis did the person do exactly this?
+		\item Main methods: observation, conversation, book analysis.
+	\end{textitemize}	
+	
+	\textbf{Knowledge Representation}:
+	\begin{textitemize}
+		\item How do people represent knowledge?
+		\item Is there a universal way of representing knowledge?
+		\item How to represent knowledge to solve this problem?
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Knowledge Extraction Methods}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Communicative methods
+		\begin{textitemize}
+			\item Active (brainstorming, interviews, questionnaires, etc.);
+			\item Passive (observations, lectures).
+		\end{textitemize}
+		\item Textual methods (literature analysis, document analysis);
+		\item Automated methods of knowledge extraction.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Knowledge Representation Requirements}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item \textbf{Visibility} and simplicity of knowledge presentation;
+		\item \textbf{Convenience of knowledge representation} for the operation of an intelligent system (ease of use or processing);
+		\item \textbf{Versatility}: the ability to represent a wide variety of knowledge;
+		\item \textbf{Expandability} of the knowledge base, the ability to integrate different types of knowledge and entire knowledge bases.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Knowledge Representation Model}
+	\topline
+	\justifying
+	
+	\textbf{Knowledge representation model} --- a formalism designed to describe static and dynamic properties of subject domains (an agreement on how to describe knowledge).
+	
+	\vspace{1em}
+	
+	Classification of models:
+	\begin{textitemize}
+		\item Universal knowledge representation models
+		\item Specialized knowledge representation models.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Basic models of knowledge representation}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Frames
+		\item Formal logical models
+		\item Production models
+		\item Semantic networks
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Frames}
+	\topline
+	\justifying
+	
+	\textbf{Frame} --- an abstract pattern for representing a certain stereotype of perception.
+	
+	A frame has a set of properties (slots).
+	
+	The term was proposed by Marvin Minsky in 1979.
+	
+	The initial application is recognition of spatial scenes based on key features.
+	
+\end{frame}
+
+\begin{frame}{\\Frames: classification}
+	\topline
+	\justifying
+	
+	Frame classification:
+	\begin{textitemize}
+		\item Pattern frames (prototypes);
+		\item Instance frames;
+	\end{textitemize}
+	
+	\textbf{Frame} --- a certain structure for describing knowledge, which, as it is filled with properties, turns into a description of a fact, event, or situation.
+	
+	During the inference process in the frame model, a prototype is first selected and then refined in relation to the image.
+	
+\end{frame}
+
+\begin{frame}{\\Frame example}
+	\topline
+	\justifying
+	
+	Situation:
+	Student Ivanov received a book by A. Ya. Arkhangelsky, "100 Delphi Components"{}, from the library of the Tolstoy State Pedagogical University in Tula.
+	
+	\textbf{Frame} RECEIVING
+	\begin{textitemize}
+		\item OBJECT: (BOOK (Author, Title));
+		\item AGENT: (STUDENT(LastName));
+		\item PLACE: (LIBRARY(Name, Location)).
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Frame Tools}
+	\topline
+	\justifying
+	\vspace{12mm}
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]{part2/images/is_knowledge_bases/frame.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Frames: evaluation}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\textbf{Advantages}:
+	\begin{textitemize}
+		\item Integration of knowledge (declarative and procedural)
+		\item Compliance with the principles of human knowledge storage
+		\item Visibility, flexibility, homogeneity
+	\end{textitemize}
+	
+	\textbf{Disadvantages}:
+	\begin{textitemize}
+		\item Limited expressiveness
+		\item Scalability Difficulty
+		\item Weak inference mechanisms
+		\item Poor handling of uncertainty and dynamics
+		\item Lack of standards and ambiguity in modeling
+		\item Difficulties in "borderline" situations (between frames)
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Formal Logical Models}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	Types of logical models:
+	\begin{textitemize}
+		\item Propositional Calculus
+		\item Predicate Calculus
+		\item Fuzzy logic
+	\end{textitemize}
+	
+	It is based on a formal theory (system):
+	\begin{textitemize}
+		\item T --- set of terms, alphabet of the system
+		\item P --- syntactic rules for constructing expressions from basic terms
+		\item A --- axioms, a priori true expressions
+		\item R --- a set of inference rules that allow us to obtain from some true statements others
+	\end{textitemize}
+	
+	They are practically not used in industrial developments.
+	
+\end{frame}
+
+\begin{frame}{\\Propositional Calculus}
+	\topline
+	\justifying
+	
+	А \textbf{statement} is an indivisible, grammatically correct sentence that can be signized as true or false.
+	
+	\vspace{1em}
+	
+	А \textbf{complex statement} is a combination of simple statements using logical connectives.
+	
+	\vspace{1em}
+	
+	Example:
+	\begin{textitemize}
+		\item A --- The Moon is the Earth's satellite
+		\item B --- The Sun is the Earth's satellite
+		\item A \& B --- false
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Predicate Calculus}
+	\topline
+	\justifying
+	
+	\textbf{Predicate calculus} allows one to model a subject domain and test various hypotheses regarding this subject domain using the developed predicate system.
+	
+	\vspace{1em}
+	
+	\textbf{Predicate} --- a function on the set M=M1*M2*…*Mn, taking the value true or false.
+	
+	\vspace{1em}
+	
+	Example:
+	\begin{textitemize}
+		\item If a philosopher wins a race against someone, that person will admire him.
+		\item (any X) (any Y) (PHILOSOPHER(X) \textasciicircum BEATS(X, Y) -> ADMIRE(Y, X)).
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Logical Models: An Example}
+	\topline
+	\justifying
+	
+	\[
+	\forall x \forall a \forall b \forall c \Bigl(
+	RT(x) \land K(x,a) \land K(x,b) \land H(x,c)
+	\rightarrow
+	Pyth\bigl(a,b,c\bigr)
+	\Bigr).
+	\]
+	
+	\[
+	\forall a \forall b \forall c \Bigl(
+	Pyth(a,b,c) \leftrightarrow
+	\exists u \exists v \exists w \bigl(
+	S(a,u) \land S(b,v) \land S(c,w) \land Plus(u,v,w)
+	\bigr)
+	\Bigr).
+	\]
+	
+\end{frame}
+
+\begin{frame}{\\Logical Models: An Example}
+	\topline
+	\justifying
+	
+	\begin{flalign*}
+		RT(x) &:\; x \text{ --- right triangle.} \\
+		K(x, a) &:\; a \text{ --- leg of triangle } x. \\
+		H(x, c) &:\; c \text{ --- hypotenuse of triangle } x. \\
+		S(a, u) &:\; u \text{ --- the square of the length of the segment} a. \\
+		Plus(u, v, w) &:\; w \text{ is the sum of } u \text{ and } v. \\
+		Pyth(a, b, c) &:\; \text{the square of the hypotenuse is equal to} \\
+		&\text{ sum of the squares of the legs for } a, b, c.
+	\end{flalign*}
+	
+\end{frame}
+
+\begin{frame}{\\Formal Logical Models: Evaluation}
+	\topline
+	\justifying
+	
+	\textbf{Advantages}:
+	\begin{textitemize}
+		\item High level of formalization, which ensures the accuracy of the result
+		\item Consistency
+		\item A unified way of describing knowledge about a subject domain and methods for solving problems in the subject domain.
+	\end{textitemize}
+	
+	\textbf{Disadvantages}:
+	\begin{textitemize}
+		\item Lack of clarity in knowledge representation
+		\item Very strict restrictions imposed by the knowledge representation structure
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Production Models}
+	\topline
+	\justifying
+	
+	\textbf{A production model} is a set of productions --- rules of the form "If"{} --- "Then"{};
+	
+	Formally, the product is described as:
+	\begin{textitemize}
+		\item W --- scope of application of the product.
+		\item U --- precondition --- (truth of production).
+		\item P --- conditions of use of the product.
+		\item A->B --- core of the production, rule of the type If …, then … .
+		\item C --- production postcondition, actions after processing the product.
+	\end{textitemize}
+	
+	\textbf{Production system} = fact base + production + interpreter.
+	
+\end{frame}
+
+\begin{frame}{\\Production Models: Example}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{center}
+		\includegraphics[width=\textwidth]{part2/images/is_knowledge_bases/product_en.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Production Models: Evaluation}
+	\topline
+	\justifying
+	
+	\textbf{Advantages}:
+	\begin{textitemize}
+		\item Simplicity and clarity of rules
+		\item Ease of replenishing the knowledge base
+		\item Ease of output in the knowledge base
+	\end{textitemize}
+	
+	\textbf{Disadvantages}:
+	\begin{textitemize}
+		\item Inconsistency with human knowledge representation
+		\item It is difficult to manage the output with large KBs
+		\item Complexity of KB consistency assessment
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Semantic networks}
+	\topline
+	\justifying
+	
+	\textbf{Semantic network (knowledge graph)} --- a directed graph whose vertices are concepts, and arcs are the relationships between them.
+	
+	\vspace{1em}
+	
+	$\bm{S = (O, R)}$
+	
+	\vspace{1em}
+	
+	The most general way of representing knowledge
+	
+	\vspace{1em}
+	
+\end{frame}
+
+\begin{frame}{\\Classification of Semantic Networks}
+	\topline
+	\justifying
+	
+	By number of relationship types:
+	\begin{textitemize}
+		\item homogeneous
+		\item heterogeneous
+	\end{textitemize}
+	
+	By relationship type:
+	\begin{textitemize}
+		\item binary
+		\item N-ary
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Knowledge Graphs: Examples}
+	\topline
+	\justifying
+	\vspace{10mm}
+	\begin{center}
+		\includegraphics[width=\textwidth]{part2/images/is_knowledge_bases/kg.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Knowledge Graphs: Examples}
+	\topline
+	\justifying
+	
+	\begin{columns}
+		\begin{column}{0.49\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{part2/images/is_knowledge_bases/kolas.png}
+			
+			\textbf{Google Knowledge Graph}
+		\end{column}
+		\begin{column}{0.49\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{part2/images/is_knowledge_bases/kupala.png}
+			
+			\textbf{WikiData}
+		\end{column}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}{\\Semantic networks: assessment}
+	\topline
+	\justifying
+	
+	\textbf{Advantages}:
+	\begin{textitemize}
+		\item Clarity, versatility, ease of understanding
+		\item Correspond to the human knowledge representation
+	\end{textitemize}
+	
+	\textbf{Disadvantages}:
+	\begin{textitemize}
+		\item The complexity of organizing inference processes on a semantic network
+		\item Mixing of different knowledge groups
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{}
+	
+	\centering
+	
+	\Huge
+	
+	\textbf{Ontologies}
+	
+\end{frame}
+
+\begin{frame}{\\Why ontologies are needed}
+	\topline
+	\justifying
+	\vspace{15mm}
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{part2/images/is_knowledge_bases/ontocat.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{Ambiguity of correspondence\\ sign --- concept --- denotation}
+	\topline
+	\justifying
+	
+	
+	\Large
+	
+	\begin{textitemize}
+		\item Homonymy
+		\item Synonymy
+		\item Polysemy
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Homonymy}
+	\topline
+	\justifying
+	
+	\vspace{15mm}
+	There are several signs that are identical in form, each of which has its own meaning, and these meanings are completely unrelated to each other, just like the corresponding denotates.
+	
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{part2/images/is_knowledge_bases/jaguar.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Polysemy}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	The presence of different meanings for the same symbol. This term is typically used in situations where these different meanings are somehow related (as opposed to homonymy).
+	
+	\vspace{10mm}
+	\textbf{Example}: definitions of the concept for the phrase "Major repairs"{},
+	encountered at one of the domestic enterprises:
+	\begin{textitemize}
+		\item work on technical maintenance and repair of equipment,
+		performed during a major shutdown, i.e. a stop of production
+		lines lasting more than 24 hours
+		\item repairs performed to restore serviceability and complete
+		or close to full restoration of the product's resource with replacement
+		or restoration of any of its parts, including the basic ones
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Synonymy}
+	\topline
+	\justifying
+	
+	Indicates the equivalence, but not the identity, of the signs.
+	
+	\vspace{1em}
+	
+	Equivalence means:
+	\begin{textitemize}
+		\item or correlation with the same denotation (subject);
+		\item or correlation with the same concept, or more precisely with that part of it that contains signizing information.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Synonymy: example}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{part2/images/is_knowledge_bases/synonymy_en.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Resolving the ambiguity problem}
+	\topline
+	\justifying
+	
+	To reduce the ambiguity of the correspondence between sign --- concept --- denotation presented above, a "common language"{} is needed, which includes:
+	\begin{textitemize}
+		\item A strictly defined dictionary of lexical units (signs),
+		\item A consistent understanding of which concepts are denoted by given lexical units (signs).
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Intgrated Information Space}
+	\topline
+	\vspace{15mm}
+	
+	\begin{columns}[T]
+		\begin{column}{0.33\textwidth}
+			\justifying
+			In addition to the need for a common language, organizations are also experiencing the need to integrate information and create a unified information space. The necessary knowledge may reside in various locations.
+		\end{column}
+		
+		\begin{column}{0.65\textwidth}
+			\centering
+			\includegraphics[width=\textwidth]{part2/images/is_knowledge_bases/datasources_en.png}
+		\end{column}
+	\end{columns}
+	
+\end{frame}
+
+\begin{frame}{\\Digital Twins of Data}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[width=\textwidth]{part2/images/is_knowledge_bases/dt.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Ontology}
+	\topline
+	\justifying
+	
+	Ontology (from the ancient Greek ontos --- being, logos --- teaching, concept) --- a term defining the teaching about being, existence, in contrast to epistemology --- the teaching about knowledge.
+	
+	\vspace{1em}
+	
+	In the philosophical sense (and this term is borrowed from philosophy), ontology is a certain system of categories that are a consequence of certain views of the world.
+	
+\end{frame}
+
+\begin{frame}{\\History of the concept}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	Currently, the term “ontology” has moved into the field of information technology, where it has been used by a number of research communities in artificial intelligence, first in the field of knowledge engineering, in natural language processing, and then in knowledge representation [Gruber, 1993; Uschold, Jasper, 1999].
+	
+	\vspace{0.5em}
+	
+	In the late 1990s and early 2000s, the concept of ontology also became widely used in domains such as information mining, web retrieval, and knowledge management [Fensel, 2001; Gomez-Perez et al, 2006]
+	
+\end{frame}
+
+\begin{frame}{\\History of the concept (continued)}
+	\topline
+	\justifying
+	
+	Later, ontologies began to be considered as a key element in the Semantic Web project -- a new stage in the development of the WWW (Word Wide Web).
+	
+	\vspace{1em}
+	
+	If the existing Web is a huge set of documents that are linked by cross-references, then the emerging Semantic Web should add to the existing network a set of ontologies and meta-descriptions of knowledge contained in Web documents (including standards and software tools) [BernersLee et al, 2001; Domingue et al, 2011].
+	
+\end{frame}
+
+\begin{frame}{\\The concept of ontology}
+	\topline
+	\justifying
+	
+	\vspace{2em}
+	In general, an ontology consists of a hierarchy of concepts in a subject domain, the connections between them, and the laws that operate within the framework of this model.
+	
+	\vspace{0.5em}
+	An ontology is constructed as a network consisting of concepts, the relationships between them, and descriptions of the properties of these concepts. Relationships can be of various types (e.g., "is," "consists of," "is an executor," etc.).
+	
+	\vspace{0.5em}
+	To fulfill the role of a common language, an ontology includes a dictionary (a set of words/lexical units) and a set of definitions of concepts (formal, described, for example, in some logical language, or informal), defining the meaning of the elements of the dictionary.
+	
+	\vspace{0.5em}
+	The connections between vocabulary (signs) and semantics limit the number of possible interpretations of signs.
+	
+\end{frame}
+
+\begin{frame}{\\More strictly}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item \textbf{Ontology} is an explicit formal specification of the conceptualization of some subject domain, shared by some community of agents
+		\begin{textitemize}
+			\item In other words, a formal (strict) description of a system of concepts of a certain subject domain, agreed upon within a certain community
+			\item The purpose of developing ontologies is to solve problems such as synonymy, homonymy, and polysemy
+		\end{textitemize}
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Even more strict:\\formal model of ontology}
+	\topline
+	\justifying
+	
+	O = < C, P, R, A >,
+	
+	\vspace{1em}
+	
+	Where:
+	\begin{textitemize}
+		\item C --- a finite set of concepts (entity classes) of a subject domain;
+		\item P --- a finite set of properties of these concepts (classes);
+		\item R --- a finite set of relationships between concepts (classes);
+		\item A --- a set of axioms, statements constructed from these concepts, their properties and connections between them.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Example of disambiguation}
+	\topline
+	\justifying
+	
+	After establishing the connection between the word "Jaguar"{} and the intensional definition "a predatory animal of the cat family"{}, we exclude cars and drinks from the set of possible interpretations of this word.
+	
+	\vspace{1em}
+	As a result, ontologies allow us to correctly correlate the signs used by people and computer systems with concepts (semantic models) and designated objects of the real world.
+	
+\end{frame}
+
+\begin{frame}{Example of integration of heterogeneous information sources}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{part2/images/is_knowledge_bases/ontodocs_en.png}
+	\end{center}
+	
+\end{frame}
