@@ -597,6 +597,7 @@
 \begin{frame}{\\Фреймы: оценка}
 	\topline
 	\justifying
+	
 	\vspace{10mm}
 	\textbf{Достоинства}:
 	\begin{textitemize}
@@ -1121,6 +1122,187 @@
 	\begin{center}
 		\includegraphics[width=0.9\textwidth]{part2/images/is_knowledge_bases/ontodocs.png}
 	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Классификация онтологий}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{part2/images/is_knowledge_bases/onto_class.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Прикладная онтология}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{textitemize}
+		\item Назначение --- описать концептуальную модель конкретной задачи или приложения
+		\item Содержат необходимые в конкретном приложении понятия, заимствованные из одной или нескольких онтологий предметных областей, а также понятия, тесно связанные с решаемыми задачами
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Онтология предметной области}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{textitemize}
+		\item онтология домена (от англ. Domain) или доменная онтология
+		\item Область охвата таких онтологий ограничена одной предметной областью (доменом), например, авиация, медицина, культура, дистанционное обучение, организация.
+		\item Онтология предметной области обобщает понятия, использующиеся в некоторых задачах домена, абстрагируясь от самих задач (так, онтология автомобилей независима от любых особенностей конкретных марок машин)
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Онтология предметной области\\Примеры}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item SNOMED CT (Systematized Nomenclature of Medicine --- Clinical Terms --- систематизированная номенклатура медицины --- клиническая терминология)
+		\item UMLS (Unified Medical Language System --- система унифицированного медицинского языка)
+		\item генная онтология (gene ontology, http://geneontology.org/)
+		\item онтология исследовательской деятельности в области семантического веба --- SWRC (Semantic Web Research Community) ontology
+		\item онтологии организации (enterprise ontologies), которые включают в себя понятия, характерные для любой организации --- онтология предприятия Учхолда, Кинга
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Онтология верхнего уровня}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item назначение --- в создании единой «правильной» онтологии, фиксирующей знания, общие для нескольких предметных областей, и в многократном использовании данной онтологии
+		\item крупные онтологии верхнего уровня: Cyc, DOLCE, SUMO, онтология Джона Совы (J. Sowa) и др.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Онтология верхнего уровня\\Пример: DOLCE}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{center}
+		\includegraphics[width=0.85\textwidth]{part2/images/is_knowledge_bases/dolce.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Онтология представления}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item Цель создания --- описать область представления знаний, создать язык для спецификации других онтологий более низких уровней.
+		\item Пример: описание понятий языка OWL средствами RDF/RDFS
+	\end{textitemize}
+	
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{part2/images/is_knowledge_bases/onto_top.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{Классификация онтологий\\ по степени формальности}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{part2/images/is_knowledge_bases/onto_formal.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Контролируемый словарь}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item конечный список терминов
+		\item простейшим примером является каталог на основе идентификаторов
+		\item каталоги представляют точную (не многозначную) интерпретацию терминов
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Глоссарий}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item список терминов с их значениями
+		\item значения описываются в виде комментариев (определений) на естественном языке. Это дает больше информации, т.к. люди могут прочесть такой комментарий (определение) и понять смысл термина
+		\item интерпретации терминов могут быть многозначными
+		\item глоссарии непригодны для автоматической обработки программными агентами
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Тезаурусы}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item несут дополнительную семантику, определяя связи между терминами
+		\item отношения, свойственные для тезаурусов: синонимия, иерархическое отношение и ассоциация
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Иерархии терминов\\ (неформальные таксономии)}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item определяли термины через операции обобщения и уточнения
+		\item В таких иерархиях может встретиться ситуация, в которой экземпляр класса-потомка не является экземпляром класса-предка.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Формальные таксономии}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item включает точное определение отношения ПОДКЛАСС-КЛАСС (обозначаемого как isA или AKO --- A Kind Of)
+		\item В таких системах строго соблюдается транзитивность отношения ПОДКЛАСС-КЛАСС: если A является подклассом класса B, то каждый подкласс класса A также является подклассом класса B.
+		\item Строгая иерархия классов необходима при использовании наследования для процедуры логического вывода
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Онтологии описания отношения\\ЭКЗЕМПЛЯР-КЛАСС}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item обозначается как isInstanceOf
+		\item некоторые классификации включают только имена классов, другие содержат на нижнем уровне экземпляры
+		\item для отношения ЭКЗЕМПЛЯР-КЛАСС выполняется так называемая «наследуемость»: если A является подклассом класса B, то каждый экземпляр класса A также является экземпляром класса B
+	\end{textitemize}
 	
 \end{frame}
 

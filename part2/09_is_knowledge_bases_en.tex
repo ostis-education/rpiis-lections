@@ -1122,3 +1122,183 @@
 	\end{center}
 	
 \end{frame}
+
+\begin{frame}{\\Ontology Classification}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{center}
+		\includegraphics[width=0.9\textwidth]{part2/images/is_knowledge_bases/onto_class_en.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Applied ontology}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{textitemize}
+		\item Purpose --- to describe a conceptual model of a specific problem or application
+		\item Contain concepts necessary for a specific application, borrowed from one or more domain ontologies, as well as concepts closely related to the tasks being solved
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Subject Domain Ontology}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{textitemize}
+		\item The scope of such ontologies is limited to one subject domain, for example, aviation, medicine, culture, distance learning, organization.
+		\item The ontology of a subject domain generalizes the concepts used in some tasks of the domain, abstracting from the tasks themselves (for example, the ontology of automobiles is independent of any features of specific brands of cars)
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Ontology of the subject domain\\Examples}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item SNOMED CT (Systematized Nomenclature of Medicine --- Clinical Terms --- systematized nomenclature medicine --- clinical terminology )
+		\item UMLS (Unified Medical Language System)
+		\item gene ontology (gene ontology, http://geneontology.org/)
+		\item ontology of research activities in Semantic Web --- SWRC (Semantic Web Research Community)
+		\item enterprise ontologies, which include concepts characteristic of any organization --- Uchhold, King's enterprise ontology
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Top-Level Ontology}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item purpose --- to create a single "correct"{} ontology that captures knowledge common to several subject domains, and to reuse this ontology
+		\item large top-level ontologies: Cyc, DOLCE, SUMO, the ontology of John Sowa, etc.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Top-Level Ontology\\Example: DOLCE}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{center}
+		\includegraphics[width=0.85\textwidth]{part2/images/is_knowledge_bases/dolce.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Representation Ontology}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item The purpose of creation is to describe the domain of knowledge representation, to create a language for the specification of other ontologies of lower levels.
+		\item Example: Description of OWL language concepts using RDF/RDFS
+	\end{textitemize}
+	
+	\begin{center}
+		\includegraphics[width=0.6\textwidth]{part2/images/is_knowledge_bases/onto_top.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{Classification of ontologies\\ by degree of formality}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{center}
+		\includegraphics[width=0.7\textwidth]{part2/images/is_knowledge_bases/onto_formal_en.png}
+	\end{center}
+	
+\end{frame}
+
+\begin{frame}{\\Controlled dictionary}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item final list of terms
+		\item simplest example is an ID-based catalog
+		\item catalogs represent a precise (not ambiguous) interpretation of terms
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Glossary}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item list of terms with their meanings
+		Item values are described as comments (definitions) in natural language. This provides more information, as people can read such a comment (definition) and understand the meaning of the term.
+		\item interpretations of terms can be ambiguous
+		\item glossaries are not suitable for automatic processing by software agents
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Thesauri}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item additional semantics, defining relationships between terms
+		\item relations characteristic of thesauri: synonymy, hierarchical relation, and association
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Term Hierarchies\\ (Informal Taxonomies)}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item defined terms through the operations of generalization and clarification
+		\item In such hierarchies, a situation may arise in which an instance of a descendant class is not an instance of an ancestor class.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{\\Formal taxonomies}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item includes a precise definition of the SUBCLASS-CLASS relationship (denoted as isA or AKO --- A Kind Of)
+		\item In such systems, the transitivity of the SUBCLASS-CLASS relation is strictly observed: if A is a subclass of class B, then every subclass of class A is also a subclass of class B.
+		\item A strict class hierarchy is necessary when using inheritance for inference procedures
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Ontologies for describing the relationship\\INSTANCE-CLASS}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\begin{textitemize}
+		\item is denoted as isInstanceOf
+		\item Some classifications include only class names, others contain instances at the lower level
+		\item for the INSTANCE-CLASS relationship, the so-called "inheritance"{} holds: if A is a subclass of class B, then every instance of class A is also an instance of class B
+	\end{textitemize}
+	
+\end{frame}
