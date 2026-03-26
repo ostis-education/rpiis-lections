@@ -1306,34 +1306,504 @@
 	
 \end{frame}
 
-\iffalse
-
-% Слайд 11: Semantic Web
-\begin{frame}{Semantic Web}
-	\topline
-	\justifying
+\begin{frame}{}
 	
-	\begin{textitemize}
-		\item Март 1989 -- концепция Всемирной паутины (HTML, HTTP, URL, DNS, XML,\ldots)
-		\item 1997-2003 -- развитие идеи Семантического Веба (RDF, OWL, OWL2,\ldots)
-	\end{textitemize}
+	\centering
 	
-	\vspace{1em}
+	\Huge
 	
-	\begin{textitemize}
-		\item Цель Semantic Web --- создать надстройку над существующей Всемирной паутиной, которая позволит сделать веб \textit{машинно-понимаемым}
-		\begin{textitemize}
-			\item описывать ресурсы формальными онтологиями и связями
-			\item программы смогут автоматически находить, интерпретировать и комбинировать данные, а не просто показывать страницы людям
-		\end{textitemize}
-	\end{textitemize}
+	\textbf{Semantic Web}
 	
 \end{frame}
 
-\fi
 
-%онтологии
-%Semantic Web
+\begin{frame}{История World Wide Web\\Создание основы интернета}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item 1989 год --- Тим Бернерс-Ли предложил концепцию WWW
+		\item Цель: объединение знаний человечества
+		\item Объединение IP-протоколов и технологии гипертекста
+		\item Основа современного интернета
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Основные элементы WWW\\Технологическая база}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item HTML --- язык гипертекстовой разметки документов
+		\item HTTP --- протокол обмена гипертекстовой информацией
+		\item URI/URL --- универсальный способ адресации ресурсов
+		\item DNS --- система доменных имен
+		\item XML --- расширяемый язык разметки
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Что такое Semantic Web?\\Основная концепция}
+	\topline
+	\justifying
+	Надстройка над существующей Всемирной паутиной для машинной обработки информации:
+	\begin{textitemize}
+		\item Автоматический анализ и синтез данных
+		\item Логический вывод из информации
+		\item Преобразование данных в полезные представления
+		\item Повышение релевантности предоставляемой информации
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{\\Цели Semantic Web}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Повышение релевантности информации для пользователя
+		\item Предоставление только необходимой части информации
+		\item Облегчение поиска информации
+		\item Повышение эффективности использования данных
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Дескриптивная логика (DL)\\Формальная основа SW}
+	\topline
+	\justifying
+	Семейство формальных языков представления знаний:
+	\begin{textitemize}
+		\item Баланс между выразительной мощностью и сложностью вывода
+		\item Более выразительны чем пропозициональные логики
+		\item Менее выразительны чем логика предикатов первого порядка
+		\item Обычно разрешимы с эффективными процедурами вывода
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Основные понятия DL\\Концепты и роли}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item \textbf{Концепт} --- одноместный предикат (класс, множество)
+		\item \textbf{Роль} --- двухместный предикат (бинарное отношение)
+		\item \textbf{TBox} --- набор терминологических аксиом
+		\item \textbf{ABox} --- набор утверждений об индивидах
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{База знаний в DL\\Структура представления}
+	\topline
+	\justifying
+	База знаний = TBox + ABox
+	
+	\textbf{Терминологические аксиомы (TBox):}
+	\begin{textitemize}
+		\item Аксиома вложенности: $C \sqsubseteq D$
+		\item Аксиома эквивалентности: $C \equiv D$
+	\end{textitemize}
+	
+	\textbf{Утверждения об индивидах (ABox):}
+	\begin{textitemize}
+		\item Принадлежность концепту: $C(a)$ или $a:C$
+		\item Связь ролью: $R(a,b)$ или $aRb$
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Пример терминологии (TBox)\\Формальное представление}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Woman $\equiv$ Person $\sqcap$ Female
+		\item Mother $\equiv$ Woman $\sqcap$ $\exists$ hasChild.$\top$
+		\item $\forall$ hasChild.Person $\sqsubseteq$ Person
+		\item Doctor $\sqsubseteq$ Person
+	\end{textitemize}
+	
+	\vspace{0.5cm}
+	Интерпретация: Женщина --- это человек женского пола; Мать --- женщина, имеющая ребенка; Всякий доктор является человеком
+\end{frame}
+
+\begin{frame}{URI --- идентификация ресурсов\\Универсальный механизм}
+	\topline
+	\justifying
+	URI (Universal Resource Identifier) --- символьная строка для идентификации любого ресурса
+	
+	\begin{textitemize}
+		\item \textbf{URL} --- указывает местонахождение ресурса
+		\item \textbf{URN} --- только идентифицирует в пространстве имен
+		\item \textbf{IRI} --- поддержка символов Unicode
+	\end{textitemize}
+	
+	URI используются для обозначения субъектов, отношений и объектов в RDF
+\end{frame}
+
+\begin{frame}{Структура URI\\Синтаксис идентификатора}
+	\topline
+	\justifying
+	URI = scheme://[user@]host[:port]path[?query][\#fragment]
+	
+	\vspace{0.5cm}
+	\textbf{Пример:}
+	
+	https://example.com/path/resource.txt\#fragment
+	
+	\vspace{0.5cm}
+	URI позволяют отличать сущности с одинаковым названием, но разной трактовкой в разных онтологиях
+\end{frame}
+
+\begin{frame}{RDF --- основа Semantic Web\\Resource Description Framework}
+	\topline
+	\justifying
+	Модель для представления данных и метаданных, разработанная W3C:
+	\begin{textitemize}
+		\item Утверждения о ресурсах в виде триплетов
+		\item Структура триплета: субъект --- предикат --- объект
+		\item Использует URI для обозначения элементов
+		\item Пригодна для машинной обработки
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{\\Структура триплета RDF}
+	\topline
+	\justifying
+	\textbf{Субъект} --- ресурс, о котором делается утверждение
+	
+	\textbf{Предикат} --- свойство или отношение
+	
+	\textbf{Объект} --- значение свойства или связанный ресурс
+	
+	\vspace{0.5cm}
+	Пример: (ex:John, ex:hasAge, "25")
+\end{frame}
+
+\begin{frame}{\\Форматы записи RDF}
+	\topline
+	\justifying
+	RDF --- абстрактная модель данных. Форматы хранения:
+	\begin{textitemize}
+		\item \textbf{RDF/XML} --- запись в виде XML-документа
+		\item \textbf{RDF/JSON} --- запись в виде JSON-данных
+		\item \textbf{Turtle} --- компактная текстовая форма
+		\item \textbf{N3} --- расширенная нотация с формулами
+		\item \textbf{N-Triples} --- минимальная форма записи
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Нотация N3 (Notation 3)\\Расширенная запись RDF}
+	\topline
+	\justifying
+	Надмножество RDF с дополнительными возможностями:
+	\begin{textitemize}
+		\item Формулы --- графы как литералы
+		\item Переменные и логические импликации
+		\item Функциональные предикаты
+		\item Читабельный текстовый синтаксис
+	\end{textitemize}
+	
+	Каждый документ N3 --- конъюнкция входящих утверждений
+\end{frame}
+
+\begin{frame}{Пример записи в N3\\Синтаксис и префиксы}
+	\topline
+	\justifying
+	@prefix : <\#> .
+	
+	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema\#> .
+	
+	\vspace{0.3cm}
+	:Person a rdfs:Class .
+	
+	:Pat a :Person .
+	
+	:Woman rdfs:subClassOf :Person .
+	
+	:sister rdfs:domain :Person ; rdfs:range :Woman .
+\end{frame}
+
+\begin{frame}{RDFS --- RDF Schema\\Базовый словарь}
+	\topline
+	\justifying
+	Набор классов и свойств для описания онтологий на основе RDF:
+	\begin{textitemize}
+		\item Базовый словарь для построения других словарей
+		\item Включает классы, свойства и метасвойства
+		\item Основа для языка OWL
+		\item Позволяет описывать сами RDF-триплеты
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Основные классы RDFS\\Базовые понятия словаря}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item \textbf{rdfs:Resource} --- класс всех ресурсов
+		\item \textbf{rdfs:Class} --- описывает что ресурс является классом
+		\item \textbf{rdfs:Literal} --- литералы (строки, числа)
+		\item \textbf{rdfs:Datatype} --- класс типов данных
+		\item \textbf{rdf:Property} --- класс свойств (отношений)
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Метасвойства RDFS\\Описание предикатов}
+	\topline
+	\justifying
+	Свойства, описывающие свойства самих предикатов:
+	
+	\begin{textitemize}
+		\item \textbf{rdfs:domain} --- объявляет класс субъекта
+		\item \textbf{rdfs:range} --- объявляет класс или тип объекта
+		\item \textbf{rdfs:subPropertyOf} --- отношение подсвойства
+		\item \textbf{rdfs:subClassOf} --- отношение подкласса
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Dublin Core\\Стандартизация метаданных}
+	\topline
+	\justifying
+	Широко используемый словарь для описания ресурсов (15 базовых элементов):
+	\begin{textitemize}
+		\item Title, Creator, Subject, Description
+		\item Publisher, Contributor, Date, Type
+		\item Format, Identifier, Source, Language
+		\item Relation, Coverage, Rights
+	\end{textitemize}
+	
+	Действует ГОСТ РФ с 2011 года
+\end{frame}
+
+\begin{frame}{Schema.org\\Единая схема разметки}
+	\topline
+	\justifying
+	Инициатива Google, Microsoft, Yahoo и Яндекс (2011):
+	\begin{textitemize}
+		\item Единая схема семантической разметки в HTML5
+		\item Базовое понятие: Thing
+		\item Частные понятия: Action, CreativeWork, Event, Organization, Person, Place, Product и др.
+		\item Онтология верхнего уровня для веб-ресурсов
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Другие популярные словари\\Специализированные области}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item \textbf{FOAF} --- описание персон и социальных сетей
+		\item \textbf{SKOS} --- организация знаний, тезаурусы
+		\item \textbf{DOAP} --- описание проектов разработки ПО
+		\item \textbf{SIOC} --- связь онлайн-сообществ (блоги, форумы)
+		\item \textbf{SWAP} --- платформа с базовыми онтологиями (Logic, String, Math, Crypto, OS)
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{OWL --- Web Ontology Language\\Язык описания онтологий}
+	\topline
+	\justifying
+	Язык для представления сложных знаний на основе DL:
+	\begin{textitemize}
+		\item Расширение RDFS и RDF
+		\item Логический язык для автоматической обработки
+		\item Актуальная версия: OWL 2 (2009 год)
+		\item Основан на расширенной дескриптивной логике
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Классы и операции OWL\\Конструирование классов}
+	\topline
+	\justifying
+	\textbf{Базовые классы:}
+	\begin{textitemize}
+		\item owl:Thing --- универсальный класс
+		\item owl:Nothing --- пустой класс
+		\item owl:Class --- класс классов
+	\end{textitemize}
+	
+	\textbf{Операции над классами:}
+	\begin{textitemize}
+		\item owl:intersectionOf --- пересечение
+		\item owl:unionOf --- объединение
+		\item owl:complementOf --- дополнение
+		\item owl:oneOf --- перечисление элементов
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Свойства индивидов OWL\\Два вида свойств}
+	\topline
+	\justifying
+	\textbf{ObjectProperties} --- отношения между индивидами (экземплярами)
+	
+	\textbf{DataProperties} --- связь индивида со значением типа данных
+	
+	\vspace{0.5cm}
+	Можно задавать ограничения:
+	\begin{textitemize}
+		\item На класс значений
+		\item На количество экземпляров (кардинальность)
+		\item На тип данных для DataProperties
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Отношения в OWL\\Классы и свойства}
+	\topline
+	\justifying
+	\textbf{На классах:}
+	\begin{textitemize}
+		\item rdfs:subClassOf --- отношение подкласса
+		\item owl:equivalentClass --- эквивалентность классов
+		\item owl:disjointWith --- непересекающиеся классы
+		\item owl:disjointUnionOf --- разбиение класса
+	\end{textitemize}
+	
+	\textbf{На свойствах:} аналогичные отношения + рефлексивность, симметричность, транзитивность
+\end{frame}
+
+\begin{frame}{Подъязыки OWL\\Баланс выразительности}
+	\topline
+	\justifying
+	\textbf{OWL 1:}
+	\begin{textitemize}
+		\item OWL Lite --- простая версия
+		\item OWL DL --- максимальная выразительность + разрешимость
+		\item OWL Full --- все конструкции без ограничений
+	\end{textitemize}
+	
+	\textbf{OWL 2:}
+	\begin{textitemize}
+		\item OWL EL --- оптимизация для большого числа классов
+		\item OWL QL --- оптимизация для большого числа экземпляров
+		\item OWL RL --- вывод без существенных ограничений
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{SWRL --- правила логического вывода\\Semantic Web Rule Language}
+	\topline
+	\justifying
+	Расширение OWL для описания логических правил
+	
+	\vspace{0.5cm}
+	\textbf{Пример правила:}
+	
+	hasParent(?x1, ?x2) $\land$ hasBrother(?x2, ?x3) $\Rightarrow$ hasUncle(?x1, ?x3)
+	
+	\vspace{0.5cm}
+	Правило: если x2 является родителем x1, и x3 является братом x2, то x3 --- дядя для x1
+\end{frame}
+
+\begin{frame}{Реификация в RDF\\Метаданные второго уровня}
+	\topline
+	\justifying
+	Описание конструкций языка средствами самого языка
+	
+	\begin{textitemize}
+		\item Описание синтаксической структуры RDF-графов
+		\item Классы узлов: rei:Symbol, rei:Bnode, rei:Literal
+		\item Класс rei:Statement для RDF-предложений
+		\item Класс rei:RDFGraph для описания графов
+	\end{textitemize}
+	
+	Позволяет оперировать структурой графа как данными
+\end{frame}
+
+\begin{frame}{Преимущества Semantic Web\\Часть 1}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Машинная обработка и понимание данных
+		\item Интеграция разнородных источников информации
+		\item Автоматический логический вывод новых знаний
+		\item Улучшенный поиск и релевантность информации
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Преимущества Semantic Web\\Часть 2}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Стандартизация метаданных через W3C
+		\item Совместное использование знаний между системами
+		\item Расширяемость и гибкость архитектуры
+		\item Открытые стандарты и инструменты
+		\item Возможность построения интеллектуальных агентов
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Ограничения дескриптивных логик\\Выразительная мощность}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Ориентация на таксономии и иерархии классов
+		\item Отсутствие средств структуризации баз знаний
+		\item Нет встроенной поддержки нечетких знаний
+		\item Нет поддержки нестационарных знаний
+		\item Ограничения в описании свойств классов и отношений
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Проблемы модели RDF\\Структурные ограничения}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Неоднозначность между отношением и конкретной связью
+		\item Отсутствие равноправных компонентов в триплете
+		\item Нет явного знака связи (дуги) в записи
+		\item Сложность описания симметричных отношений
+		\item Проблема описания свойств конкретной связи
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Проблемы стандартизации\\Формальные основы}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Отсутствие единой строгой математической модели
+		\item Интуитивное построение иерархии классов
+		\item Множество форматов записи одних данных
+		\item Сложность трактовки некоторых средств
+		\item Неясность критериев полноты на уровнях иерархии
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Выводы о Semantic Web\\Итоговая оценка}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item RDF --- модель данных, но не задает семантику
+		\item RDFS и OWL последовательно расширяют выразительность
+		\item Баланс между выразительной мощностью и вычислимостью
+		\item Множество готовых словарей и онтологий
+		\item Успешное решение задач структурирования информации
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Области применения\\Практическое использование}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Структурирование глобального информационного пространства
+		\item Облегчение поиска и доступа к информации
+		\item Согласованное описание ресурсов разных типов
+		\item Интеграция знаний из разнородных источников
+		\item Построение интеллектуальных систем и агентов
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Направления развития\\Будущее технологий}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Расширение выразительной мощности языков
+		\item Улучшение производительности алгоритмов вывода
+		\item Поддержка нечетких и неопределенных знаний
+		\item Упрощение стандартов и инструментов
+		\item Интеграция с технологиями искусственного интеллекта
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Заключение\\Semantic Web сегодня}
+	\topline
+	\justifying
+	
+	Стандарты Semantic Web представляют собой мощный инструмент, который широко используется при структуризации знаний и разработке баз знаний.
+	
+	\bigskip
+	
+	Вместе с тем основные идеи Semantic Web в контексте структуризации глобального информационного пространства до сих пор не реализованы и пока массового движения в эту сторону нет.
+	
+\end{frame}
 
 \begin{frame}{}
 	
@@ -1345,7 +1815,7 @@
 	
 \end{frame}
 
-% 1
+
 \begin{frame}{Проблема обеспечения совместимости\\инф. ресурсов и моделей обработки}
 	\topline
 	\justifying
@@ -1360,7 +1830,7 @@
 	
 \end{frame}
 
-% 2
+
 \begin{frame}{\\Совместимость и её роль}
 	\topline
 	\justifying
@@ -1374,7 +1844,7 @@
 	
 \end{frame}
 
-% 3
+
 \begin{frame}{Главный фактор совместимости\\видов знаний и систем}
 	\topline
 	\justifying
@@ -1388,7 +1858,7 @@
 	
 \end{frame}
 
-% 4
+
 \begin{frame}{Унификация представления информации\\в памяти компьютерных систем}
 	\topline
 	\justifying
@@ -1406,7 +1876,7 @@
 	
 \end{frame}
 
-% 5
+
 \begin{frame}{Смысловое представление информации\\Основная идея}
 	\topline
 	\justifying
@@ -1422,7 +1892,7 @@
 	
 \end{frame}
 
-% 6
+
 \begin{frame}{Смысловое представление информации\\Структура содержания}
 	\topline
 	\justifying
@@ -1436,7 +1906,7 @@
 	
 \end{frame}
 
-% 7
+
 \begin{frame}{Стандартизация смыслового представления\\и совместимость знаний}
 	\topline
 	\justifying
@@ -1450,7 +1920,7 @@
 	
 \end{frame}
 
-% 8
+
 \begin{frame}{\\Понятие «смысла»}
 	\topline
 	\justifying
@@ -1467,7 +1937,7 @@
 	
 \end{frame}
 
-% 9
+
 \begin{frame}{Требования к смыслу\\(продолжение)}
 	\topline
 	\justifying
@@ -1485,7 +1955,7 @@
 	
 \end{frame}
 
-% 10
+
 \begin{frame}{Нелинейность смыслового представления\\информации}
 	\topline
 	\justifying
@@ -1499,7 +1969,7 @@
 	
 \end{frame}
 
-% 11
+
 \begin{frame}{\\Язык смыслового представления}
 	\topline
 	\justifying
@@ -1514,7 +1984,7 @@
 	
 \end{frame}
 
-% 12
+
 \begin{frame}{Рафинированная семантическая сеть:\\основной принцип}
 	\topline
 	\justifying
@@ -1530,7 +2000,7 @@
 	
 \end{frame}
 
-% 13
+
 \begin{frame}{Рафинированная семантическая сеть:\\уточнение принципов}
 	\topline
 	\justifying
@@ -1544,7 +2014,7 @@
 	
 \end{frame}
 
-% 14
+
 \begin{frame}{Рафинированная семантическая сеть:\\фрагменты и инцидентность}
 	\topline
 	\justifying
@@ -1567,7 +2037,7 @@
 	
 \end{frame}
 
-% 15
+
 \begin{frame}{Рафинированная семантическая сеть:\\атомарность знаков}
 	\topline
 	\justifying
@@ -1583,7 +2053,7 @@
 	
 \end{frame}
 
-% 16
+
 \begin{frame}{Рафинированная семантическая сеть:\\следствие атомарности}
 	\topline
 	\justifying
@@ -1597,7 +2067,7 @@
 	
 \end{frame}
 
-% 17
+
 \begin{frame}{Рафинированная семантическая сеть:\\явное представление связей}
 	\topline
 	\justifying
@@ -1613,7 +2083,7 @@
 	
 \end{frame}
 
-% 18
+
 \begin{frame}{Рафинированная семантическая сеть:\\отсутствие синонимии}
 	\topline
 	\justifying
@@ -1629,7 +2099,7 @@
 	
 \end{frame}
 
-% 19
+
 \begin{frame}{Рафинированная семантическая сеть:\\отсутствие омонимии и дублирования}
 	\topline
 	\justifying
@@ -1645,7 +2115,7 @@
 	
 \end{frame}
 
-% 20
+
 \begin{frame}{Рафинированная семантическая сеть:\\семантическая vs логическая эквивалентность}
 	\topline
 	\justifying
@@ -1658,7 +2128,7 @@
 	
 \end{frame}
 
-% 21
+
 \begin{frame}{Рафинированная семантическая сеть:\\интеграция сетей}
 	\topline
 	\justifying
@@ -1671,7 +2141,7 @@
 	
 \end{frame}
 
-% 22
+
 \begin{frame}{Рафинированная семантическая сеть:\\универсальность и метаинформация}
 	\topline
 	\justifying
@@ -1685,7 +2155,7 @@
 	
 \end{frame}
 
-% 23
+
 \begin{frame}{Рафинированная семантическая сеть:\\денотаты знаков}
 	\topline
 	\justifying
@@ -1699,7 +2169,7 @@
 	
 \end{frame}
 
-% 24
+
 \begin{frame}{Рафинированная семантическая сеть:\\связь с файлами и внешними форматами}
 	\topline
 	\justifying
@@ -1713,7 +2183,7 @@
 	
 \end{frame}
 
-% 25
+
 \begin{frame}{Рафинированная семантическая сеть:\\имена и термины}
 	\topline
 	\justifying
@@ -1727,7 +2197,7 @@
 	
 \end{frame}
 
-% 26
+
 \begin{frame}{Рафинированная семантическая сеть:\\нелинейность и память}
 	\topline
 	\justifying
@@ -1743,7 +2213,7 @@
 	
 \end{frame}
 
-% 27
+
 \begin{frame}{Семантическая модель базы знаний:\\определение}
 	\topline
 	\justifying
@@ -1759,7 +2229,7 @@
 	
 \end{frame}
 
-% 28
+
 \begin{frame}{Семантическая модель базы знаний:\\графодинамическая память}
 	\topline
 	\justifying
@@ -1768,7 +2238,7 @@
 	
 \end{frame}
 
-% 29
+
 \begin{frame}{Семантическая модель базы знаний:\\достоинства (1)}
 	\topline
 	\justifying
@@ -1781,7 +2251,7 @@
 	
 \end{frame}
 
-% 30
+
 \begin{frame}{Семантическая модель базы знаний:\\достоинства (2)}
 	\topline
 	\justifying
@@ -1794,7 +2264,7 @@
 	
 \end{frame}
 
-% 31
+
 \begin{frame}{Семантическая модель базы знаний:\\достоинства (3)}
 	\topline
 	\justifying
@@ -1806,7 +2276,7 @@
 	
 \end{frame}
 
-% 32
+
 \begin{frame}{Семантическая модель базы знаний:\\компактность представления}
 	\topline
 	\justifying
@@ -1823,7 +2293,7 @@
 	
 \end{frame}
 
-% 33
+
 \begin{frame}{Семантическая модель базы знаний:\\интеграция текстов}
 	\topline
 	\justifying
@@ -1836,7 +2306,7 @@
 	
 \end{frame}
 
-% 34
+
 \begin{frame}{Семантическая модель базы знаний:\\анализ структуры знаний}
 	\topline
 	\justifying
@@ -1851,7 +2321,7 @@
 	
 \end{frame}
 
-% 35
+
 \begin{frame}{Семантическая модель базы знаний:\\теоретико-графовые алгоритмы}
 	\topline
 	\justifying
@@ -1860,7 +2330,7 @@
 	
 \end{frame}
 
-% 36
+
 \begin{frame}{\\Смысловое пространство}
 	\topline
 	\justifying
