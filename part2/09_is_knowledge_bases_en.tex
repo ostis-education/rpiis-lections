@@ -8,7 +8,7 @@
 	\topline
 	\justifying
 	
-	Knowledge base. Requirements for knowledge bases. Quality criteria. Types of knowledge and models of their representation. Crisp and fuzzy sets and knowledge. Meaning. Semantic representation of knowledge. Subject domain. Ontology. Propositions and formal theories.
+	Knowledge base. Requirements for knowledge bases. Quality criteria. Types of knowledge and models of their representation. Crisp and fuzzy sets and knowledge. sense. Semantic representation of knowledge. Subject domain. Ontology. Propositions and formal theories.
 	
 \end{frame}
 
@@ -349,7 +349,7 @@
 	
 	\vspace{0.5em}
 	
-	\textbf{III. Concept} of an object or thing. Other names: in linguistics --- significator, designatum; in mathematics --- the meaning of a name, or the concept of a denotate.
+	\textbf{III. Concept} of an object or thing. Other names: in linguistics --- significator, designatum; in mathematics --- the sense of a name, or the concept of a denotate.
 	
 \end{frame}
 
@@ -373,7 +373,7 @@
 		\scnidtf{denotate of the given sign*}
 		\scnidtf{object denoted by the given sign*}
 		\scnidtf{denotational semantics of a given sign*}
-		\scnidtf{meaning of the given sign*}
+		\scnidtf{sense of the given sign*}
 		\scnidtf{A binary oriented relation, each pair of which
 			connects:
 			\begin{textitemize}
@@ -913,7 +913,7 @@
 	\justifying
 	
 	\vspace{15mm}
-	There are several signs that are identical in form, each of which has its own meaning, and these meanings are completely unrelated to each other, just like the corresponding denotates.
+	There are several signs that are identical in form, each of which has its own sense, and these senses are completely unrelated to each other, just like the corresponding denotates.
 	
 	\begin{center}
 		\includegraphics[width=0.9\textwidth]{part2/images/is_knowledge_bases/jaguar.png}
@@ -926,7 +926,7 @@
 	\justifying
 	
 	\vspace{10mm}
-	The presence of different meanings for the same symbol. This term is typically used in situations where these different meanings are somehow related (as opposed to homonymy).
+	The presence of different senses for the same symbol. This term is typically used in situations where these different senses are somehow related (as opposed to homonymy).
 	
 	\vspace{10mm}
 	\textbf{Example}: definitions of the concept for the phrase "Major repairs"{},
@@ -1061,7 +1061,7 @@
 	An ontology is constructed as a network consisting of concepts, the relationships between them, and descriptions of the properties of these concepts. Relationships can be of various types (e.g., "is," "consists of," "is an executor," etc.).
 	
 	\vspace{0.5em}
-	To fulfill the role of a common language, an ontology includes a dictionary (a set of words/lexical units) and a set of definitions of concepts (formal, described, for example, in some logical language, or informal), defining the meaning of the elements of the dictionary.
+	To fulfill the role of a common language, an ontology includes a dictionary (a set of words/lexical units) and a set of definitions of concepts (formal, described, for example, in some logical language, or informal), defining the sense of the elements of the dictionary.
 	
 	\vspace{0.5em}
 	The connections between vocabulary (signs) and semantics limit the number of possible interpretations of signs.
@@ -1245,8 +1245,8 @@
 	
 	\vspace{10mm}
 	\begin{textitemize}
-		\item list of terms with their meanings
-		Item values are described as comments (definitions) in natural language. This provides more information, as people can read such a comment (definition) and understand the meaning of the term.
+		\item list of terms with their senses
+		Item values are described as comments (definitions) in natural language. This provides more information, as people can read such a comment (definition) and understand the sense of the term.
 		\item interpretations of terms can be ambiguous
 		\item glossaries are not suitable for automatic processing by software agents
 	\end{textitemize}
@@ -1300,5 +1300,1048 @@
 		\item Some classifications include only class names, others contain instances at the lower level
 		\item for the INSTANCE-CLASS relationship, the so-called "inheritance"{} holds: if A is a subclass of class B, then every instance of class A is also an instance of class B
 	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{}
+	
+	\centering
+	
+	\Huge
+	
+	\textbf{Semantic Web}
+	
+\end{frame}
+
+
+\begin{frame}{History of the World Wide Web\\Creating the Foundation of the Internet}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item 1989 -- Tim Berners-Lee proposed the concept of the World Wide Web
+		\item Goal: to unite human knowledge
+		\item Unification of IP protocols and hypertext technology
+		\item The foundation of the modern Internet
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Basic Elements of the WWW\\Technological Base}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item HTML --- Hypertext Markup Language
+		\item HTTP --- Hypertext Transfer Protocol
+		\item URI/URL --- a universal way of addressing resources
+		\item DNS --- Domain Name System
+		\item XML --- Extensible Markup Language
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{What is the Semantic Web?\\Basic Concept}
+	\topline
+	\justifying
+	
+	An add-on to the existing World Wide Web for machine processing of information:
+	\begin{textitemize}
+		\item Automatic data analysis and synthesis
+		\item Logical inference from information
+		\item Transforming data into useful representations
+		\item Improving the relevance of the information provided
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{\\Goals of the Semantic Web}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Improving the relevance of information for the user
+		\item Providing only the necessary part of the information
+		\item Making it easier to find information
+		\item Improving the efficiency of data use
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Descriptive Logic (DL)\\Formal Framework of SW}
+	\topline
+	\justifying
+	A family of formal knowledge representation languages:
+	\begin{textitemize}
+		\item Balance between expressive power and output complexity
+		\item More expressive than propositional logics
+		\item Less expressive than first-order predicate logic
+		\item Usually solvable with efficient inference procedures
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{DL Basic Concepts\\Concepts and Roles}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item \textbf{Concept} --- unary predicate (class, set)
+		\item \textbf{Role} --- two-place predicate (binary relation)
+		\item \textbf{TBox} --- a set of terminological axioms
+		\item \textbf{ABox} --- a set of statements about individuals
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Knowledge Base in DL\\Representation Structure}
+	\topline
+	\justifying
+	
+	Knowledge Base = TBox + ABox
+	
+	\textbf{Terminological axioms (TBox)}:
+	\begin{textitemize}
+		\item Nesting Axiom: $C \sqsubseteq D$
+		\item Axiom of Equivalence: $C \equiv D$
+	\end{textitemize}
+	
+	\textbf{Statements about individuals (ABox):}
+	\begin{textitemize}
+		\item Concept Belonging: $C(a)$ or $a:C$
+		\item Role relationship: $R(a,b)$ or $aRb$
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Example Terminology (TBox)\\Formal Representation}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Woman $\equiv$ Person $\sqcap$ Female
+		\item Mother $\equiv$ Woman $\sqcap$ $\exists$ hasChild.$\top$
+		\item $\forall$ hasChild.Person $\sqsubseteq$ Person
+		\item Doctor $\sqsubseteq$ Person
+	\end{textitemize}
+	
+	\vspace{0.5cm}
+	Interpretation: A woman is a female person; A mother is a woman who has a child; Every doctor is a Person
+\end{frame}
+
+\begin{frame}{URI --- resource identification\\Universal mechanism}
+	\topline
+	\justifying
+	URI (Universal Resource Identifier) is a character string used to identify any resource.
+	
+	\begin{textitemize}
+		\item \textbf{URL} --- specifies the location of the resource
+		\item \textbf{URN} --- only identifies in the namespace
+		\item \textbf{IRI} --- Unicode character support
+	\end{textitemize}
+	
+	URIs are used to denote subjects, relations, and objects in RDF.
+\end{frame}
+
+\begin{frame}{URI Structure\\Identifier Syntax}
+	\topline
+	\justifying
+	URI = scheme://[user@]host[:port]path[?query][\#fragment]
+	
+	\vspace{0.5cm}
+	\textbf{Example:}
+	
+	https://example.com/path/resource.txt\#fragment
+	
+	\vspace{0.5cm}
+	URIs allow us to distinguish entities with the same name but different interpretations in different ontologies.
+\end{frame}
+
+\begin{frame}{RDF --- the basis of the Semantic Web\\Resource Description Framework}
+	\topline
+	\justifying
+	A model for representing data and metadata developed by the W3C:
+	\begin{textitemize}
+		\item Resource Statements as Triplets
+		\item Triplet structure: subject --- predicate --- object
+		\item Uses URIs to designate elements
+		\item Suitable for machine processing
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{\\RDF Triplet Structure}
+	\topline
+	\justifying
+	\textbf{Subject} --- the resource about which the statement is made
+	
+	\textbf{Predicate} --- property or relation
+	
+	\textbf{Object} --- property value or associated resource
+	
+	\vspace{0.5cm}
+	Example: (ex:John, ex:hasAge, "25")
+\end{frame}
+
+\begin{frame}{\\RDF Record Formats}
+	\topline
+	\justifying
+	RDF is an abstract data model. Storage formats:
+	\begin{textitemize}
+		\item \textbf{RDF/XML} --- record as an XML document
+		\item \textbf{RDF/JSON} --- a record in the form of JSON data
+		\item \textbf{Turtle} --- compact text form
+		\item \textbf{N3} --- extended notation with formulas
+		\item \textbf{N-Triples} --- minimal notation
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Notation 3 (N3)\\Extended RDF Notation}
+	\topline
+	\justifying
+	A superset of RDF with additional features:
+	\begin{textitemize}
+		\item Formulas --- graphs as literals
+		\item Variables and logical implications
+		\item Functional predicates
+		\item Readable text syntax
+	\end{textitemize}
+	
+	Each N3 document is a conjunction of incoming statements
+\end{frame}
+
+\begin{frame}{Example entry in N3\\Syntax and prefixes}
+	\topline
+	\justifying
+	@prefix : <\#> .
+	
+	@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema\#> .
+	
+	\vspace{0.3cm}
+	:Person a rdfs:Class .
+	
+	:Pat a :Person .
+	
+	:Woman rdfs:subClassOf :Person .
+	
+	:sister rdfs:domain :Person ; rdfs:range :Woman .
+\end{frame}
+
+\begin{frame}{RDFS --- RDF Schema\\Core Vocabulary}
+	\topline
+	\justifying
+	A set of classes and properties for describing ontologies based on RDF:
+	\begin{textitemize}
+		\item Basic dictionary for building other dictionaries
+		\item Includes classes, properties, and metaproperties
+		\item Foundation for the OWL language
+		\item Allows you to describe the RDF triples themselves
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{RDFS Core Classes\\Basic Dictionary Concepts}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item \textbf{rdfs:Resource} --- class of all resources
+		\item \textbf{rdfs:Class} --- describes that the resource is a class
+		\item \textbf{rdfs:Literal} --- literals (strings, numbers)
+		\item \textbf{rdfs:Datatype} --- data type class
+		\item \textbf{rdfs:Property} --- class of properties (relations)
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{RDFS Metaproperties\\Predicate Description}
+	\topline
+	\justifying
+	Properties describing the properties of the predicates themselves:
+	
+	\begin{textitemize}
+		\item \textbf{rdfs:domain} --- declares the subject class
+		\item \textbf{rdfs:range} --- Declares a class or type of object
+		\item \textbf{rdfs:subPropertyOf} --- subproperty relation
+		\item \textbf{rdfs:subClassOf} --- subclass relation
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Dublin Core\\Metadata Standardization}
+	\topline
+	\justifying
+	A widely used vocabulary for describing resources (15 basic elements):
+	\begin{textitemize}
+		\item Title, Creator, Subject, Description
+		\item Publisher, Contributor, Date, Type
+		\item Format, Identifier, Source, Language
+		\item Relation, Coverage, Rights
+	\end{textitemize}
+	
+	The Russian Federation GOST has been in force since 2011.
+\end{frame}
+
+\begin{frame}{Schema.org\\Unified Markup Schema}
+	\topline
+	\justifying
+	Initiative by Google, Microsoft, Yahoo and Yandex (2011):
+	\begin{textitemize}
+		\item Unified Semantic Markup Framework in HTML5
+		\item Basic concept: Thing
+		\item Specific concepts: Action, Creative Work, Event, Organization, \item Person, Place, Product, etc.
+		\item Top-level ontology for web resources
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Other popular dictionaries\\Specialized areas}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item FOAF --- Description of people and social networks
+		\item \textbf{SKOS} --- knowledge organization, thesauri
+		\item \textbf{DOAP} --- Description of software development projects
+		\item SIOC --- Online Community Connections (blogs, forums)
+		\item SWAP is a platform with basic ontologies (Logic, String, Math, Crypto, OS)
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{OWL --- Web Ontology Language\\Ontology Description Language}
+	\topline
+	\justifying
+	A language for representing complex knowledge based on DL:
+	\begin{textitemize}
+		\item RDFS and RDF Extension
+		\item Logical language for automatic processing
+		\item Current version: OWL 2 (2009)
+		\item Based on extended descriptive logic
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{OWL Classes and Operations\\Constructing Classes}
+	\topline
+	\justifying
+	\textbf{Base classes:}
+	\begin{textitemize}
+		\item owl:Thing --- generic class
+		\item owl:Nothing --- empty class
+		\item owl:Class --- class of classes
+	\end{textitemize}
+	
+	\textbf{Operations on classes:}
+	\begin{textitemize}
+		\item owl:intersectionOf --- intersection
+		\item owl:unionOf --- union
+		\item owl:complementOf --- complement
+		\item owl:oneOf --- enumeration of elements
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Properties of OWL Individuals\\Two Kinds of Properties}
+	\topline
+	\justifying
+	\textbf{ObjectProperties} --- relationships between individuals (instances)
+	
+	\textbf{DataProperties} --- association of an individual with a data type value
+	
+	\vspace{0.5cm}
+	You can set restrictions:
+	\begin{textitemize}
+		\item On the class of values
+		\item By the number of values (cardinality)
+		\item On the data type for DataProperties
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Relationships in OWL\\Classes and Properties}
+	\topline
+	\justifying
+	\textbf{On classes:}
+	\begin{textitemize}
+		\item rdfs:subClassOf --- subclass relation
+		\item owl:equivalentClass --- equivalence of classes
+		\item owl:disjointWith --- disjoint classes
+		\item owl:disjointUnionOf --- class split
+	\end{textitemize}
+	
+	\textbf{On properties:} analogous relations + reflexivity, symmetry, transitivity
+\end{frame}
+
+\begin{frame}{OWL Sublanguages\\Balance of Expressivity}
+	\topline
+	\justifying
+	\textbf{OWL 1:}
+	\begin{textitemize}
+		\item OWL Lite --- simple version
+		\item OWL DL --- maximum expressiveness + decidability
+		\item OWL Full --- all constructions without restrictions
+	\end{textitemize}
+	
+	\textbf{OWL 2:}
+	\begin{textitemize}
+		\item OWL EL --- optimization for a large number of classes
+		\item OWL QL --- optimization for large numbers of instances
+		\item OWL RL --- output without significant restrictions
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{SWRL --- Inference Rules\\Semantic Web Rule Language}
+	\topline
+	\justifying
+	An extension of OWL for describing logical rules
+	
+	\vspace{0.5cm}
+	\textbf{Example rule:}
+	
+	hasParent(?x1, ?x2) $\land$ hasBrother(?x2, ?x3) $\Rightarrow$ hasUncle(?x1, ?x3)
+	
+	\vspace{0.5cm}
+	Rule: If x2 is the parent of x1, and x3 is the sibling of x2, then x3 is the uncle of x1
+\end{frame}
+
+\begin{frame}{Reification in RDF\\Second-Level Metadata}
+	\topline
+	\justifying
+	Description of language constructs using the language itself
+	
+	\begin{textitemize}
+		\item Description of the syntactic structure of RDF graphs
+		\item Node classes: rei:Symbol, rei:Bnode, rei:Literal
+		\item rei:Statement class for RDF sentences
+		\item Class rei:RDFGraph for describing graphs
+	\end{textitemize}
+	
+	Allows you to manipulate the graph structure as data
+\end{frame}
+
+\begin{frame}{Advantages of the Semantic Web\\Part 1}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Machine learning and data understanding
+		\item Integration of heterogeneous information sources
+		\item Automatic logical inference of new knowledge
+		\item Improved search and information relevance
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Advantages of the Semantic Web\\Part 2}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Standardization of metadata through W3C
+		\item Sharing knowledge between systems
+		\item Extensibility and flexibility of architecture
+		\item Open standards and tools
+		\item Possibility of building intelligent agents
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Limitations of Descriptive Logics\\Expressive Power}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Focus on taxonomies and class hierarchies
+		\item Lack of means for structuring knowledge bases
+		\item No built-in support for fuzzy knowledge
+		\item No support for non-stationary knowledge
+		\item Limitations in the description of properties of classes and relationships
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Problems of the RDF Model\\Structural Limitations}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Ambiguity between a relation and a specific connection
+		\item Lack of equal components in a triplet
+		\item There is no clear sign of connection (arc) in the entry
+		\item The complexity of describing symmetrical relationships
+		\item The problem of describing the properties of a specific connection
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Problems of standardization\\Formal foundations}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Lack of a single rigorous mathematical model
+		\item Intuitive construction of class hierarchy
+		\item Multiple formats for recording the same data
+		\item Difficulty in interpreting some funds
+		\item Unclear criteria for completeness at hierarchical levels
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Conclusions about the Semantic Web\\Final Assessment}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item RDF --- a data model, but does not define semantics
+		\item RDFS and OWL consistently expand expressiveness
+		\item Balance between expressive power and computability
+		\item A set of ready-made dictionaries and ontologies
+		\item Successful solution of information structuring problems
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Application areas\\Practical use}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Structuring the global information space
+		\item Making it easier to find and access information
+		\item Coordinated description of resources of different types
+		\item Integration of knowledge from diverse sources
+		\item Construction of intelligent systems and agents
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Directions of Development\\The Future of Technology}
+	\topline
+	\justifying
+	\begin{textitemize}
+		\item Expanding the expressive power of languages
+		\item Improving the performance of inference algorithms
+		\item Support for fuzzy and uncertain knowledge
+		\item Simplification of standards and instruments
+		\item Integration with artificial intelligence technologies
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Conclusion\\The Semantic Web Today}
+	\topline
+	\justifying
+	
+	Semantic Web standards are a powerful tool that is widely used in knowledge structuring and knowledge base development.
+	
+	\bigskip
+	
+	At the same time, the main ideas of the Semantic Web in the context of structuring the global information space have not yet been realized, and there is no mass movement in this direction.
+	
+\end{frame}
+
+\begin{frame}{}
+	
+	\centering
+	
+	\Huge
+	
+	\textbf{Semantic representation of information}
+	
+\end{frame}
+
+
+\begin{frame}{The problem of ensuring compatibility of information resources and processing models}
+	\topline
+	\justifying
+	
+	\textbf{Aspects of the solution:}
+	\begin{textitemize}
+		\item Compatibility between components of computer systems and between entire systems in teams.
+		\item Compatibility (a high level of mutual understanding) between computer systems and their users.
+		\item Interdisciplinary compatibility, convergence of various fields of knowledge.
+		\item Continuous monitoring and restoration of compatibility in the context of evolving systems and users.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{\\Compatibility and its role}
+	\topline
+	\justifying
+	
+	Without compatibility of information resources of different computer systems and resources of different semantic types, it is impossible:
+	\begin{textitemize}
+		\item create \textbf{teams of computer systems} that coordinate actions in solving complex problems;
+		\item create \textbf{hybrid computer systems} that use different types of knowledge and problem-solving models;
+		\item use \textbf{component-based design methodology} at all levels of the computer systems hierarchy.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{The main factor of compatibility\\of types of knowledge and systems}
+	\topline
+	\justifying
+	
+	\textbf{The main factor:}
+	\begin{textitemize}
+		\item Unification of information representation in the memory of computer systems
+		(standardization of information presentation).
+		\item Unification of principles for organizing information processing in the memory of computer systems.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Unification of information representation\\in computer system memory}
+	\topline
+	\justifying
+	
+	Unification of information presentation involves:
+	\begin{textitemize}
+		\item \textbf{Syntactic unification} of information\\
+		(unification of the form of presentation and coding of information).
+		\item \textbf{Semantic unification} of information\\
+		(coordination and precise specification of all used concepts through a hierarchical system of formal ontologies).
+	\end{textitemize}
+	
+	\medskip
+	Proper unification does not limit the developer's creative freedom, but guarantees the compatibility of his results with the results of other developers.
+	
+\end{frame}
+
+
+\begin{frame}{Semantic representation of information\\Main idea}
+	\topline
+	\justifying
+	
+	\textbf{Semantic representation of information} ---
+	a symbolic construction (text), the syntactic structure of which is close to its sense, that is, the configuration of connections between the described entities.
+	
+	\medskip
+	The main principle: as little as possible of the superfluous, irrelevant to the sense of the information being presented.
+	
+	\medskip
+	A semantic representation is an abstract symbolic construction that is an \uline{invariant} of the maximal class of semantically equivalent symbolic constructions.
+	
+\end{frame}
+
+
+\begin{frame}{Semantic representation of information\\Content structure}
+	\topline
+	\justifying
+	
+	The semantic representation of any information comes down to:
+	\begin{textitemize}
+		\item to the list of signs of the described entities (primary and secondary, which are fragments of the structure);
+		\item to an explicit description of the connections between the signs of secondary entities and the corresponding fragments;
+		\item to the description of other relationships between the described entities.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Standardization of semantic representation\\and knowledge compatibility}
+	\topline
+	\justifying
+	
+	Competent unification of the semantic presentation of information:
+	\begin{textitemize}
+		\item should not limit the creative freedom of authors of scientific and technical knowledge and developers of knowledge bases;
+		\item must guarantee \textit{semantic compatibility} of knowledge presented by different authors (subject to compliance with the rules of knowledge construction);
+		\item must constantly evolve, the current version of the standard is not a dogma, but a support for further improvement.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{\\The concept of "sense"}
+	\topline
+	\justifying
+	
+	\textbf{sense} --- an abstract symbolic construction of the internal language of a computer system, which is an \textbf{invariant} of the maximal class of semantically equivalent texts in different languages.
+	
+	\medskip
+	Requirements for sense representation:
+	\begin{textitemize}
+		\item \textbf{Universality}: the ability to present any information.
+		\item \textbf{Absence of synonymy of signs}: prohibition of multiple occurrences of signs with the same denotations.
+		\item \textbf{Absence of duplication of information} in the form of semantically equivalent texts.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Requirements for sense\\(continued)}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item \textbf{Absence of homonymous signs} (including pronouns).
+		\item \textbf{Lack of internal structure of characters}\\
+		(atomic nature of signs).
+		\item \textbf{Absence of inflection (sign forms)}\\
+		as a consequence of the lack of internal structure of signs.
+		\item \textbf{Absence of fragments} that are not signs\\
+		(separators, delimiters, etc.).
+		\item \textbf{Separation of connection signs}, connecting any signs with incidence relations.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Nonlinearity of semantic representation\\of information}
+	\topline
+	\justifying
+	
+	The nonlinearity of the semantic representation is due to the fact that:
+	\begin{textitemize}
+		\item each described entity can have an unlimited number of connections with other entities;
+		\item each entity has exactly one sign (synonymy of signs is prohibited);
+		\item all connections between entities are described by connections between their signs.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{\\Language of semantic representation}
+	\topline
+	\justifying
+	
+	The key property of the language of semantic representation of information:
+	\begin{textitemize}
+		\item \textbf{Unambiguity of information representation} in the memory of each computer system.
+	\end{textitemize}
+	
+	\medskip
+	This means the absence of semantically equivalent symbolic constructions belonging to the semantic language and stored in the same semantic memory (with logical equivalence allowed for compactness).
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\main principle}
+	\topline
+	\justifying
+	
+	\textbf{Refined semantic network} ---
+	\uline{extremely} compact semantic information model of the system of entities under consideration.
+	
+	\medskip
+	The main principle: absolutely nothing superfluous, not related to the sense of the information presented.
+	
+	\medskip
+	The refined semantic network is used as a \textit{internal consumption semantic network} for the semantic representation of information in the internal memory of a computer system.
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\clarification of principles}
+	\topline
+	\justifying
+	
+	The clarification of the principles of semantic representation of information in a refined semantic network is based on:
+	\begin{textitemize}
+		\item a clear opposition between \textit{internal language} (for storing information) and \textit{external languages} (for communication with users and other systems);
+		\item maximum simplification of the syntax of the internal language while maintaining universality;
+		\item exclusion from the internal language of means oriented towards communication (conjunctions, prepositions, separators, declensions, conjugations, etc.).
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\fragments and incidence}
+	\topline
+	\justifying
+	
+	\footnotesize
+	
+	\textbf{Principle 1}:
+	\begin{textitemize}
+		\item Each fragment of the \textit{refined semantic network} is either a sign (node, edge, arc) or a set of signs connected by an incidence relation.
+		\item Incidence is a binary oriented relation that connects the signs of connections with the signs of entities or with the entities themselves.
+	\end{textitemize}
+	
+	\medskip
+	The structuring of a refined semantic network is described explicitly by:
+	\begin{textitemize}
+		\item nodes denoting non-elementary fragments (sets of nodes, edges, arcs);
+		\item membership arcs connecting such nodes with elements of sets;
+		\item relationships between fragments and other entities, as well as fragment classes.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\atomicity of signs}
+	\topline
+	\justifying
+	
+	\textbf{Principle 2}:
+	\begin{textitemize}
+		\item All signs of the refined semantic network are syntactically elementary (atomic), the internal structure of signs does not play a role in semantic analysis.
+		\item A set of signs corresponds to an alphabet that defines the syntactic typology of elementary fragments and has a semantic interpretation.
+	\end{textitemize}
+	
+	\medskip
+	The signs of the refined semantic network are not names (terms) and are not tied to natural languages, which eliminates terminological disputes.
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\atomicity of signs}
+	\topline
+	\justifying
+	
+	A consequence of atomicity:
+	\begin{textitemize}
+		\item It is not necessary to use fragments that are not entity signs (letters, separators, limiters, etc.).
+		\item There is no need to contrast simple signs and expressions: both correspond to network elements that have certain denotations.
+		\item Expressions additionally correspond to non-elementary network fragments that specify the entities they designate.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\Explicit Representation of Relationships}
+	\topline
+	\justifying
+	
+	\textbf{Principle 3}:
+	\begin{textitemize}
+		\item All connections between the described entities are represented explicitly by signs of the corresponding connections, incident to the signs of the entities.
+		\item For binary connections, the connection signs are the edges or arcs of the network.
+	\end{textitemize}
+	
+	\medskip
+	Consequence: there is no need for declensions, conjugations, genders, semantically loaded sequences of words and other linguistic means.
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\absence of synonymy}
+	\topline
+	\justifying
+	
+	\textbf{Principle 4}:
+	\begin{textitemize}
+		\item All signs enter the network once; pairs of synonymous signs (with identical denotations) are absent.
+		\item Different elements of the network are a priori considered to be signs of different entities, even if they belong to the same syntactic type.
+	\end{textitemize}
+	
+	\medskip
+	The appearance of synonymous signs makes the network incorrect and requires their identification (gluing).
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\absence of homonymy and duplication}
+	\topline
+	\justifying
+	
+	\textbf{Principle 5}:
+	\begin{textitemize}
+		\item There are no homonymous signs on the network, that is, signs with several denotations.
+		\item The network does not contain duplication of information in the form of semantically equivalent fragments of refined semantic networks.
+	\end{textitemize}
+	
+	\medskip
+	Semantically equivalent networks are isomorphic networks whose correspondence pairs link synonymous signs; the exclusion of homonymy and synonymy excludes the semantic equivalence of fragments.
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\semantic vs. logical equivalence}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item The prohibition of semantic equivalence does not mean the prohibition of logical equivalence: logical equivalence is useful for compact knowledge representation.
+		\item Logically equivalent constructions use different sets of concepts; semantically equivalent ones use the same set.
+		\item To minimize logical equivalence, a well-designed hierarchical system of formal ontologies is required.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\network integration}
+	\topline
+	\justifying
+	
+	Consequence:
+	\begin{textitemize}
+		\item Integration of two refined semantic networks comes down to unification followed by conformity with the requirements of absence of synonymy and semantic equivalence.
+		\item This ensures correct merging of knowledge without duplicating entities and fragments.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network: Universality and Metainformation}
+	\topline
+	\justifying
+	
+	\textbf{Principle 6} (universality):
+	\begin{textitemize}
+		\item Refined semantic networks should provide representation of any information, including metainformation about the networks themselves.
+		\item On a set of networks, a ``be a substructure'' relation is defined that connects networks with their fragments.
+		\item Each network is interpreted as a set of signs and a set of connections between them, reflecting the connections between denotates.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\sign denotations}
+	\topline
+	\justifying
+	
+	Denotates of signs can be:
+	\begin{textitemize}
+		\item any described entities --- specific and arbitrary (variables);
+		\item real (material) and abstract entities (numbers, points in space, etc.);
+		\item external entities and internal entities, which are sets of signs of the same construction.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\linking with files and external formats}
+	\topline
+	\justifying
+	
+	\textbf{Principle 7}:
+	\begin{textitemize}
+		\item The memory of new generation computers must process and store information structures in various formats.
+		\item Such constructions can be considered as entities described by a refined semantic network.
+		\item Among the network nodes, file nodes appear, the denotations of which (files) are stored in the same memory as the nodes that designate them.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\names and terms}
+	\topline
+	\justifying
+	
+	Consequence:
+	\begin{textitemize}
+		\item The name (term) of an entity described by the same network can be stored in the form of a file described by the network.
+		\item The node denoting the name is linked to the node denoting the entity itself.
+		\item This allows the terminology of external languages to be aligned with the internal symbols of the network.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Refined semantic network:\\Nonlinearity and Memory}
+	\topline
+	\justifying
+	
+	\textbf{Principle 8}:
+	\begin{textitemize}
+		\item Refined semantic networks are nonlinear symbolic constructions (graph structures).
+		\item Nonlinearity complicates the implementation of computer system memory, but simplifies logical organization and associative access.
+	\end{textitemize}
+	
+	\medskip
+	Nonlinearity is caused by: the multitude of connections of each entity, the uniqueness of the sign for the entity, the description of all connections as connections between signs.
+	
+\end{frame}
+
+
+\begin{frame}{Semantic model of the knowledge base:\\definition}
+	\topline
+	\justifying
+	
+	\textbf{Semantic model of a knowledge base} --- a semantic representation of the entire knowledge base of an intelligent computer system in the form of a semantic network belonging to the universal language of semantic networks.
+	
+	\medskip
+	To use semantic networks as a means of knowledge representation it is necessary:
+	\begin{textitemize}
+		\item consider semantic networks as texts representing different types of knowledge;
+		\item to clarify the syntax and semantics of a universal knowledge representation language, the texts of which are semantic networks.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Semantic model of the knowledge base:\\graphodynamic memory}
+	\topline
+	\justifying
+	
+	By implementing graphodynamic memory and programming languages oriented towards processing information in such memory, the theoretical advantages of semantic networks can be practically realized in full.
+	
+\end{frame}
+
+
+\begin{frame}{Semantic model of the knowledge base:\\advantages (1)}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Providing a high level of associativity in accessing fragments of a knowledge base for a wide range of queries and reducing the computational complexity of searching.
+		\item Possibility of effective semantic navigation through the knowledge base with clear 2D/3D visualization of semantic neighborhoods of network elements.
+		\item Convenience of knowledge representation for both the intelligent system and users.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Semantic model of the knowledge base:\\advantages (2)}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item The ability to consider parts of the model not only as fragments of the external environment, but also as fragments of the knowledge base itself (self-description of the structure).
+		\item Explicit selection of knowledge base fragments representing subject areas and ontologies, with an explicit description of their hierarchy and connections (morphisms).
+		\item Localization of the scope of knowledge base processing operations through semantic structuring by subject areas.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Semantic model of the knowledge base:\\advantages (3)}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item The placement and access to information are determined exclusively by semantic characteristics (sense), and not by the features of memory implementation.
+		\item The sense of the information uniquely determines its location in the model and its relationship to the rest of the knowledge base.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Semantic model of the knowledge base:\\compactness of representation}
+	\topline
+	\justifying
+	
+	If the volume of representation of an information structure is defined as a pair:
+	\begin{textitemize}
+		\item number of syntactically elementary fragments;
+		\item the number of elements of the alphabet of these fragments,
+	\end{textitemize}
+	then, among semantically equivalent representations, the most compact is the representation in the form of a refined semantic network.
+	
+	\medskip
+	As the knowledge base expands, the compactness of refined networks increases, since new connections often connect already described entities.
+	
+\end{frame}
+
+
+\begin{frame}{Semantic model of the knowledge base:\\text integration}
+	\topline
+	\justifying
+	
+	Semantic networks allow for a new understanding of text integration:
+	\begin{textitemize}
+		\item integration of two semantic networks involves gluing together synonymous elements;
+		\item This integration is used when introducing new information into the semantic model of the knowledge base.
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Semantic model of the knowledge base:\\knowledge structure analysis}
+	\topline
+	\justifying
+	
+	Semantic models of knowledge bases make it possible to:
+	\begin{textitemize}
+		\item analyze the semantic coherence of the knowledge base by specifying the semantic strength of the connections;
+		\item perform knowledge base clustering;
+		\item set the metric of semantic distance between characters;
+		\item describe correspondences (morphisms) between fragments of the knowledge base (isomorphisms, homomorphisms, analogies and differences).
+	\end{textitemize}
+	
+\end{frame}
+
+
+\begin{frame}{Semantic model of the knowledge base:\\graph-theoretic algorithms}
+	\topline
+	\justifying
+	
+	The use of semantic networks as a knowledge base model allows for the wide application of a range of graph-theoretical algorithms to perform knowledge base processing operations.
+	
+\end{frame}
+
+
+\begin{frame}{\\Semantic space}
+	\topline
+	\justifying
+	
+	\textbf{Semantic space} (semantic space) ---
+	the union of all correct abstract semantic networks belonging to some language of abstract refined semantic networks.
+	
+	\medskip
+	It can be considered as a global (maximal) abstract refined semantic network, including all abstract refined networks of a given language, that is, as an abstract semantic space.
 	
 \end{frame}
