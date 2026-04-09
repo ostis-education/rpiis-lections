@@ -1,0 +1,895 @@
+\title{Lecture 10\\Problems in Intelligent Systems \vspace{-2em}}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{\\Lecture Contents}
+	\topline
+	\justifying
+	Questions and information problems. Behavioral goals and behavioral problems. Information retrieval problems. Intellectualization of information search. Difficult-to-formalize problems. Problems for which a clear statement is missing. Classes of problems and stored (interpreted) methods for their solution – programs. Typology of stored programs and their interpreters.
+\end{frame}
+
+
+\begin{frame}{Problem: Basic Definitions}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{problem}
+		\scnidtf{a description of a desired state or event within the external environment of a cybernetic system or within its knowledge base}
+		\scnidtf{problem statement}
+		\scnidtf{problem to perform some action}
+		\scnidtf{statement of the problem}
+		\scnidtf{description of the problem situation}
+		\scnidtf{a specification of some action that is complete enough to perform that action}
+		\scnidtf{the goal and additional conditions (restrictions) imposed on the result or the process of obtaining this result}
+		\scnidtf{description of what needs to be done}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Problem as an action specification}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{problem}
+		\scntext{explanation}{\textbf{\textit{Problem}}, that is, a formal description of the conditions of a certain problem, is essentially a formal \textit{specification} of some \textit{action} aimed at solving a given \textit{problem}, sufficient for the execution of this \textit{action} by some \textit{subject}. Depending on the specific \textit{class of problems}, either the internal state of the intelligent system itself or the required state of the \textit{external environment} can be described.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Problem and Action Lifecycle}
+	\topline
+	\justifying
+	
+	Each \textbf{\textit{problem}} represents a specification of an \textit{action} that has either already been completed, is currently being completed, is planned, or is yet to be completed. Classification of \textit{problems} can be carried out according to didactic criteria within the subject domain (problems involving triangles, problems involving systems of equations, etc.).
+	
+\end{frame}
+
+\begin{frame}{Problem composition: main components}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	Each \textit{problem} may include:
+	\begin{textitemize}
+		\item membership of the \textit{action} to a particular class of actions and its state in the life cycle;
+		\item description of \textit{goal*} (\textit{result*}) of the action;
+		\item indication of the \textit{customer*} and \textit{performer*} of the action;
+		\item specifying \textit{action arguments\scnrolesign}, tools, and scope;
+		\item description of the \textit{action decomposition*} and \textit{action sequence*};
+		\item condition of action initiation, start and end moments, duration.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Additional problem information}
+	\topline
+	\justifying
+	
+	Some \textit{problems} are qualified by context—additional information about the entities involved in the problem formulation. Additionally, a \textit{problem} may include any additional information about the action:
+	\begin{textitemize}
+		\item list of resources and funds (performers, deadlines, finances);
+		\item limitations of the scope of the action (for example, a section of the knowledge base);
+		\item restrictions on the knowledge allowed when solving the problem.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Classes of problems by nature}
+	\topline
+	\justifying
+	
+	On the one hand, the problems solved by the \textit{system} are divided into \textit{informational} and \textit{behavioral}. On the other hand, by formulation, a distinction is made between \textit{declarative problem formulations} and \textit{procedural problem formulations}, as well as their combinations.
+	
+\end{frame}
+
+\begin{frame}{Problem as knowledge and its subtypes}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{problem}
+		\scnsubset{specification}
+		\scnsuperset{question}
+		\scnidtf{specification of the action that has been performed, is being performed, or can be performed by the corresponding cybernetic system}
+		\scnsubset{knowledge}
+		\scntext{note}{Each \textit{problem} is \textit{knowledge} that describes what action might need to be performed.}
+		\scnsuperset{initiated problem}
+		\begin{scnindent}
+			\scnidtf{formulation of the problem to be accomplished}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Problem formulations: types}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{problem}
+		\scnsuperset{declarative problem formulation}
+		\begin{scnindent}
+			\scnidtf{a problem in which the goal situation, i.e., the result, is clearly indicated in the formulation}
+		\end{scnindent}
+		\scnsuperset{procedural problem formulation}
+		\begin{scnindent}
+			\scnidtf{a problem in which the characteristics of the action (subject, objects, tools, time and conditions of start and end) are clearly indicated in the formulation}
+		\end{scnindent}
+		\scnsuperset{declarative-procedural problem formulation}
+		\begin{scnindent}
+			\scnidtf{a problem whose formulation includes both goal and procedural aspects}
+		\end{scnindent}
+		\scntext{note}{The quality of the problem solving process largely depends on the quality of the problem formulation.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Difficult problems}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{problem}
+		\scnsuperset{difficult problem}
+		\begin{scnindent}
+			\scnidtf{hard problem}
+			\scnidtf{a complex, difficult-to-solve problem}
+			\scnsuperset{inventive problem}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Procedural problem formulation}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{procedural problem formulation}
+		\scnidtf{specification of the action to be performed}
+		\scntext{explanation}{In a \textbf{\textit{procedural problem formulation}}, the action arguments and the semantic typology of \textit{actions} are explicitly stated, but the result is not specified. If necessary, a procedural formulation can be reduced to a declarative one by a rule, for example, by defining an action class as a more general class.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Declarative problem formulation}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{declarative problem formulation}
+		\scnidtf{description of the situation (state) that should be achieved as a result of the planned action}
+		\scntext{explanation}{The declarative problem formulation specifies the purpose of the \textit{action}, that is, the desired result.}
+		\scnidtf{description of the initial situation and the goal situation of the specified action}
+		\scnidtf{semantic specification of an action}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Declarative problem formulation structure}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{declarative problem formulation}
+		\scntext{note}{The problem formulation may not contain context (in which case the entire knowledge base or its agreed-upon part is considered the scope) and may not contain a description of the initial or goal situation.}
+		\scnidtf{formulation of a problem situation with an explicit or implicit description of the context, conditions, and result of the action being performed}
+		\scnidtf{an explicit or implicit description of what is \uline{given} and what is \uline{required}}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Problem in the memory of a cybernetic system}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{problem}
+		\scnsuperset{a problem solved in the memory of a cybernetic system}
+		\begin{scnindent}
+			\scnsuperset{a problem solved in the memory of an individual cybernetic system}
+			\scnsuperset{a problem solved in the shared memory of a multi-agent system}
+			\scnidtf{information problem}
+			\scnidtf{a problem aimed at generating or searching for information that meets requirements, or at transforming given information}
+			\scnsuperset{math problem}
+		\end{scnindent}
+		\scnsuperset{elementary information problem}
+		\scnsuperset{simple information problem}
+		\scnsuperset{diffucult information problem}
+		\begin{scnindent}
+			\scnidtf{intelligent information problem}
+			\scnsuperset{Hilbert's problem}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Question as a problem}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{question}
+		\scnidtf{query}
+		\scnsubset{problem solved in the memory of a cybernetic system}
+		\scnidtf{non-procedural formulation of the problem of searching for or generating knowledge that satisfies the requirements}
+		\scnsuperset{question --- what is this}
+		\scnsuperset{question --- why}
+		\scnsuperset{question --- why}
+		\scnsuperset{question --- how}
+		\begin{scnindent}
+			\scnidtf{in what way}
+			\scnidtf{request for a method or plan for solving a problem or class of problems}
+		\end{scnindent}
+		\scnidtf{a problem aimed at satisfying the information needs of the client entity}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Command as an initiated problem}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{command}
+		\scnidtf{initiated problem}
+		\scnidtf{initiated action specification}
+		\scntext{explanation}{Examples of command formulations: \textit{Form a complete semantic\\ neighborhood of the triangle concept}; \textit{Verify a section of the knowledge base on polygons}.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Problem and Action Relationships}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{problem}
+		\scntext{note}{One action may correspond to several problem formulations. Different formulations of the same problem are considered formally different problems.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Elements of a relation:\\ declarative formulation}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{declarative problem formulation}
+		
+		\scntext{explanation}{\textit{declarative problem formulation} includes:
+			\begin{textitemize}
+				\item relation link \textit{goal*} and description of the goal situation;
+				\item relation link \textit{initial situation*} and description of the initial situation;
+				\item indication of the context (solution area) of the problem.
+			\end{textitemize}
+			Description of the initial situation may be missing.}
+		
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Elements of a relation:\\ procedural problem formulation}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{procedural problem formulation}
+		\scntext{explanation}{\textit{procedural problem formulation} includes the indication of:
+			\begin{textitemize}
+				\item \textit{the action class} to which the action belongs;
+				\item \textit{subjects} of action and their roles;
+				\item \textit{objects} of action and their roles;
+				\item materials and tools used;
+				\item temporal characteristics (timeframe, duration);
+				\item action priority;
+				\item decomposition of an action into sub-actions down to the elementary ones.
+		\end{textitemize}}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Action Context}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{\scnkeyword{action context*}}
+		\scnidtf{problem situation*}
+		\scnidtf{what is given*}
+		\scnidtf{additional information about the entities included in the goal description*}
+		\scnidtf{the relationship between a problem and the state of the knowledge base, capabilities, and skills of the subject to whom the specified problem is assigned*}
+		\scnidtf{the connection between the formulation of a problem and the context of that problem, that is, the description of the available resources, the description of what is given*}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Action context: explanation}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{action context*}
+		\scntext{explanation}{Links of the \textbf{\textit{action context*}} relationship and the execution context of this \textit{action}, that is, additional information about the entities from the \textit{goal*} description. The context defines the problem conditions ("what is given") and determines the knowledge that can be used in the solution. Even problems of the same class of actions can be solved differently in different contexts.}
+	\end{SCn}
+	
+\end{frame}
+
+\begin{frame}{Context representation form}
+	\topline
+	\justifying
+	
+	The context can be represented not only by an atomic factual statement, but also by more complex statements, for example:
+	\begin{textitemize}
+		\item definition of the set used in the description of the \textit{goal*};
+		\item statement, taking into account which can be useful when solving problems.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Action Protocol}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{\scnkeyword{protocol}*}
+		\scnidtf{decomposition of the completed action into a system of sequentially and parallelly executed sub-actions*}
+		\scnidtf{a description of how the relevant action was actually performed and the sequence of situations and events*}
+		\scnidtf{a protocol for executing a complex action, including protocols for executing all sub-actions*}
+		\scnidtf{protocol for solving the problem*}
+		\scnidtf{history of the completed problem solution*}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Protocol: Explanation}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{protocol}
+		\scntext{explanation}{Each \textbf{\textit{protocol}} is a \textit{specification} of an \textit{action}, the execution process of which is described, including sub-actions that later prove inappropriate. It is assumed that the action sign refers to a set of past entities. Unlike a \textit{plan}, a protocol is always formed upon the execution of an action.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Result part of the protocol}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{\scnkeyword{result part of the protocol}*}
+		\scnidtf{part of the completed action protocol, including only those sub-actions that contributed to the construction of the result of this action*}
+		\scntext{note}{The protocol of the completed action and its resulting part can differ greatly, just as the protocol of proving a theorem and its resulting part, which serves as a justification for the truth of the theorem, can differ greatly.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Action Decomposition}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{\scnkeyword{action decomposition*}}
+		\scnidtf{reducing an action to a set of simpler, interconnected actions*}
+		\scntext{explanation}{Links of the \textit{action decomposition*} relation connect the \textit{action} and the set of partial \textit{actions} into which it is decomposed, that is, lower-level actions.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Decomposition and problem-solving strategy}
+	\topline
+	\justifying
+	
+	Each action can have several decomposition options depending on the set of elementary actions available to the system of subjects. The principle by which decomposition is carried out in different problem-solving approaches is called a \textit{problem-solving strategy}.
+	
+\end{frame}
+
+\begin{frame}{Initial situation}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{\scnkeyword{initial situation}*}
+		\scnidtf{initial situation corresponding to a given action*}
+		\scnidtf{initial situation of the action*}
+		\scnidtf{description of what is given before the start of the execution of the specified action*}
+		\scntext{note}{\textit{initial situation*} describes the initial conditions sufficient to initiate an action, whereas \textit{initial situation*} is a more general concept and need not contain such a description.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{End Situation and Goal}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{\scnkeyword{end situation}*}
+		\scnidtf{resulting situation corresponding to the given action*}
+		\scnidtf{the final situation corresponding to the given action*}
+		
+		\scnheader{\scnkeyword{goal}*}
+		\scnidtf{goal situation*}
+		\scnidtf{description of what is required to be obtained as a result of performing the specified action*}
+		\scnidtf{purpose of the action*}
+		\scnidtf{intention*}
+		\scnidtf{design*}
+		\scnidtf{desire*}
+		\scnidtf{aspiration*}
+		\scnidtf{direction of action*}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Intellectualization\\ of information search}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{Intellectualization of information search}
+		\scntext{explanation}{This is the process of applying various technologies and artificial intelligence methods to improve the quality and efficiency of information search.}
+		\scntext{goal}{The goal is to understand the user's request, interpret it, and provide the most relevant results.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Intellectualization\\ of information search}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{Intellectualization of information search}
+		\begin{scnrelfromset}{reasons}
+			\scnfileitem{When a user receives a large amount of information as a result of an automated search, a lot of time is spent reviewing it and selecting the necessary information}
+			\scnfileitem{The selection of information made by a person is often not rational and strictly consistent, which significantly complicates the search for information}
+			\scnfileitem{When searching for information, the user usually does not strictly define the search goal, that is, they use vaguely defined concepts and formulations}
+		\end{scnrelfromset}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Intellectualization\\ of information search}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{Intellectualization of information search}
+		\begin{scnrelfromset}{advantages}
+			\scnfileitem{systems can use machine learning algorithms and data analysis to provide the most relevant results to the user}
+			\scnfileitem{intellectualization allows expand search functionality, including filtering, classification, analysis, and other functions}
+			\scnfileitem{systems may take into account a user's previous actions and preferences to provide personalized results}
+		\end{scnrelfromset}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Problems of Traditional Search}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Traditional information search systems often return large numbers of irrelevant documents, making relevance a key criterion for search quality.
+		\item Simple search automation and multi-criteria classification of information in themselves did not provide a significant increase in the relevance and convenience of searching.
+		\item Another significant problem is that documents are often presented as a random selection rather than as a sequence ordered by importance.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Intelligent Search Technologies}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Knowledge management systems are used to intelligentize search, as they help organize information and simplify the solution of search problems.
+		\item Ontological and multi-agent approaches are proposed as the basis for intelligent IISS.
+		Other AI techniques, including fuzzy logic and machine learning, which allow for dealing with uncertainty and approximate reasoning, also play an important role.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Search personalization}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Modern search engines are moving from general relevance to individual relevance, that is, taking into account the characteristics of a specific user.
+		\item Personalization means delivering results based on the user's information needs, interests, geographic location, age, and other characteristics.
+		\item Collaborative filtering, heuristic modeling and behavioral goaling are used to assess preferences.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Architecture of an \\intelligent information search system}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item A multi-agent architecture, in which intelligent agents interact on the server and client sides, is considered promising.
+		\item Such agents can perform traditional search engine functions, supplementing them with monitoring of user preferences and intelligent query processing.
+		\item Collected information about user requests and interests can be placed in a library of precedents and used for subsequent mathematical and statistical processing.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Effect of intelligent information search}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Intelligent and personalized search mechanisms should be used in\\ conjunction with traditional search tools, as their effectiveness increases when used together.
+		\item The main practical effect of intellectualization is to bring us closer to solving the problem of selecting truly relevant information from large data sets.
+		\item Thus, intelligent search becomes not just a means of issuing documents, but a tool to support the user in extracting knowledge and making decisions.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Problems that are difficult to formalize}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{difficult-to-formalize problems}
+		\scnidtf{problems for which there is no clear statement}
+		\scnidtf{problems whose conditions are not fully defined}
+		\scnidtf{problems in which not all relationships, constraints, and criteria are explicitly specified}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{The nature of difficult-to-formalize problems}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item For such problems it is difficult or impossible to construct an exact mathematical formulation.
+		\item Even if a formal statement exists, the search space for a solution may be too large for practical enumeration.
+		\item In such problems, there is often no single universal solution algorithm.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Key Features}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Incompleteness, inaccuracy or unreliability of the original data.
+		\item Ambiguity of conditions, restrictions and the very concept of a solution.
+		\item The presence of contradictory or inconsistent criteria for evaluating the result.
+		\item Dependence of the decision on the context, experience and interpretation of the person.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Why the statement is unclear}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item The objectives of the problem may be formulated vaguely or changed during the solution process.
+		\item Not all significant factors and the relationships between them are always known.
+		\item Some parameters are qualitative rather than quantitative.
+		\item A problem may simultaneously involve uncertainty, subjectivity, and changing conditions.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Semi-structured problems}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{semi-structured problems}
+		\scnidtf{problems dominated by qualitative and weak-defined factors}
+		\scnidtf{problems for which the criteria for evaluating alternatives are often subjective}
+	\end{SCn}
+	
+	Semi-structured problems occupy an intermediate position between well-formalized and completely unstructured problems.
+\end{frame}
+
+\begin{frame}{Examples of Difficult-to-Formalize Problems}
+	\topline
+	\justifying
+	
+	\footnotesize
+	\vspace{10mm}
+	
+	\begin{textitemize}
+		\item \textbf{Decision-making problems:} making management decisions in a complex socio-economic system, choosing a development strategy, allocating resources.
+		\item \textbf{Design problems:} designing the architecture of a complex information system, choosing principles for constructing an object, synthesizing the structure of the solution.
+		\item \textbf{Recognition problems:} medical diagnostics, pattern recognition, interpretation of signals and complex visual data.
+		\item \textbf{Data analysis problems:} classification, clustering, text annotation, identification of hidden patterns.
+		\item \textbf{Forecasting and planning problems:} forecasting the behavior of a system, assessing the development of a situation, creating action plans in conditions of uncertainty.
+		\item \textbf{Problems of logical inference and solution search:} proving theorems, constructing hypotheses, searching for a heuristic method for solving a new problem.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{How are such problems solved}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Heuristics, expert knowledge and intuitive assessments are often used to solve them.
+		\item Instead of an exact algorithm, approximate methods are used to help eliminate obviously unsuccessful options.
+		\item Knowledge of the subject domain, the context of the problem and the specialist’s experience play an important role.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Example of a difficult-to-formalize problem}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\textbf{Example:}\\ Making a medical diagnosis based on complaints, anamnesis, examination and test results.
+	
+	\vspace{10mm}
+	
+	\begin{textitemize}
+		\item Such a problem is difficult to formalize, because the same symptoms may correspond to different diseases.
+		\item Source data is often incomplete, ambiguous or contradictory, and some of the relevant information is of a qualitative nature.
+		\item The decision depends not only on formal rules, but also on clinical experience, interpretation of signs and the choice of diagnostic hypothesis.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Method as Knowledge}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{method}
+		\scnidtf{knowledge about \uline{how} any (or almost any) action belonging to the corresponding class of actions can be performed}
+		\scnidtf{a method for solving a corresponding class of problems that ensures the solution of any problem or most problems of the specified class}
+		\scnidtf{generalized specification of the execution of actions of the corresponding class}
+		\scnidtf{generalized specification of the solution to problems of the corresponding class}
+		\scnidtf{knowledge of how to solve problems of a certain class (a set of equivalent, similar problems)}
+		\scnsubset{knowledge}
+		\scniselement{knowledge type}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Method, program, and class of problems}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{method}
+		\scnidtf{a program for solving problems of the corresponding class, which can be either procedural or declarative}
+		\scnidtf{a generalized plan for executing a certain class of complex actions (or a plan for solving the corresponding class of complex problems)}
+		\scnidtf{information sufficient to solve any problem of a given class using the appropriate problem-solving model}
+		\scntext{note}{The complexity of developing a method is determined not so much by the size of the class of problems, but by their semantic closeness and similarity.}
+		\scnsuperset{method of reducing problems to subproblems}
+		\begin{scnindent}
+			\scnidtf{a class of logically equivalent methods that solve problems by reducing them to subproblems and differ only in the details of formalization}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Method and class of problems}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{method}
+		\scntext{explanation}{Each method is defined not for one individual problem, but for a certain \textit{class of problems} (class of actions), the elements of which are of the same type or semantically close.}
+		\scnidtf{method for solving the corresponding class of problems}
+		\scnidtf{execution method of the corresponding action class}
+		\scntext{explanation}{The same class of actions (class of problems) may correspond to several methods (programs) implementing different ways of solving problems of this class.}
+		\scntext{explanation}{The binding of a method to a specific problem of a given class consists in the fact that the generalized plan specified by the method is specified for the parameters and conditions of this problem, generating an individual plan for its solution.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Problem-Solving Strategy}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{problem-solving strategy}
+		\scnsubset{method}
+		\scnidtf{a problem-solving metamethod that provides either a search for a single relevant known method or the synthesis of a goaled sequence of actions for applying various known methods in a general case}
+		\scntext{note}{We can speak of a universal metamethod (universal strategy) for solving problems that explains all possible particular strategies.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Basic Problem Solving Strategies}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	If the current context of the knowledge base is not sufficient to achieve the information goal, three main strategies are possible:
+	
+	\begin{textitemize}
+		\item \textbf{Goal decomposition:} the original goal is reduced to a system of subgoals and subproblems until subgoals are obtained for which an applicable solution method already exists.
+		\item \textbf{Generation of new knowledge:} in the semantic neighborhood of the goal, new knowledge is generated using available methods in order to obtain a context sufficient to achieve the original goal.
+		\item \textbf{Combined strategy:} joint use of decomposition and generation of new knowledge.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Method class}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{method class}
+		\scnrelto{family of subclasses}{method}
+		\scnidtf{a set of methods for which it is possible to \uline{unify} the representation (specification) of these methods}
+		\scnidtf{a set of problem-solving methods that have a common language for representing these methods}
+		\scnidtf{a set of methods to which a separate problem-solving model is assigned}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Method class and language}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{method class}
+		\scnidtf{the set of methods provided in a given language}
+		\scnidtf{a set of methods for which a representation language for these methods is specified}
+		\scnidtf{a set of methods based on a common ontology}
+		\scnidtf{a set of problem-solving methods, which corresponds to a special language (for example, sc-language), providing a representation of methods from this set}
+		\scntext{note}{Each specific \textit{method class} has a one-to-one correspondence with the \textit{method representation language} belonging to that class. The specification of a method class is reduced to the specification of the corresponding language (syntax, denotational and operational semantics).}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Class of methods: main types}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{method class}
+		\scnhaselement{procedural problem solving method}
+		\begin{scnindent}
+			\scnsuperset{algorithmic method for solving problems}
+		\end{scnindent}
+		\scnhaselement{non-procedural problem solving method}
+		\begin{scnindent}
+			\scnsuperset{logical problem solving method}
+			\scnsuperset{production problem solving method}
+			\scnsuperset{functional problem solving method}
+			\begin{scnindent}
+				\scnsuperset{artificial neural network}
+				\begin{scnindent}
+					\scnidtf{a class of problem-solving methods based on artificial neural networks}
+				\end{scnindent}
+				\scnsuperset{genetic algorithm}
+			\end{scnindent}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Method Representation Language}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{method representation language}
+		\scnidtf{method language}
+		\scnidtf{language for representing methods corresponding to a certain class of methods}
+		\scnsubset{language}
+		\scnidtf{programming language}
+		\scntext{note}{A method representation language allows one to describe the syntactic, denotational, and operational semantics of a method. There can be many such languages, each with its own problem-solving model (interpreter).}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Method representation languages:\\ by purpose}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{method representation language}
+		\scnsuperset{general-purpose method representation language}
+		\begin{scnindent}
+			\scnidtf{general-purpose programming language}
+		\end{scnindent}
+		\scnsuperset{domain-specific method representation language}
+		\begin{scnindent}
+			\scnidtf{domain-specific programming language}
+		\end{scnindent}
+		\scnsuperset{language for representing information processing methods}
+		\begin{scnindent}
+			\scnidtf{programming language for the internal actions of a cybernetic system, executed in its memory}
+			\scnidtf{language for representing methods for solving problems in the memory of cybernetic systems}
+		\end{scnindent}
+		\scnsuperset{language for representing methods for solving problems in the external environment of cybernetic systems}
+		\begin{scnindent}
+			\scnidtf{programming language for external actions of cybernetic systems}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Paradigms of Method Representation Languages}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{method representation language}
+		\scnrelfrom{partition}{method representation language paradigm\scnsupergroupsign}
+		\begin{scnindent}
+			\begin{scneqtoset}
+				\scnitem{procedural method representation language}
+				\scnitem{non-procedural method representation language}
+			\end{scneqtoset}
+		\end{scnindent}
+		\scntext{explanation}{By method representation language we mean a formal language whose symbolic constructs are methods for which general rules of construction and general rules of correlation with the described entities and relationships are specified.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Procedural Languages\\ Method Representations}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{procedural method representation language}
+		\scnidtf{imperative method representation language}
+		\scnsuperset{structured method representation language}
+		\begin{scnindent}
+			\begin{scnhaselementrolelist}{example}
+				\scnitem{C}
+				\scnitem{Pascal}
+				\scnitem{Ada}
+			\end{scnhaselementrolelist}
+		\end{scnindent}
+		\scnsuperset{object-oriented method representation language}
+		\begin{scnindent}
+			\begin{scnhaselementrolelist}{example}
+				\scnitem{Java}
+				\scnitem{C++}
+				\scnitem{C\#}
+			\end{scnhaselementrolelist}
+		\end{scnindent}
+		\scntext{note}{Procedural languages specify computations as a sequence of instructions and have historically been oriented toward the von Neumann architecture.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Procedural Languages:\\ Advanced Examples}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{procedural method representation language}
+		\scnsuperset{aspect-oriented method representation language}
+		\begin{scnindent}
+			\begin{scnhaselementrolelist}{example}
+				\scnitem{AspectJ}
+			\end{scnhaselementrolelist}
+		\end{scnindent}
+		\scnsuperset{scripting language for method representation}
+		\begin{scnindent}
+			\scnidtf{scripting language}
+			\begin{scnhaselementrolelist}{example}
+				\scnitem{Python}
+				\scnitem{JavaScript}
+				\scnitem{Perl}
+			\end{scnhaselementrolelist}
+		\end{scnindent}
+		\scntext{note}{Scripting languages are often used for "gluing"{} components, automation, and rapid development, but they remain procedural in their paradigm.}
+	\end{SCn}
+\end{frame}
+
+
+\begin{frame}{Non-procedural languages\\ method representations}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{SCn}
+		\scnheader{non-procedural method representation language}
+		\scnidtf{declarative method representation language}
+		\scnsuperset{logical method representation language}
+		\begin{scnindent}
+			\begin{scnhaselementrolelist}{example}
+				\scnitem{Prolog}
+			\end{scnhaselementrolelist}
+		\end{scnindent}
+		\scnsuperset{production method representation language}
+		\scnsuperset{functional method representation language}
+		\begin{scnindent}
+			\scnidtf{applicative method representation language}
+			\begin{scnhaselementrolelist}{example}
+				\scnitem{LISP}
+			\end{scnhaselementrolelist}
+		\end{scnindent}
+		\scntext{note}{Non-procedural languages specify computations as a sequence of related objects or expressions, and their underlying concepts are usually not directly related to computer components.}
+	\end{SCn}
+\end{frame}
