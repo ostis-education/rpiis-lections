@@ -1,0 +1,510 @@
+\title{Lecture 11\\Problem Solvers of Intelligent Systems \vspace{-2em}}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{\\Contents}
+	\topline
+	\justifying
+	
+	Models for solving problems in the absence of stored solution methods. Plausible reasoning. The knowledge processing engine of an intelligent system as a multi-agent system. The concept of a multi-agent system.
+	
+\end{frame}
+
+\begin{frame}{Modern approaches to problem solving}
+	\topline
+	\justifying
+	\vspace*{\fill}
+	
+	\footnotesize
+	
+	\vspace{2mm}
+	\textbf{Solving Problems Using Stored Programs}
+	
+	\vspace{1mm}
+	In this case, it is assumed that the system already has a program
+	solutions to problems of a given class, and the solution comes down to finding such a program
+	and its interpretation on the given input data. Towards systems oriented
+	This approach includes, in particular:
+	\begin{textitemize}
+		\item programs written in programming languages such as imperative,
+		as well as the declarative paradigm (including logical and functional);
+		\item implementation of genetic algorithms;
+		\item neural network models of information and knowledge processing.
+	\end{textitemize}
+	
+	\vspace{1mm}
+	It should be noted that even in the case of using a stored program the solution to the problem is not always trivial: firstly, it is necessary to find a suitable program based on the specification, secondly, to ensure its
+	correct interpretation.
+	
+\end{frame}
+
+\begin{frame}{Modern approaches to problem solving}
+	\topline
+	\justifying
+	\vspace*{\fill}
+	
+	\footnotesize
+	
+	\vspace{2mm}
+	\textbf{Solving problems in conditions where the solution program is unknown}
+	
+	\vspace{1mm}
+	In this case, the system may not have a ready-made solution program for the class.
+	tasks to which the formulated task relates. Therefore, they are used
+	additional, relatively general methods for finding a solution, not
+	designed for a narrow class of tasks, for example:
+	\begin{textitemize}
+		\item splitting a task into subtasks;
+		\item methods for searching solutions in depth and breadth;
+		\item random search method and trial and error method;
+		\item bisection method and other heuristics.
+	\end{textitemize}
+	
+	Various models of logical inference are also used:
+	\begin{textitemize}
+		\item deductive, inductive and abductive models;
+		\item models based on fuzzy logic and default logic;
+		\item models based on temporal logic and other variants of formal inference.
+	\end{textitemize}
+	
+\end{frame}
+
+\begin{frame}{Problem Solver}
+	\topline
+	\justifying
+	
+	\begin{SCn}
+		\scnheader{cybernetic system problem solver}
+		\scnidtf{a component of a cybernetic system responsible for solving specific problems using existing methods}
+		\scntext{feature}{The main feature of problem solvers is the need to solve problems in conditions where the information needed for the solution is not explicitly localized and must be found during the solution process based on specified criteria and search strategies.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Cybernetic System Problem Solver}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\begin{SCn}
+		\scnheader{cybernetic system problem solver}
+		\scnidtf{the totality of all skills and problem-solving methods possessed by a cybernetic system at a given moment in time}
+		\scntext{explanation}{The modern approach to constructing problem solvers assumes their modifiability: a cybernetic system can acquire new \textit{skills} as needed, refine existing ones, and even abandon some skills to improve performance. Therefore, it makes sense to speak not of a rigidly fixed solver, defined once during the system's creation, but of a set of skills, fixed at each moment in time but constantly evolving.}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{Types of Problem Solvers}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\begin{SCn}
+		\scnheader{cybernetic system problem solver}
+		\scnsuperset{united cybernetic system problem solver}
+		\begin{scnindent}
+			\scnidtf{complete cybernetic system problem solver}
+			\scnidtf{integrated cybernetic system problem solver}
+			\scnidtf{problem solver that implements all the system's functional capabilities, both primary and secondary}
+		\end{scnindent}
+		\scnsuperset{hybrid cybernetic system problem solver}
+		\begin{scnindent}
+			\scnidtf{problem solver that implements two or more problem-solving models}
+		\end{scnindent}
+	\end{SCn}
+\end{frame}
+
+\begin{frame}{United Problem Solver}
+	\topline
+	\justifying
+	\vspace*{\fill}\\
+	\small{
+		\begin{SCn}
+			\scnheader{united cybernetic system problem solver}
+			\scntext{explanation}{In general, a united cybernetic system problem solver solves problems related to:
+				\begin{textitemize}
+					\item providing the basic functional capabilities of the system (for example, solving clearly formulated problems at the user’s request);
+					\item ensuring the correctness and optimization of the operation of the cybernetic system itself throughout its entire life cycle;
+					\item ensuring advanced training for end users and system developers (training and maintenance support);
+					\item ensuring automation of development and management of the development of the cybernetic system itself.
+			\end{textitemize}}
+		\end{SCn}
+	}
+\end{frame}
+
+\begin{frame}{Models for solving problems in the absence of stored solution methods}
+	\topline
+	\justifying
+	
+	\footnotesize
+	\vspace{10mm}
+	
+	They are used in situations where the system does not have a ready-made solution to a problem, and the solution path has to be \uline{constructed}, \uline{searched for} or \uline{generated} directly in the process of work.
+	
+	Such situations include:
+	\begin{textitemize}
+		\item the problem is new and there is no pre-prepared solution method for it;
+		\item the conditions of the problem are not fully specified, contain uncertainty or contradictions;
+		\item the system has individual knowledge and rules, but does not have a ready-made plan for their application to a given task;
+		\item the problem is too complex for direct enumeration and requires decomposition, heuristics, or plausible reasoning;
+		\item solution must be obtained in a changing environment, where a stored method quickly loses its relevance.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Problem Statement}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item For many problems, it is impossible to store in advance a ready-made solution program for every possible case.
+		\item The state space may be too large, incomplete, probabilistic, or partially observable.
+		\item Search, inference, heuristics, learning and adaptation models are used.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Historical stages of AI}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item 1950s–1960s: Automatic problem solvers, theorem provers, heuristic search.
+		\item 1969–1980s: Expert systems and rule-based reasoning.
+		\item Since 1986: The return of neural networks thanks to backpropagation.
+		\item Since the late 1980s: probabilistic models, machine learning,  deep learning.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Early approaches}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Some of the early directions were state-space search, automated theorem proving, and heuristic search control.
+		\item During this period, General Problem Solver, Logic Theorist, and other systems oriented toward universal solution strategies emerged.
+		\item The idea was not to store a ready-made answer, but to build a chain of steps towards the goal.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{General Problem Solving Strategies}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item splitting a task into subtasks;
+		\item solution of the problem "from the end"{} (reverse inference);
+		\item simplification of the task and transition to a more convenient description language;
+		\item enumeration, random search and trial and error method;
+		\item use of analogy, patterns and typical classes of problems.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{State space}
+	\topline
+	\justifying
+	
+	\footnotesize
+	\vspace{10mm}
+	
+	A state space is a set of possible problem states, interconnected by admissible transitions. In such a model, solving a problem is interpreted as finding a path that takes the system from its initial state to its target state.
+	
+	\vspace{2mm}
+	
+	To define the state space, it is necessary to determine:
+	\begin{textitemize}
+		\item initial state of the task;
+		\item target state or set of admissible target states;
+		\item operations of transition from one state to another;
+		\item restrictions on the admissibility of states and transitions.
+	\end{textitemize}
+	
+	\vspace{2mm}
+	
+	Thus, the solution to the problem is reduced to constructing a sequence of admissible transitions leading from the initial state to one of the target states.
+\end{frame}
+
+\begin{frame}{AND-subgoals and OR-subgoals}
+	\topline
+	\justifying
+	
+	\footnotesize
+	\vspace{10mm}
+	
+	When describing a solution process, a complex goal is often represented as a system of subgoals. These subgoals can be linked by \uline{AND} and \uline{OR} relationships, which allows for defining the structure of the solution search.
+	
+	\vspace{2mm}
+	
+	\begin{textitemize}
+		\item \uline{AND-subgoals} mean that in order to achieve the overall goal, it is necessary to solve all related subtasks;
+		\item \uline{OR-subgoals} mean that to achieve the goal it is sufficient to solve at least one of several alternative subgoals;
+		\item The combination of AND and OR subgoals allows one to represent the solution to a problem in the form of a tree or a search graph.
+	\end{textitemize}
+	
+	\vspace{2mm}
+	
+	For example, if the goal is to diagnose a technical malfunction, then several tests may be required to confirm one hypothesis, and there may be several alternative paths to choosing a method for eliminating the malfunction.
+\end{frame}
+
+\begin{frame}{Searching the state space}
+	\topline
+	\justifying
+	
+	\footnotesize
+	\vspace{10mm}
+	
+	State space search involves the sequential generation, analysis, and selection of states that potentially lead to the goal. The order in which states are considered is determined by the chosen search strategy.
+	
+	\vspace{2mm}
+	
+	The most common search directions are:
+	\begin{textitemize}
+		\item \uline{depth-first} search, in which one selected branch of the solution is first developed;
+		\item \uline{breadth-first} search, in which all states of the current level are considered sequentially;
+		\item search \uline{from source data to target}, corresponding to the direct deployment of the solution process;
+		\item search \uline{from the target to the source data}, corresponding to the inverse construction of the solution.
+	\end{textitemize}
+	
+	\vspace{2mm}
+	
+	The choice of strategy depends on the structure of the state space, the number of possible transitions, the depth of the solution, and the available information about the problem.
+\end{frame}
+
+\begin{frame}{Splitting a task into subtasks}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item The original problem is divided into simpler subproblems, the solution of which is more accessible.
+		\item Then the solutions of the subproblems are combined into a final solution.
+		\item This approach is associated with hierarchical planning and the divide-and-conquer strategy.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Reverse output}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item In backward inference, the system starts with a goal and looks for rules or statements that can justify it.
+		\item Then each premise is turned into a subgoal.
+		\item This approach has been widely used in logical and expert systems.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Depth-first and breadth-first search}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item \textbf{Depth-first search} quickly goes down one branch, but can get stuck in a dead end.
+		\item \textbf{Breadth-first search} is systematic and finds the shortest solution in the number of steps, but requires a lot of memory.
+		\item These strategies formed the basis of many state-space problem solvers.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Heuristic Search}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Heuristics reduce search complexity by using domain knowledge.
+		\item Instead of a complete enumeration, the system evaluates which states are more promising.
+		\item A classic example is best-first search and A*-search (search by the first best match on a graph).
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Random search and enumeration}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item If the solution space is small or poorly structured, random search and trial and error can be used.
+		\item A more systematic option is a complete enumeration with checking of variants and rollback.
+		\item These methods are simple, but do not scale well.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Analogy and Templates}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item In a number of cases, the problem is solved by comparing it with an already known type of problem.
+		\item Analogy allows us to transfer the structure of a solution from one area to another.
+		\item This is close to case-based reasoning and the use of precedents.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Logical models of problem solving}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Logical models represent knowledge in a formal form and allow one to draw conclusions about new facts.
+		\item They are especially convenient where rigor, explainability, and control over the correctness of reasoning are important.
+		\item In such models, the task often boils down to proving a goal from a set of facts and rules.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Classification of logical reasoning}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item \textbf{Deduction:} derivation of the particular from the general.
+		\item \textbf{Induction:} generalization based on a set of particular observations.
+		\item \textbf{Abduction:} search for the most plausible explanation of an observed fact.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Plausible reasoning}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Plausible reasoning is used when there is insufficient information for rigorous proof.
+		\item In this case, the system does not construct an absolutely guaranteed conclusion, but the most reasonable or probable one.
+		\item These include \textit{abductive inference}, \textit{default inference}, \textit{fuzzy inference}, and \textit{probabilistic inference}.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Logical Languages and Systems}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item \textbf{Prolog} is widely used for logic programming.
+		\item For production systems, rule-based environments are used, for example \textbf{CLIPS}.
+		\item These tools are used in expert systems, rule interpreters and automatic inference systems.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Examples of logical and expert systems}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	\begin{textitemize}
+		\item \textbf{DENDRAL} --- one of the first expert systems designed for chemical analysis and identification of the structure of organic compounds.
+		\item \textbf{MYCIN} --- a medical consultation system that used production rules to diagnose bacterial infections and select therapy.
+		\item \textbf{PROSPECTOR} --- expert system for geological exploration and assessment of the probability of the presence of minerals.
+		\item \textbf{INTERNIST} --- a medical decision support system focused on the diagnosis of internal diseases.
+		\item \textbf{R1 (XCON)} --- expert system for configuring computing systems according to specified requirements.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Limitations of Purely Logical Models}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item A pure logical model requires labor-intensive manual description of knowledge.
+		\item Rigid formalization does not work well in environments with uncertainty and variable data.
+		\item Therefore, logical models are often combined with probabilistic, learning and heuristic approaches.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Machine learning}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Machine learning is used when it is not possible to explicitly program in advance a way to solve all situations.
+		\item Instead of a ready-made algorithm, the system learns from data and experience.
+		\item Basic modes: supervised, unsupervised, and reinforcement learning.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Neural network models}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item Neural networks are particularly effective for recognizing images, speech, text, and complex nonlinear relationships.
+		\item After 1986, the backpropagation method gave a powerful impetus to the development of the neural network approach.
+		\item The current stage is associated with deep learning: CNN, RNN, Transformers and other architectures.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Advantages of neural networks}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item They allow us to solve problems for which it is difficult to formulate a set of rules manually.
+		\item The network itself extracts useful features from the data during the training process.
+		\item However, neural network solutions are often less interpretable than logical models.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Genetic Algorithms}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	\footnotesize
+	
+	\begin{columns}[T,totalwidth=\textwidth]
+		\begin{column}{0.56\textwidth}
+			
+			\vspace{10mm}
+			
+			\begin{textitemize}
+				\item Genetic algorithms model natural selection in solution space.
+				\item Each possible solution is encoded as a set of parameters (genotype) and evaluated using a fitness function.
+				\item The search process uses selection, crossover, and mutation operations, which allows for a gradual improvement in the quality of solutions.
+				\item This approach is especially useful for complex nonlinear optimization and search problems.
+			\end{textitemize}
+		\end{column}
+		
+		\begin{column}{0.40\textwidth}
+			\begin{center}
+				\includegraphics[width=0.8\linewidth]{part2/images/is_problem_solvers/gen_en.png}
+			\end{center}
+		\end{column}
+	\end{columns}
+\end{frame}
+
+\begin{frame}{When Genetic Algorithms Are Useful}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item When the solution space is very large and there is no good analytical method.
+		\item When it is necessary to search for an acceptable, and not necessarily strictly optimal, solution.
+		\item When it is useful to explore many alternative options in parallel.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Hybrid Models}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item In practice, hybrid systems are increasingly used: logic + probabilities, rules + learning, neural networks + evolutionary methods.
+		\item Genetic algorithms can be used to tune neural networks, and logical rules can be used to interpret ML results.
+		\item The hybrid approach allows for the combination of explainability, flexibility, and adaptability.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Comparison of approaches}
+	\topline
+	\justifying
+	
+	\begin{textitemize}
+		\item \textbf{Search and heuristics} are good for explicit state spaces.
+		\item \textbf{Logical models} are strong in explainable inference and formal correctness.
+		\item \textbf{Machine learning and neural networks} are effective on big data and complex dependencies.
+		\item \textbf{Genetic algorithms} are useful for global search and optimization.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Conclusion: Models for solving problems in the absence of stored methods for their solution}
+	\topline
+	\justifying
+	
+	In the absence of a stored solution method, the problem is solved not by extracting a ready-made program, but by constructing a solution path based on search, logical inference, heuristics, plausible reasoning, learning, and adaptation.
+	
+	\bigskip
+	
+	The history of AI shows that the most powerful systems emerge when these approaches are not opposed but \uline{combined}.
+\end{frame}
+
