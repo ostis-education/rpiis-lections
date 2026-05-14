@@ -1,0 +1,1027 @@
+\title{Lecture 12\\User interfaces of intelligent systems \vspace{-2em}}
+%\author[]{Shunkevich D.V.}
+%\institute[]{Belarusian State University of Informatics and Radioelectronics}
+
+\begin{frame}
+	\titlepage
+\end{frame}
+
+\begin{frame}{Lecture Contents}
+	\topline
+	\justifying
+	
+	
+	User interfaces as intelligent systems. External languages of user communication: universal and specialized. Editors of external information structures.
+	
+\end{frame}
+
+\begin{frame}{Interface as a subsystem\\ of a cybernetic system}
+	\topline
+	\justifying
+	
+	The interface of a cybernetic system is considered as a special subsystem that ensures the interaction of the system with the outside world: the user, other systems, technical devices and the physical environment.
+	
+	\begin{textitemize}
+		\item The interface is not limited to on-screen dialogue with a person.
+		\item It provides for the reception, interpretation, transmission and presentation of external influences and messages.
+		\item In an intelligent system, the interface must be consistent with the models of knowledge, context, and goals of the activity.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{External environment for a cybernetic system}
+	\topline
+	\justifying
+	
+	
+	The external environment includes not only the human operator, but also many other sources and recipients of interaction.
+	
+	\begin{textitemize}
+		\item Users and user groups.
+		\item Other cybernetic and information systems.
+		\item Sensors, actuators, robotic components.
+		\item Documents, databases, signals, images, scenes of the outside world.
+		\item Communication channels and exchange protocols.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Why is the interface especially important for intelligent systems?}
+	\topline
+	\justifying
+	
+	
+	For conventional programs, an interface is often understood as a means of input and output. For intelligent systems, this is insufficient, as interaction must be meaningfully interpretable, context-sensitive, and adaptive.
+	
+	\begin{textitemize}
+		\item It is necessary to correlate messages with domain models.
+		\item It is necessary to support uncertainty, incompleteness and ambiguity.
+		\item It is necessary to take into account the user's state, tasks and interaction situation.
+		\item It is important to provide an explanation for the system's decisions.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{User Interface and Smart Interface}
+	\topline
+	\justifying
+	
+	These concepts are close, but not identical.
+	
+	\begin{textitemize}
+		\item The user interface of an intelligent system is a subsystem of interaction between the system and the user.
+		\item An intelligent interface is a broader concept; it uses knowledge, context models, interpretation and adaptation mechanisms.
+		\item Intelligence can be manifested in both human-machine and intersystem and sensory-executive interactions.
+		\item Therefore, not every interface of an intelligent system is intelligent in the strong sense, but advanced intelligent systems usually require precisely such interfaces.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Working Definition of an Intelligent Interface}
+	\topline
+	\justifying
+	
+	
+	An intelligent interface is an interface subsystem of a cybernetic system that, based on knowledge of the subject domain, user, context and goals of the activity, interprets input messages, generates output messages and adapts the interaction process.
+	
+	\begin{textitemize}
+		\item Uses knowledge models, not just a set of commands and forms.
+		\item Supports semantic interpretation of messages.
+		\item Capable of personalization, explanation and adaptation.
+		\item Can work with various modalities: text, speech, graphics, gestures, sensory signals.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Working Definition of the User Interface of an Intelligent System}
+	\topline
+	\justifying
+	
+	
+	The user interface of an intelligent system is a part of the interface subsystem that directly organizes two-way interaction between the system and a person at the level of information presentation, input, interpretation of messages, support of actions and feedback.
+	
+	\begin{textitemize}
+		\item It should ensure not only convenience, but also substantive accuracy of communication.
+		\item It focuses on message semantics, user intent modeling, and explainability.
+		\item It may include graphic, text, speech, multimodal and mixed means.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Interface Subsystem Boundaries}
+	\topline
+	\justifying
+	
+	
+	The interface subsystem of an intelligent system is located between the internal problem-solving mechanisms and the outside world.
+	
+	\begin{textitemize}
+		\item As input, it receives external actions, messages and observations.
+		\item In the inner layer, it relates them to knowledge, context, scenarios and rules.
+		\item At the output, it generates external information structures that are understandable to the user or another system.
+		\item Often includes monitoring, dialogue, explanation, and attention management tools.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Three views of the interface}
+	\topline
+	\justifying
+	
+	
+	It is useful to consider the same interface from three interrelated perspectives.
+	
+	\begin{textitemize}
+		\item Functional: what classes of interaction problems does it solve.
+		\item Informational-semiotic: what external languages and constructions does it operate with?
+		\item Architectural: what components, agents, editors and services does it consist of?
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Main classes of interface subsystem tasks}
+	\topline
+	\justifying
+	
+	The user interface of an intelligent system solves a wide range of problems that go beyond simple input and output.
+	
+	\begin{textitemize}
+		\item Visualization of knowledge, states, and results of the system's operation.
+		\item Receiving actions, requests, commands, restrictions and clarifications.
+		\item Interpretation of ambiguous, incomplete, and context-dependent messages.
+		\item Support for dialogue, navigation, learning and explanation.
+		\item Coordination of human interaction with internal agents of the system.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{The task of identifying and\\ interpreting the input}
+	\topline
+	\justifying
+	
+	An intelligent interface must recognize not just the shape of the input signal, but its intended meaning.
+	
+	\begin{textitemize}
+		\item Recognition of text, speech, gestures, touches, and object manipulation.
+		\item Selection of entities, relationships, intentions and task parameters.
+		\item Disambiguation based on context and interaction history.
+		\item Identifying errors, omissions, and conflicts in a user's message.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{The task of forming an\\ external representation}
+	\topline
+	\justifying
+	
+	The system must not only find a solution, but also present it in a form suitable for perception and further action.
+	
+	\begin{textitemize}
+		\item Select the presentation form: text, table, diagram, graph, map, warning, animation.
+		\item Select the level of detail and order of information disclosure.
+		\item Adaptation of the presentation to the user's role, competence and current task.
+		\item Providing interactivity and the possibility of subsequent clarification.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Dialog Control Task}
+	\topline
+	\justifying
+	
+	The interface of an intelligent system should support not a single command, but an evolving dialogue.
+	
+	\begin{textitemize}
+		\item Support for user initiative and system initiative.
+		\item Maintaining the communication scenario and context of the current session.
+		\item Transitions between clarification, explanation, teaching and performing actions.
+		\item Managing dialog states, interruptions, and returning to previous steps.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Interface Adaptation Task}
+	\topline
+	\justifying
+	
+	Intelligent interfaces adapt interaction to the characteristics of the subject and the situation.
+	
+	\begin{textitemize}
+		\item Adaptation to the user's level of training and work style.
+		\item Adaptation to the device, communication channel and physical environment.
+		\item Taking into account the frequency of actions and typical scenarios.
+		\item Personalize the presentation, tooltips, and order of operations.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{The task of explanation and justification}
+	\topline
+	\justifying
+	
+	It is especially important for an intelligent system to be able to explain what it has understood, why it made a decision, and what constraints were taken into account.
+	
+	\begin{textitemize}
+		\item Explanation of the result and its basis.
+		\item Display of facts, rules, hypotheses and sources used.
+		\item Identification of the degree of confidence and areas of uncertainty.
+		\item Support for user trust, verification, and training.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{The problem of coordination with other systems}
+	\topline
+	\justifying
+	
+	The interface of an intelligent system often works not only with humans, but also with other systems, services, and agents.
+	
+	\begin{textitemize}
+		\item Machine-to-machine exchange of messages and knowledge.
+		\item Agreement on formats, protocols, and semantics of interaction.
+		\item Translation between external and internal representations.
+		\item Managing distributed services and agents.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Problem of interaction\\ with the physical environment}
+	\topline
+	\justifying
+	
+	If we are talking about a robotic or cyber-physical intelligent system, the interface subsystem must also work with the surrounding physical environment.
+	
+	\begin{textitemize}
+		\item Receiving signals from sensors and environmental events.
+		\item Formation of control actions on actuators.
+		\item Taking into account spatial, temporal and situational context.
+		\item Integration of human-machine and machine-environment interaction.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Multi-level classification of interfaces}
+	\topline
+	\justifying
+	
+	It is convenient to classify intelligent interfaces according to several independent criteria at once.
+	
+	\begin{textitemize}
+		\item By interaction recipient.
+		\item By modality of communication.
+		\item According to the degree of intelligence and adaptability.
+		\item By the method of presentation and editing of external structures.
+		\item On the architectural approach to development.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Classification by\\ interaction recipient}
+	\topline
+	\justifying
+	
+	From the point of view of the external world, interfaces of intelligent systems can be divided according to the main interaction partner.
+	
+	\begin{textitemize}
+		\item User interfaces: human --- system.
+		\item Intersystem interfaces: system --- system.
+		\item Sensory-actuator interfaces: system --- physical environment.
+		\item Mixed interfaces: simultaneous coordination of all three circuits.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Classification by communication modality}
+	\topline
+	\justifying
+	
+	Based on the form of external messages, several classes of interfaces can be distinguished.
+	
+	\begin{textitemize}
+		\item Text and symbolic.
+		\item Graphic and visual-spatial.
+		\item Speech and auditory.
+		\item Gestural, tactile, sensory.
+		\item Multimodal, combining several channels.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Classification by level of intelligence}
+	\topline
+	\justifying
+	
+	Conventionally, several levels of development of interface tools can be distinguished.
+	
+	\begin{textitemize}
+		\item Traditional interfaces: fixed scenarios and controls.
+		\item Adaptive interfaces: customization for the user and context.
+		\item Intelligent interfaces: semantic interpretation, intent modeling, explanation.
+		\item Self-evolving interfaces: accumulation of experience and knowledge-based reconfiguration.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Traditional, adaptive, and intelligent interfaces}
+	\topline
+	\justifying
+	
+	This line of classification is particularly useful for understanding the evolution of interface tools.
+	
+	\begin{textitemize}
+		\item The traditional interface relies on predefined forms and commands.
+		\item The adaptive interface takes into account the user profile, device, preferences, and task context.
+		\item The intelligent interface additionally uses knowledge and semantic interpretation.
+		\item In practice, modern systems often combine all three levels.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{WIMP, Post-WIMP, and Intelligent Interfaces}
+	\topline
+	\justifying
+	
+	For computer systems, it is useful to consider the evolution of interaction paradigms.
+	
+	\begin{textitemize}
+		\item WIMP: windows, icons, menu, pointer.
+		\item Post-WIMP: gestures, touch input, direct manipulation, spatial scenes.
+		\item Intelligent interfaces: semantic and dialog mechanisms on top of traditional and post-WIMP tools.
+		\item Advanced systems are usually multimodal and are not limited to a single paradigm.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Classification by the degree of specialization of the language of communication}
+	\topline
+	\justifying
+	
+	An important criterion is how universal the external language of communication is or how focused it is on a specific subject domain.
+	
+	\begin{textitemize}
+		\item General-purpose external languages are suitable for a wide range of tasks and knowledge structures.
+		\item Specialized languages are focused on specific types of objects, operations, and scenarios.
+		\item Hybrids are possible between them: a universal core plus domain extensions.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Classification by the role of external structures}
+	\topline
+	\justifying
+	
+	External information structures may differ in their function in interaction.
+	
+	\begin{textitemize}
+		\item Representation constructs: visualization of knowledge, states, results.
+		\item Assignment and editing structures: forms, graphs, diagrams, text descriptions.
+		\item Navigation structures: menus, maps, routes, tables of contents, links.
+		\item Explanatory constructions: comments, tracings, argumentation schemes.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Classification by\\ construction architecture}
+	\topline
+	\justifying
+	
+	Approaches to interface development differ in the level of abstraction and the way components are described.
+	
+	\begin{textitemize}
+		\item Manual development at the level of widgets and screen forms.
+		\item Component and framework approach.
+		\item Model-oriented interface design.
+		\item Ontological and semantic design.
+		\item Agent-oriented and event-driven architectures.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{What knowledge does\\ an intelligent interface need?}
+	\topline
+	\justifying
+	
+	Interface intelligence is impossible without the explicit or implicit use of multiple types of knowledge.
+	
+	\begin{textitemize}
+		\item Knowledge of the subject domain.
+		\item Knowledge about the user and his activities.
+		\item Knowledge of interaction scenarios.
+		\item Knowledge of types of external languages and constructions.
+		\item Knowledge about the state of the system itself and its services.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{User model in an intelligent interface}
+	\topline
+	\justifying
+	
+	One of the central components of an intelligent interface is the user model.
+	
+	\begin{textitemize}
+		\item Role, qualifications, preferences, limitations.
+		\item History of actions and typical work scenarios.
+		\item Goals, intentions, current context of the task.
+		\item Possible difficulties, errors and the need for hints.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Interaction Context Model}
+	\topline
+	\justifying
+	
+	In addition to the user model, the system must take into account the context of the situation.
+	
+	\begin{textitemize}
+		\item Current state of the subject domain.
+		\item Activity stage and active subtask.
+		\item Device, communication channel, environment of use.
+		\item Temporal, spatial and organizational constraints.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Adaptation and customization\\interface}
+	\topline
+	\justifying
+	
+	Contemporary work on intelligent interfaces emphasizes the importance of adapting and personalizing user tools.
+	
+	\begin{textitemize}
+		\item Individualization of the composition of displayed components.
+		\item Changing the level of detail and sequence of actions.
+		\item Reconfigure input methods, suggestions, and notifications.
+		\item Formation of personalized interaction trajectories.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{User Interface Components\\ as Knowledge Objects}
+	\topline
+	\justifying
+	
+	In the ontological and model-oriented approach, user interface elements are considered as formally described entities.
+	
+	\begin{textitemize}
+		\item Presentation components: text, images, maps, graphs, messages.
+		\item Containers: windows, panels, tabs, lists, tables, trees.
+		\item Interactive components: input fields, radio buttons, buttons, selectors.
+		\item View manipulation components: scrolling, zooming, resizing.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{User Interface Actions}
+	\topline
+	\justifying
+	
+	For an intelligent system, it is important not only to store interface components, but also to formally describe user actions.
+	
+	\begin{textitemize}
+		\item Mouse actions: hover, click, double-click, drag, gestures.
+		\item Keyboard actions: text input, service keys, combinations.
+		\item Touch actions: taps, multi-touch gestures, swipes.
+		\item Speech, pen, and material actions in advanced interfaces.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Why is formalization of interface actions important?}
+	\topline
+	\justifying
+	
+	Formal description of actions allows us to link user behavior with task semantics and internal system agents.
+	
+	\begin{textitemize}
+		\item You can set rules for handling events at the knowledge level.
+		\item Simplifies reuse and automatic interface generation.
+		\item It becomes possible to analyze user scenarios and errors.
+		\item Ensures consistency between the visual layer and internal processes.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Interface and internal system agents}
+	\topline
+	\justifying
+	
+	In an intelligent system, the user interface is closely linked to internal agents that interpret events and initiate actions.
+	
+	\begin{textitemize}
+		\item Interface events trigger computational, logical, and service procedures.
+		\item Internal agents can update the view, provide explanations and clarifications.
+		\item The observable form of work of intelligent agents is organized through the interface.
+		\item This is especially important for explainable and dialog systems.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Approach 1:\\ Manual interface design}
+	\topline
+	\justifying
+	
+	The simplest and historically earliest approach is direct programming of screens, forms, and event handlers.
+	
+	\begin{textitemize}
+		\item Gives complete control over the implementation details.
+		\item Works well for local and relatively stable applications.
+		\item Does not scale well with increasing number of scenarios and modalities.
+		\item Makes it difficult to reuse interface knowledge.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Approach 2:\\ Component and framework}
+	\topline
+	\justifying
+	
+	Here the interface is assembled from ready-made components and interaction patterns.
+	
+	\begin{textitemize}
+		\item The speed of development is increased.
+		\item Ensures consistency of elements and behavior.
+		\item Cross-platform support is simplified.
+		\item However, the semantics of the subject domain often remain outside the interface description itself.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Approach 3:\\ Model-Driven Development}
+	\topline
+	\justifying
+	
+	model-driven User Interface Development views the interface through a system of interconnected models.
+	
+	\begin{textitemize}
+		\item Domain model.
+		\item Model of user tasks and scenarios.
+		\item Abstract interface model.
+		\item Model of a specific interface for the selected platform.
+		\item Generate a final implementation from a set of models.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Strengths\\ of the model-driven approach}
+	\topline
+	\justifying
+	
+	This approach is important for complex intelligent systems where multiple representations and platforms need to be coordinated.
+	
+	\begin{textitemize}
+		\item Increases description reuse.
+		\item Simplifies the portability of the interface to different devices and channels.
+		\item Makes explicit the relationships between tasks, data, and presentation.
+		\item Facilitates partial automation of design and generation.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Limitations of the model-driven approach}
+	\topline
+	\justifying
+	
+	Despite their advantages, task models and widgets alone are often insufficient for intelligent interaction.
+	
+	\begin{textitemize}
+		\item It is difficult to express the rich semantics of the subject domain.
+		\item It is difficult to take into account implicit knowledge and context dependencies.
+		\item Means of reconciling user, context and explanation models are needed.
+		\item Therefore, the role of ontological and semantic description increases.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Approach 4:\\ Ontological interface design}
+	\topline
+	\justifying
+	
+	The ontological approach assumes that the interface and its components are described in terms of the formal ontology of the subject domain and the ontology of the interaction itself.
+	
+	\begin{textitemize}
+		\item Component, action, view, and relationship classes are explicitly defined.
+		\item The interface is associated with knowledge semantics, not just with code.
+		\item A basis for automatic generation and consistency checking is provided.
+		\item The expansion of the interface is simplified by expanding the ontology.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{What does the ontological approach provide?}
+	\topline
+	\justifying
+	
+	Ontological description is especially useful for intelligent systems, where the interface should not be a decorative shell, but a semantically loaded subsystem.
+	
+	\begin{textitemize}
+		\item Coordination of the interface with the knowledge base and domain models.
+		\item Automation of construction and reconfiguration of interface components.
+		\item Increasing the reusability of solutions.
+		\item Possibility of logical control, verification and explanation.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{User Interface Ontology}
+	\topline
+	\justifying
+	
+	The user interface ontology captures the types of components, actions, views, messages, and rules for coordinating them.
+	
+	\begin{textitemize}
+		\item Describes output components, containers, and interactive elements.
+		\item User actions and system reactions are formalized.
+		\item Relationships of composition, compatibility, and nesting are defined.
+		\item The connections with tasks, roles and objects of the subject domain are clarified.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Ontological model of the graphical interface}
+	\topline
+	\justifying
+	
+	In ontological modeling of a graphical interface, the graphical entities themselves are considered as elements of the design subject domain.
+	
+	\begin{textitemize}
+		\item Basic graphic components and their properties are highlighted.
+		\item The rules for the composition of screen structures are defined.
+		\item Correspondences are established between semantic entities and visual forms.
+		\item This creates the basis for intelligent editors and interface generators.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Rules and Limitations in Interface Design}
+	\topline
+	\justifying
+	
+	In an intelligent design environment, an interface can be evaluated and built not only based on templates, but also based on rules.
+	
+	\begin{textitemize}
+		\item Component compatibility rules.
+		\item Nesting restrictions and display methods.
+		\item Rules for choosing the form of presentation for different types of knowledge.
+		\item Rules for assessing the quality and appropriateness of an interface solution.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Approach 5: Agent-Oriented Interface Architecture}
+	\topline
+	\justifying
+	
+	The interface can be built as a set of interacting agents, each of which is responsible for its own function.
+	
+	\begin{textitemize}
+		\item Agent for recognition and interpretation of input messages.
+		\item Agent for selecting the presentation form.
+		\item Dialogue and user support agent.
+		\item Adaptation and personalization agent.
+		\item Agent for explaining decisions and recommendations.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Approach 6: Event-Driven Architecture}
+	\topline
+	\justifying
+	
+	In this architecture, the interface is viewed as a system for processing external and internal events.
+	
+	\begin{textitemize}
+		\item User and environment events are processed through a single processing loop.
+		\item For different classes of events, rules of interpretation and response are specified.
+		\item Conveniently integrate the interface with internal agents and services.
+		\item The approach fits well with the ontological description of events and actions.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Approach 7: Knowledge-based approach}
+	\topline
+	\justifying
+	
+	In intelligent systems, the interface is increasingly built around knowledge rather than around individual forms and screens.
+	
+	\begin{textitemize}
+		\item The object of knowledge and its semantic connections become central.
+		\item The presentation adapts to the type of knowledge and the user's task.
+		\item Editing is carried out not only at the text level, but also at the level of knowledge structures.
+		\item This is especially important for semantic and ontological systems.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Approach 8: Human-Centered and Ergonomic}
+	\topline
+	\justifying
+	
+	Even in intelligent systems, interface design cannot be reduced to formal models alone.
+	
+	\begin{textitemize}
+		\item Human cognitive capabilities and limitations are taken into account.
+		\item Typical errors, attention load, and fatigue are analyzed.
+		\item Clear scenarios, feedback and learning modes are designed.
+		\item The intelligence of the interface should enhance convenience, not complicate work.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{External languages for communication with users}
+	\topline
+	\justifying
+	
+	The external language of communication is a system of external information structures and rules for their use, through which the user interacts with the intelligent system.
+	
+	\begin{textitemize}
+		\item These can be text, graphic, tabular, speech and mixed forms.
+		\item The language must be understandable to the user and interpretable by the system.
+		\item The richer the semantics of a language, the wider the possibilities for intellectual interaction.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Why separate external languages?}
+	\topline
+	\justifying
+	
+	The external language is not just a screen design, but the basis for meaningful communication between the user and the system.
+	
+	\begin{textitemize}
+		\item The language specifies acceptable forms of questions, descriptions, and commands.
+		\item Language determines what knowledge can be explicitly represented and edited.
+		\item Language defines navigational tools, links, relationships, and contexts.
+		\item The choice of language determines the power and accessibility of the interface.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Universal External Languages}
+	\topline
+	\justifying
+	
+	Universal external languages are oriented towards the widest possible range of objects and interaction situations.
+	
+	\begin{textitemize}
+		\item They are suitable for describing a variety of entities, relationships and constructions.
+		\item Provide a unified representation of knowledge across various subject domains.
+		\item Convenient as a base layer of a platform or intelligent environment.
+		\item Often require additional means of simplification for the end user.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Specialized External Languages}
+	\topline
+	\justifying
+	
+	Specialized languages are designed for a specific subject domain, class of tasks, or professional group.
+	
+	\begin{textitemize}
+		\item They are closer to the natural ways of thinking of an expert in a given field.
+		\item They allow us to hide the excessive generality of the universal language.
+		\item Improves the speed of input and accuracy of interpretation of typical constructions.
+		\item But they are less transferable to other areas and require support for alignment with the general semantic core.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{General-Purpose and Specialized Languages: A Comparison}
+	\topline
+	\justifying
+	
+	Typically, an effective intelligent system combines both types of external languages.
+	
+	\begin{textitemize}
+		\item A universal language provides commonality, portability, and a common semantic foundation.
+		\item Specialized language provides compactness and professional expressiveness.
+		\item There must be rules of translation and coordination between them.
+		\item In a good architecture, specialized languages are built as superstructures over general-purpose models.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Examples of external languages by presentation form}
+	\topline
+	\justifying
+	
+	From a practical point of view, it is useful to distinguish several classes of external languages.
+	
+	\begin{textitemize}
+		\item Natural-language and quasi-natural.
+		\item Graph, diagram, schematic.
+		\item Tabular and formulaic.
+		\item Command and scenario.
+		\item Multimodal languages that combine text, graphics, speech, and gestures.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Natural Language Interface}
+	\topline
+	\justifying
+	
+	Natural language interface is one of the most prominent areas of intelligent interfaces.
+	
+	\begin{textitemize}
+		\item The user formulates queries and messages in natural language.
+		\item The system must perform syntactic, semantic and pragmatic analysis.
+		\item Resolution of homonymy, synonymy, and contextual references is important.
+		\item It is necessary to generate clear answers and clarifying questions.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Stages of message processing in a natural language interface}
+	\topline
+	\justifying
+	
+	Processing a user message typically involves several layers of analysis and synthesis.
+	
+	\begin{textitemize}
+		\item Analysis of message form: tokens, morphology, syntax.
+		\item Understanding meaning: entities, relationships, intentions, context.
+		\item Correlation with the internal knowledge model and the task.
+		\item Synthesis of an answer, explanation, or clarifying question.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Graph and Scheme Languages}
+	\topline
+	\justifying
+	
+	In many intelligent systems, knowledge and tasks are conveniently expressed not by linear text, but by structural visual constructions.
+	
+	\begin{textitemize}
+		\item Semantic networks, graphs, conceptual schemes.
+		\item Process, route, and dependency diagrams.
+		\item Cause-and-effect and argumentation schemes.
+		\item Such languages are especially useful when working with complex relationships and structures.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Tabular and formulaic external languages}
+	\topline
+	\justifying
+	
+	For a number of tasks, compact tabular and formula forms are the most effective.
+	
+	\begin{textitemize}
+		\item Tables of classification, comparison, conditions and parameters.
+		\item Formula constructions for technical, economic and scientific fields.
+		\item Combination of tables with semantic comments and checks.
+		\item Such languages are convenient for precise input and editing of specialized knowledge.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{External Information Structure Editors}
+	\topline
+	\justifying
+	
+	Editors of external information structures are special tools for creating, modifying, and coordinating those structures through which the system interacts with the user or another system.
+	
+	\begin{textitemize}
+		\item Editors for text, forms, tables, graphs, diagrams, maps, and scripts.
+		\item They act not simply as graphical tools, but as part of an intelligent interface.
+		\item A good editor must understand the type of construction being edited and control its correctness.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{What functions should such editors perform?}
+	\topline
+	\justifying
+	
+	An external design editor in an intelligent system usually performs more functions than a regular graphical or text editor.
+	
+	\begin{textitemize}
+		\item Creation and modification of constructs in an acceptable language.
+		\item Checking syntactic, structural and partially semantic correctness.
+		\item Hints, auto-completion, navigation through related entities.
+		\item Translation between specialized and universal representation forms.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Types of External Structure Editors}
+	\topline
+	\justifying
+	
+	Depending on the language and type of tasks, several classes of such editors can be distinguished.
+	
+	\begin{textitemize}
+		\item Text and template text editors.
+		\item Graphic editors for diagrams, graphs and knowledge maps.
+		\item Table editors for parameters, constraints and correspondences.
+		\item Combined multimodal editors.
+		\item Intelligent editors with proofreading and fragment generation.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Intelligent Properties of Editors}
+	\topline
+	\justifying
+	
+	An editor becomes part of an intelligent interface when it does more than just draw or save shapes, but helps you work with meaning.
+	
+	\begin{textitemize}
+		\item Suggests valid constructions based on ontology and context.
+		\item Controls the constraints and type compatibility of elements.
+		\item Links the edited form to internal knowledge structures.
+		\item Supports explaining errors and recommending fixes.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Connecting editors with general-purpose and specialized languages}
+	\topline
+	\justifying
+	
+	Editors are a practical place where the question of generality and specialization of language becomes particularly noticeable.
+	
+	\begin{textitemize}
+		\item The universal editor supports a wide range of constructs.
+		\item A specialized editor simplifies work in a specific subject domain.
+		\item A multi-level scheme is often used: a domain editor plus translation into a universal core.
+		\item This provides a balance between convenience and semantic integrity.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Intelligent interface as a semiotic system}
+	\topline
+	\justifying
+	
+	It is useful to think of an intelligent interface as a semiotic system that links external signs, their meanings, and actions.
+	
+	\begin{textitemize}
+		\item The syntax defines the permissible forms of constructions.
+		\item Semantics connects constructions with objects and relations of the subject domain.
+		\item Pragmatics determines the appropriateness of constructions in a specific interaction situation.
+		\item Therefore, interface design requires working with three levels at once.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Semantic core and visual shell}
+	\topline
+	\justifying
+	
+	In an intelligent system, it is important to distinguish between the appearance of the interface and its substantive basis.
+	
+	\begin{textitemize}
+		\item The visual shell is responsible for the convenient form of presentation.
+		\item The semantic core ensures unambiguous interpretation of constructions.
+		\item Without a semantic core, adaptation and explanation quickly degenerate into superficial heuristics.
+		\item Without a convenient shell, semantic power remains inaccessible to the user.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Computer intelligent systems as a special case}
+	\topline
+	\justifying
+	
+	Although we are talking about cybernetic systems in general, many ideas receive their most advanced practical implementation in computer intelligent systems.
+	
+	\begin{textitemize}
+		\item Graphical, web, mobile and voice interfaces.
+		\item Dialogue assistants and recommendation services.
+		\item Decision support systems and intelligent learning environments.
+		\item Tools for working with knowledge and semantic graphs.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Where intelligent interfaces are especially in demand}
+	\topline
+	\justifying
+	
+	They provide the greatest value where external interactions are complex, data is heterogeneous, and the cost of error is high.
+	
+	\begin{textitemize}
+		\item Medicine and clinical decisions.
+		\item Industrial and dispatch systems.
+		\item Robotics and autonomous systems.
+		\item Educational intellectual environments.
+		\item Analytical and expert systems.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Requirements for the quality of the user interface of an intelligent system}
+	\topline
+	\justifying
+	
+	The quality criteria here are broader than in regular interface development.
+	
+	\begin{textitemize}
+		\item Clarity and convenience.
+		\item Semantic precision and unambiguity of interpretation.
+		\item Adaptability and personalization.
+		\item Explainability and trust support.
+		\item Consistency with internal models of knowledge and tasks.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Typical Design Problems}
+	\topline
+	\justifying
+	
+	There are a number of persistent challenges in developing intelligent interfaces.
+	
+	\begin{textitemize}
+		\item Gap between semantic model and visual implementation.
+		\item Complexity of formalizing user intentions.
+		\item Conflict between versatility and ease of use.
+		\item Limited data for personalization and adaptation.
+		\item Difficulties in explaining complex system outputs.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Why You Shouldn't Limit Yourself to a GUI Approach}
+	\topline
+	\justifying
+	
+	If we consider the interface only as a graphical user layer, then a significant part of the problematic of intelligent systems is lost.
+	
+	\begin{textitemize}
+		\item Intersystem interfaces and interfaces with the environment remain outside the scope.
+		\item External languages and knowledge construct editors are underestimated.
+		\item The role of ontologies, agents and semantic interpretation is not taken into account.
+		\item Therefore, GUI is just one of the special cases of a more general interface subsystem.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{From screen forms to semantic interaction}
+	\topline
+	\justifying
+	
+	The general development trend is towards a transition from an interface as a set of screen forms to an interface as an intelligent intermediary between the system and the outside world.
+	
+	\begin{textitemize}
+		\item The role of user and context models is increasing.
+		\item Dialogue and multimodal means are being developed.
+		\item The importance of external languages and knowledge structure editors is increasing.
+		\item Design increasingly relies on models, ontologies and rules.
+	\end{textitemize}
+\end{frame}
+
+\begin{frame}{Conclusion}
+	\topline
+	\justifying
+	
+	\vspace{10mm}
+	
+	The user interface of an intelligent system should be understood as part of a more general interface subsystem of a cybernetic system.
+	
+	\begin{textitemize}
+		\item Intelligent interface works with meaning, context, adaptation and explanation.
+		\item Its classification is multidimensional: addressee, modality, language, architecture, degree of intelligence.
+		\item Key development approaches: manual, component, model-oriented, ontological, agent-based, knowledge-driven.
+		\item Of particular importance are external communication languages and editors of external information structures.
+	\end{textitemize}
+\end{frame}
+
+
